@@ -1,0 +1,4 @@
+* misc_models.lib - generic models used by the DC Load Rev C decks
+* Generic 6.8 V zener standing in for BZX84C6V8 (Nexperia/Diodes), SOT-23.
+* Only the breakdown knee matters here (anti-wind-up clamp across Cc).
+.model BZX84C6V8 D(Is=1n Rs=10 Cjo=50p BV=6.8 IBV=5m)

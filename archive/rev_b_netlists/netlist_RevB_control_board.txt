@@ -1,0 +1,291 @@
+####  DAC.SchDoc
+ C23      Generic CAP 1210             =Value                         {'Value': '1uF'}
+ C24      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR61C106KE15L; Chip Multilayer Ceramic Capacitors for G
+ J10      1e4615820a309e3ce90f9e6d957b 5001                           PC TEST POINT MINIATURE BLACK
+ J9       1e4615820a309e3ce90f9e6d957b 5001                           PC TEST POINT MINIATURE BLACK
+ R14      Generic RES 0603             =Value                         {'Value': '10K'}
+ R15      Generic RES 0603             =Value                         {'Value': '4K7'}
+ R16      2dcfd2547301a7d3209a5e99acfd Ref                            TRIMMER 10K OHM 0.5W PC PIN TOP
+ R17      Generic RES 0603             =Value                         {'Value': '470K'}
+ R18      Generic RES 0603             =Value                         {'Value': '1K'}
+ U5       13d1b9b03173b6bd00baa384b893 MCP4725A0T-E/CH                IC DAC 12BIT V-OUT SOT23-6
+ U6       TI-REF5040D8                 REF5040AIDR                    Low Noise, Very Low Drift, Precision Voltage Reference, -40 
+ -- nets
+  [+4.096V] R15.2(2) U5.3(VDD)
+  [+4.096V] C24.1(1) J10.1(1) R16.1(CCW) U6.6(VOUT)
+  [5V_Sel] C23.2(2) U6.2(VIN)
+  [GND] C24.2(2) R18.1(1) U6.4(GND)
+  [GND] R14.1(1) U5.2(VSS)
+  [GND] C23.1(1)
+  [PORT:LOAD_CTRL] J9.1(1) R14.2(2) U5.1(VOUT)
+  [PORT:SCL] U5.5(SCL)
+  [PORT:SDA] U5.4(SDA)
+  [-] R16.3(CW) R18.2(2)
+  [-] R17.1(1) U6.5(TRIM/NR)
+  [-] U6.3(TEMP)
+  [-] R16.2(WIPER) R17.2(2)
+  [-] R15.1(1) U5.6(A0)
+####  Microcontroller.SchDoc
+ C1       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C10      Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C11      Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C12      Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C13      02cd4be3c70576c341d710602a67 =Value                         {'Value': '10uF'}
+ C2       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C3       Generic CAP 1210             =Value                         {'Value': '10pF'}
+ C4       Generic CAP 1210             =Value                         {'Value': '10pF'}
+ C5       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C6       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C7       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C8       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ C9       Generic CAP 1210             =Value                         {'Value': '100nF'}
+ D1       Generic LED 0603             CMP-006-000001-1               
+ J1       1e4615820a309e3ce90f9e6d957b 5001                           PC TEST POINT MINIATURE BLACK
+ J2       1e4615820a309e3ce90f9e6d957b 5001                           PC TEST POINT MINIATURE BLACK
+ J3       USB-TYPE-C-019               USB-TYPE-C-019                 Connector Type:Type-C Standard:- Gender:Female Number of Con
+ J4       1e4615820a309e3ce90f9e6d957b 5001                           PC TEST POINT MINIATURE BLACK
+ J5       1e4615820a309e3ce90f9e6d957b 5001                           PC TEST POINT MINIATURE BLACK
+ J8       USB-TYPE-C-019               USB-TYPE-C-019                 Connector Type:Type-C Standard:- Gender:Female Number of Con
+ P1       Header_Male_2R_16P           61301621121                    
+ P2       Header_Male_1R_04P           61300411121                    
+ Q1       AO-NEMOS-G1S2D3-3            AO3400                         N-channel Enhancement Mode Field-Effect Transistor; 5.8A/30V
+ R1       Generic RES 0603             =Value                         {'Value': '10K'}
+ R2       Generic RES 0603             =Value                         {'Value': '10K'}
+ R3       Generic RES 0603             =Value                         {'Value': '10K'}
+ R4       Generic RES 0603             =Value                         {'Value': '1K'}
+ R5       Generic RES 0603             =Value                         {'Value': '5.1K'}
+ R6       Generic RES 0603             =Value                         {'Value': '5.1K'}
+ R7       Generic RES 0603             =Value                         {'Value': '10K'}
+ R8       Generic RES 0603             =Value                         {'Value': '5.1K'}
+ R9       Generic RES 0603             =Value                         {'Value': '5.1K'}
+ SW1      b8895f3f4cefb76e1819d2863dba C318884                        {'Manufacturer Part Number': 'PTS526SK15SMTR2LFS'}
+ SW2      b8895f3f4cefb76e1819d2863dba C318884                        {'Manufacturer Part Number': 'PTS526SK15SMTR2LFS'}
+ TP1      TP1                          TP1                            Testpoint double sided
+ U1       MC-ARM-STM32F103XC_D_E-SQ64  STM32F103RET6                  ARM Cortex-M3 32-bit MCU, 512 KB Flash, 64 KB Internal RAM, 
+ U1       MC-ARM-STM32F103XC_D_E-SQ64  STM32F103RET6                  ARM Cortex-M3 32-bit MCU, 512 KB Flash, 64 KB Internal RAM, 
+ U2       CH340E                       CH340E                         
+ Y1       7d37667f5012bb31280c8009ddd0 8Mhz, 10pF                     MFR.Part #
+CSTCE8M00G52-R0 Copy
+JLCPCB Part #
+C22549 Copy
+ -- nets
+  [+3V3] C10.1(1) C11.1(1) C12.1(1) C13.1(1) C7.1(1) C8.1(1) C9.1(1) U1.1(VBAT) U1.13(VDDA) U1.19(VDD_4) U1.32(VDD_1) U1.48(VDD_2) U1.64(VDD_3)
+  [+3V3] R1.2(2)
+  [+3V3] C6.1(1) P2.1(1)
+  [+3V3] R2.2(2)
+  [+3V3] SW1.2(2)
+  [+3V3] Q1.3(D)
+  [+5 USB] Q1.1(G) R3.2(2)
+  [+5 USB] J8.A4B9(VBUS) J8.B4A9(VBUS)
+  [+5 USB] J3.A4B9(VBUS) J3.B4A9(VBUS) TP1.1(1)
+  [+5 USB] C1.1(1) U2.7(VCC)
+  [Boot0] SW1.4(4) U1.60(BOOT0)
+  [COL1,PORT:COL1] U1.26(PB0)
+  [COL2,PORT:COL2] U1.27(PB1)
+  [COL3,PORT:COL3] U1.28(PB2)
+  [COL4,PORT:COL4] U1.55(PB3)
+  [DUT_ISEN,PORT:DUT_ISEN] U1.15(PA1)
+  [DUT_VSEN,PORT:DUT_VSEN] U1.16(PA2)
+  [ENCA,PORT:ENCA] U1.41(PA8)
+  [ENCB,PORT:ENCB] U1.42(PA9)
+  [ENCSW,PORT:ENCSW] U1.43(PA10)
+  [GND] C6.2(2) P2.4(4)
+  [GND] C3.1(1) C4.1(1) R7.1(1) SW2.2(2) Y1.2(GND)
+  [GND] U1.12(VSSA) U1.18(VSS_4) U1.31(VSS_1) U1.47(VSS_2) U1.63(VSS_3)
+  [GND] R4.1(1)
+  [GND] J8.1(SH) J8.2(SH) J8.3(SH) J8.4(SH) J8.A1B12(GND) J8.B1A12(GND)
+  [GND] C10.2(2) C11.2(2) C12.2(2) C13.2(2) C7.2(2) C8.2(2) C9.2(2)
+  [GND] J3.1(SH) J3.2(SH) J3.3(SH) J3.4(SH) J3.A1B12(GND) J3.B1A12(GND)
+  [GND] C1.2(2)
+  [GND] C2.1(1) R3.1(1)
+  [GND] R8.1(1) R9.1(1)
+  [GND] R5.1(1) R6.1(1)
+  [GND] U2.3(GND)
+  [MCU LED] D1.1(A) U1.54(PD2)
+  [Osc In] C4.2(2) U1.5(PD0-OSC_IN) Y1.1(Input)
+  [Osc Out] C3.2(2) U1.6(PD1-OSC_OUT) Y1.3(Output)
+  [PC0] U1.8(PC0)
+  [PC0] P1.1(1)
+  [PC1] U1.9(PC1)
+  [PC1] P1.3(3)
+  [PC10] U1.51(PC10)
+  [PC10] P1.6(6)
+  [PC11] U1.52(PC11)
+  [PC11] P1.8(8)
+  [PC12] U1.53(PC12)
+  [PC12] P1.10(10)
+  [PC13] U1.2(PC13-TAMPER-RTC)
+  [PC13] P1.12(12)
+  [PC14] U1.3(PC14-OSC32_IN)
+  [PC14] P1.14(14)
+  [PC15] U1.4(PC15-OSC32_OUT)
+  [PC15] P1.16(16)
+  [PC2] U1.10(PC2)
+  [PC2] P1.5(5)
+  [PC3] U1.11(PC3)
+  [PC3] P1.7(7)
+  [PC4] P1.9(9)
+  [PC4] U1.24(PC4)
+  [PC5] P1.11(11)
+  [PC5] U1.25(PC5)
+  [PC6] P1.13(13)
+  [PC6] U1.37(PC6)
+  [PC7] P1.15(15)
+  [PC7] U1.38(PC7)
+  [PC8] P1.2(2)
+  [PC8] U1.39(PC8)
+  [PC9] U1.40(PC9)
+  [PC9] P1.4(4)
+  [PORT:ROW1,ROW1] U1.20(PA4)
+  [PORT:ROW2,ROW2] U1.21(PA5)
+  [PORT:ROW3,ROW3] U1.22(PA6)
+  [PORT:ROW4,ROW4] U1.23(PA7)
+  [PORT:SCL] J4.1(1) R2.1(1) U1.61(PB8)
+  [PORT:SDA] J5.1(1) R1.1(1) U1.62(PB9)
+  [Reset] SW2.4(4) U1.7(NRST)
+  [SWDCLK] U1.49(PA14)
+  [SWDCLK] P2.3(3)
+  [SWIO] U1.46(PA13)
+  [SWIO] P2.2(2)
+  [UART_RXD] J1.1(1) U2.8(TXD)
+  [UART_RXD] U1.59(PB7)
+  [UART_TXD] J2.1(1) U2.9(RXD)
+  [UART_TXD] U1.58(PB6)
+  [USB1D_N] J3.A7(DN1) J3.B7(DN2) U2.2(UD-)
+  [USB1D_P] J3.A6(DP1) J3.B6(DP2) U2.1(UD+)
+  [USB2D_N] J8.A7(DN1) J8.B7(DN2)
+  [USB2D_N] U1.44(PA11)
+  [USB2D_P] J8.A6(DP1) J8.B6(DP2)
+  [USB2D_P] U1.45(PA12)
+  [-] J8.B8(SBU2)
+  [-] J3.B8(SBU2)
+  [-] U1.30(PB11)
+  [-] C5.1(1) SW2.1(1)
+  [-] U1.33(PB12)
+  [-] U2.4(RTS#)
+  [-] U1.50(PA15)
+  [-] U1.17(PA3)
+  [-] C2.2(2) Q1.2(S) U2.10(3V3)
+  [-] J8.A5(CC1) R9.2(2)
+  [-] J3.A5(CC1) R6.2(2)
+  [-] U1.34(PB13)
+  [-] SW1.1(1)
+  [-] C5.2(2) SW2.3(3)
+  [-] J8.B5(CC2) R8.2(2)
+  [-] J3.B5(CC2) R5.2(2)
+  [-] U1.35(PB14)
+  [-] U2.5(CTS#)
+  [-] U2.6(TNOW)
+  [-] U1.14(PA0-WKUP)
+  [-] J8.A8(SBU1)
+  [-] J3.A8(SBU1)
+  [-] U1.29(PB10)
+  [-] U1.36(PB15)
+  [-] U1.56(PB4)
+  [-] R7.2(2) SW1.3(3)
+  [-] D1.2(C) R4.2(2)
+  [-] U1.57(PB5)
+####  Power Distribution.SchDoc
+ C14      Generic CAP 1210             =Value                         {'Value': '10nF'}
+ C15      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR61C106KE15L; Chip Multilayer Ceramic Capacitors for G
+ C16      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR61C106KE15L; Chip Multilayer Ceramic Capacitors for G
+ C17      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR61C106KE15L; Chip Multilayer Ceramic Capacitors for G
+ C18      cf48714ba7e38822c1575c7ec0b6 =Capacitance                   UCW1H221MNL1GS; CAP ALUM 220UF 20% 50V SMD
+ C19      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR60J226ME39L; Chip Multilayer Ceramic Capacitors for G
+ C20      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR60J226ME39L; Chip Multilayer Ceramic Capacitors for G
+ C21      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR60J226ME39L; Chip Multilayer Ceramic Capacitors for G
+ C22      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR60J226ME39L; Chip Multilayer Ceramic Capacitors for G
+ C28      Generic CAP 1210             =Value                         {'Value': '10uF'}
+ D2       1d6ec82d83fb6aee721767c19dac SSA34-E3/61T                   DIODE SCHOTTKY 40V 3A DO214AC
+ D3       Generic LED 0603             Generic LED 0603               
+ D4       Generic LED 0603             Generic LED 0603               
+ D6       1d6ec82d83fb6aee721767c19dac MBR0540                        DIODE SCHOTTKY 40V 500MA SOD123
+ L1       Inductor - 3                 33uH 1040                      
+ Q3       PEMOS-GSD-3_B                FDV304P                        P-Channel Digital FET, -25 V, -0.46 A, 0.35 W, -55 to 150 de
+ R10      Generic RES 0603             =Value                         {'Value': '10K'}
+ R11      Generic RES 0603             =Value                         {'Value': '3.16K'}
+ R12      Generic RES 0603             =Value                         {'Value': '3.16K'}
+ R13      Generic RES 0603             =Value                         {'Value': '3.16K'}
+ R26      Generic RES 0603             =Value                         {'Value': '100K'}
+ TP2      TP1                          TP1                            Testpoint double sided
+ TP3      TP1                          TP1                            Testpoint double sided
+ TP4      TP1                          TP1                            Testpoint double sided
+ U3       98da629940cea6febc5630bb5515 TPS5430DDA                     {'Manufacturer Part Number': 'TPS5430DDA'}
+ U4       8bdbb5f8e77002000e30dd2845d0 AMS1117-3.3                    {'Manufacturer Part Number': 'AMS1117-3.3'}
+ -- nets
+  [+12V,PORT:+12V] C15.1(1) C16.1(1) C17.1(1) TP2.1(1) U3.7(VIN)
+  [+3V3] R13.2(2)
+  [+3V3,PORT:+3V3] C19.1(1) C20.1(1) TP4.1(1) U4.2(VOUT) U4.4(VOUT)
+  [+5 USB] D6.2(A) Q3.1(G) R26.2(2)
+  [+5V] Q3.2(S)
+  [+5V,PORT:+5V] C18.2(A) L1.2(2) R10.2(2) TP3.1(1)
+  [5V_Sel] C21.1(1) C22.1(1) C28.2(2) D6.1(C) Q3.3(D) U4.3(VIN)
+  [5V_Sel] R11.2(2)
+  [BUCK_PH] C14.2(2) D2.1(C) L1.1(1) U3.8(PH)
+  [GND] C19.2(2) C20.2(2) U4.1(Ground)
+  [GND] C18.1(C) R12.1(1) U3.6(GND) U3.9(PowerPAD)
+  [GND] D4.2(C)
+  [GND] C21.2(2) C22.2(2)
+  [GND] C15.2(2) C16.2(2) C17.2(2)
+  [GND] C28.1(1)
+  [GND] D2.2(A)
+  [GND] D3.2(C)
+  [GND] R26.1(1)
+  [-] U3.3(NC)
+  [-] D3.1(A) R11.1(1)
+  [-] U3.5(ENA)
+  [-] U3.2(NC)
+  [-] R10.1(1) R12.2(2) U3.4(VSENSE)
+  [-] C14.1(1) U3.1(BOOT)
+  [-] D4.1(A) R13.1(1)
+####  Thermal.SchDoc
+ C25      b4654b650e69147ec39a6b967a45 =Capacitance                   GRM21BR61C106KE15L; Chip Multilayer Ceramic Capacitors for G
+ D5       D-AK-2                       1N4148W-7-F                    Fast Switching Diode, 100 V, 0.15 A, -65 to 150 degC, 2-Pin?
+ Q2       b44e953556f554d0102664c7d152 MMBT2222A-7-F                  TRANS NPN 40V 0.6A SMD SOT23-3
+ R19      Generic RES 0603             =Value                         {'Value': '470'}
+ R20      RES-ADJ-3_A                  TC33X-2-103E                   Trimming Potentiometer, 10000 Ohm, -40 to 100 degC, 3-Pin SM
+ R21      Generic RES 0603             =Value                         {'Value': '470'}
+ U7       4f14c3e39a10475c26dfba85d01a LM311D                         {'Manufacturer Part Number': 'LM311D'}
+ -- nets
+  [+12V,PORT:+12V] D5.2(K) R19.1(1) R20.3(3) U7.8(VCC+)
+  [GND] C25.2(2) Q2.2(E) U7.1(EMIT OUT) U7.4(VCC-)
+  [GND,PORT:GND] R20.1(1)
+  [PORT:FAN-] D5.1(A) Q2.3(C)
+  [PORT:TEMP_IN+] R19.2(2) U7.3(IN-)
+  [-] C25.1(1) Q2.1(B) R21.2(2)
+  [-] R20.2(2) U7.2(IN+)
+  [-] R21.1(1) U7.7(COL OUT)
+  [-] U7.5(BALANCE) U7.6(BAL/STRB)
+####  Top.SchDoc
+ J13      JACK-2CD3-RN_B               PJ-002A                        Through Hole Right Angle DC Power Jack, 2.5 A, 2 mm Center P
+ P3       Header_Male_2R_16P           61301621121                    
+ -- nets
+  [+12V] J13.1(1)
+  [+12V] P3.16(16)
+  [+3V3] P3.3(3)
+  [+4.096V] P3.4(4)
+  [+4.096V] P3.13(13)
+  [DUT_ISEN] P3.5(5)
+  [DUT_VSEN] P3.10(10)
+  [FAN-] P3.14(14)
+  [GND] P3.12(12) P3.2(2) P3.8(8)
+  [GND] P3.1(1) P3.11(11) P3.15(15) P3.7(7)
+  [GND] J13.3(3)
+  [LOAD_CTRL] P3.6(6)
+  [TEMP_IN+] P3.9(9)
+  [-] J13.2(2)
+ SHEETSYM  
+  sheettxt U_Power Distribution
+  sheettxt Power Distribution.SchDoc
+ SHEETSYM  
+  sheettxt U_DAC
+  sheettxt DAC.SchDoc
+ SHEETSYM  
+  sheettxt U_Digital IO
+  sheettxt Digital IO.SchDoc
+ SHEETSYM  
+  sheettxt U_Thermal
+  sheettxt Thermal.SchDoc
+ SHEETSYM  
+  sheettxt U_Microcontroller
+  sheettxt Microcontroller.SchDoc

@@ -1,0 +1,60 @@
+Altium Designer Pick and Place Locations
+C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\FREQUENTLY USED\Project\DC Load Box\DC Electronic Load Power MOSFETS\Project Outputs for DC Electronic Load Power MOSFETS\Pick Place for Power Electronics.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       26/11/24
+Time:       21:14
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"J6","S3B-XH-SM4-TB(LF)(SN)","TopLayer","FP-S3B-XH-SM4-TB_LF_SN-MFG","17.1000mm","64.0000mm","270","CONN HEADER SMD R/A 3POS 2.5MM"
+"R18","CRCW12062R20FKEA","TopLayer","FP-CRCW1206-e3-IPC_A","27.0000mm","41.5261mm","270","RES Thick Film, 2.2O, 1%, 0.25W, 100ppm/°C, 1206"
+"C5","C3216X7S2A225K160AB","TopLayer","FP-C3216-160-0_2-IPC_B","28.1761mm","46.5261mm","0","Multilayer Ceramic Capacitors 2.2uF ±10% 100V X7S SMD 1206"
+"U3","LMV358AIDR","TopLayer","FP-D0008A-IPC_C","82.2500mm","74.0000mm","90","IC OPAMP GP 2 CIRCUIT 8SOIC"
+"R17","12K","TopLayer","IPC_C_R0603_NO_SILK","86.5000mm","68.2500mm","90","Generic RES 0603"
+"R16","68K","TopLayer","IPC_C_R0603_NO_SILK","88.0000mm","68.2500mm","270","Generic RES 0603"
+"R15","200mO","TopLayer","FP-RL2512-MFG","34.0000mm","88.0000mm","270","RES 0.2 OHM 1% 1W 2512
+RL2512FK-070R2L"
+"R14","200mO","TopLayer","FP-RL2512-MFG","40.0000mm","88.0000mm","270","RES 0.2 OHM 1% 1W 2512
+RL2512FK-070R2L"
+"R13","200mO","TopLayer","FP-RL2512-MFG","55.0000mm","87.8150mm","270","RES 0.2 OHM 1% 1W 2512
+RL2512FK-070R2L"
+"R12","200mO","TopLayer","FP-RL2512-MFG","61.0000mm","87.8150mm","270","RES 0.2 OHM 1% 1W 2512
+RL2512FK-070R2L"
+"R9","3K3","TopLayer","IPC_C_R0603_NO_SILK","81.0000mm","67.5000mm","180","Generic RES 0603"
+"R8","3K3","TopLayer","IPC_C_R0603_NO_SILK","82.2500mm","80.0000mm","180","Generic RES 0603"
+"R7","100R","TopLayer","IPC_C_R0603_NO_SILK","79.5000mm","78.5000mm","180","Generic RES 0603"
+"R6","100R","TopLayer","IPC_C_R0603_NO_SILK","78.2500mm","69.7500mm","90","Generic RES 0603"
+"Q2","IRF530PBF","TopLayer","FP-X15-0364-MFG","44.5000mm","81.1850mm","270","MOSFET N-CH 100V 14A TO-220AB"
+"Q1","IRF530PBF","TopLayer","FP-X15-0364-MFG","65.5000mm","81.1850mm","270","MOSFET N-CH 100V 14A TO-220AB"
+"J5","5001","TopLayer","FP-5001-MFG","86.5000mm","105.0000mm","90","PC TEST POINT MINIATURE BLACK"
+"J4","5001","TopLayer","FP-5001-MFG","76.5000mm","105.0000mm","90","PC TEST POINT MINIATURE BLACK"
+"J3","5001","TopLayer","FP-5001-MFG","81.5000mm","105.0000mm","90","PC TEST POINT MINIATURE BLACK"
+"J2","5001","TopLayer","FP-5001-MFG","66.5000mm","105.0000mm","90","PC TEST POINT MINIATURE BLACK"
+"J1","5001","TopLayer","FP-5001-MFG","71.5000mm","105.0000mm","90","PC TEST POINT MINIATURE BLACK"
+"C4","220pF","TopLayer","IPC_C_C0603_NO_SILK","81.0000mm","69.0000mm","180","Generic CAP 0603"
+"C3","220pF","TopLayer","IPC_C_C0603_NO_SILK","82.2500mm","78.5000mm","180","Generic CAP 0603"
+"R11","0R","TopLayer","IPC_C_R0603_NO_SILK","86.0000mm","31.0000mm","180","Generic RES 0603"
+"R10","0R","TopLayer","IPC_C_R0603_NO_SILK","86.0000mm","29.0000mm","180","Generic RES 0603"
+"TP2","TP1","TopLayer","TP1","84.2125mm","32.2625mm","90","Testpoint double sided"
+"TP1","TP1","TopLayer","TP1","59.7500mm","42.7500mm","90","Testpoint double sided"
+"R5","WSLP25125L000FEA","TopLayer","FP-WSLP2512-0R005-0R0069-MFG","71.2500mm","30.0000mm","90","WSLP25125L000FEA Res Metal Strip 2512 0.005 Ohm 1% 3W ±110ppm/C Sulfur Resistant Pad SMD Automotive T/R"
+"U2","INA240A2PWR","TopLayer","FP-PW0008A-MFG","79.5000mm","30.0000mm","0","IC AMP CURRENT SENSE 8-TSSOP"
+"C2","100nF","TopLayer","IPC_C_C0402_NO_SILK","81.5400mm","27.2900mm","0",""
+"U1","LMV358AIDR","TopLayer","FP-D0008A-IPC_C","56.2500mm","39.9250mm","270","IC OPAMP GP 2 CIRCUIT 8SOIC
+C182039"
+"R4","2K","TopLayer","IPC_C_R0603_NO_SILK","58.0000mm","35.1750mm","0","Generic RES 0603"
+"R3","20K","TopLayer","IPC_C_R0603_NO_SILK","55.7500mm","34.6750mm","90","Generic RES 0603
+C136942"
+"R2","20K","TopLayer","IPC_C_R0603_NO_SILK","54.2500mm","34.6750mm","90","Generic RES 0603
+C136942"
+"R1","2K","TopLayer","IPC_C_R0603_NO_SILK","52.5000mm","39.9250mm","90","Generic RES 0603"
+"P1","61301621121","TopLayer","61301621121","85.5002mm","55.0001mm","90",""
+"C1","100nF","TopLayer","IPC_C_C0402_NO_SILK","59.7000mm","37.1750mm","90",""
+"XF1","3568","TopLayer","KSTN-3568_V","32.5000mm","33.5000mm","0","JLCPCB: 
+C19727305
+Fuse Holder, 20 A, 500 V, -50 to 145 degC, 4-Pin THD, RoHS"

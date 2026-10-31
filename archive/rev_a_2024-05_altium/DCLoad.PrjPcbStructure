@@ -1,0 +1,5 @@
+Record=TopLevelDocument|FileName=ElectronicLoad.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=ElectronicLoad.SchDoc|FileName=Microcontroller.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=ElectronicLoad.SchDoc|FileName=Peripherals.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=ElectronicLoad.SchDoc|FileName=PowerDistribution.SchDoc|SheetNumber=4
+Record=NoMainPathDocument|SourceDocument=ElectronicLoad.SchDoc|FileName=RemoteVsense.SchDoc|SheetNumber=5

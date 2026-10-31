@@ -1,0 +1,243 @@
+LTspice 26.0.2 for MacOS
+Circuit: /private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/03_loop_gain/03_loop_gain.net
+Start Time: Thu Oct 29 01:48:06 2026
+
+.step fet=1 ich=0.025 llead=1e-06
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 ich=0.025 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 ich=0.025 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 ich=0.025 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=1 ich=0.25 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 ich=0.25 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 ich=0.25 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 ich=0.25 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=1 ich=2.5 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 ich=2.5 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 ich=2.5 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 ich=2.5 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=1 ich=0.025 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 ich=0.025 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 ich=0.025 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 ich=0.025 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=1 ich=0.25 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 ich=0.25 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 ich=0.25 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 ich=0.25 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=1 ich=2.5 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 ich=2.5 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 ich=2.5 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 ich=2.5 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 5.983 seconds.
+
+Files loaded:
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/03_loop_gain/03_loop_gain.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/lib/fet_models.lib
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/lib/misc_models.lib
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/sub/LT1013.sub
+
+
+Measurement: fc
+  step	mag(V(src)/V(inj))=1
+     1	485.190811424
+     2	467.490964879
+     3	454.057907885
+     4	548.348619418
+     5	7793.05799648
+     6	6664.79153871
+     7	6083.02089643
+     8	12920.9024969
+     9	20173.4593488
+    10	16490.1251477
+    11	15459.4023941
+    12	32771.8460184
+    13	485.190859476
+    14	467.490996207
+    15	454.057957595
+    16	548.348878192
+    17	7795.83127981
+    18	6665.7756712
+    19	6084.63050075
+    20	12986.3724759
+    21	20335.2246688
+    22	16468.4699336
+    23	15514.4879525
+    24	34727.7566385
+
+Measurement: pm
+  step	V(src)/V(inj) 	at
+     1	(0dB,90.0058749372°)	485.190811424
+     2	(-9.64327466553e-16dB,90.0160616935°)	467.490964879
+     3	(0dB,90.0166700623°)	454.057907885
+     4	(1.92865493311e-15dB,89.9447764319°)	548.348619418
+     5	(0dB,89.3317313343°)	7793.05799648
+     6	(0dB,89.4862634107°)	6664.79153871
+     7	(0dB,89.6175599008°)	6083.02089643
+     8	(0dB,88.1051338869°)	12920.9024969
+     9	(0dB,88.4094994474°)	20173.4593488
+    10	(-9.64327466553e-16dB,88.6657792475°)	16490.1251477
+    11	(0dB,88.949627855°)	15459.4023941
+    12	(0dB,86.8811195619°)	32771.8460184
+    13	(0dB,90.0058749749°)	485.190859476
+    14	(0dB,90.0158970007°)	467.490996207
+    15	(0dB,90.0165959212°)	454.057957595
+    16	(-9.64327466553e-16dB,89.9445850212°)	548.348878192
+    17	(-9.64327466553e-16dB,89.3311217095°)	7795.83127981
+    18	(0dB,89.4112575167°)	6665.7756712
+    19	(0dB,89.5852684271°)	6084.63050075
+    20	(-9.64327466553e-16dB,87.9374231414°)	12986.3724759
+    21	(1.92865493311e-15dB,88.2966617489°)	20335.2246688
+    22	(-9.64327466553e-16dB,87.0292486922°)	16468.4699336
+    23	(0dB,88.1621442683°)	15514.4879525
+    24	(0dB,80.3052448906°)	34727.7566385
+
+Measurement: gm
+  step	V(src)/V(inj) 	at
+     1	(-58.2075906967dB,5.98656548635e-15°)	639521.28612
+     2	(-59.5357895553dB,9.18175400015e-15°)	731130.899258
+     3	(-62.4049778903dB,-1.27833023736e-15°)	959226.476613
+     4	(-56.4465293499dB,-2.05693587699e-15°)	411688.933489
+     5	(-32.4985307958dB,-7.98840751857e-15°)	599155.934627
+     6	(-35.1801631795dB,-1.54949940863e-15°)	693422.580666
+     7	(-35.6770353535dB,8.76777490127e-15°)	757943.967393
+     8	(-25.8123467268dB,2.18382294352e-15°)	368757.324234
+     9	(-22.2633076187dB,4.94398088123e-15°)	561678.874268
+    10	(-26.2451547751dB,1.19987811597e-14°)	658743.668831
+    11	(-24.2422918185dB,-8.9196046289e-15°)	607493.625965
+    12	(-13.1768774576dB,1.49105223782e-14°)	337539.470284
+    13	(-58.2746928128dB,-1.20662151673e-14°)	638879.705903
+    14	(-59.5884713484dB,1.03462581805e-14°)	730401.210661
+    15	(-62.505455981dB,6.22365182129e-16°)	955373.446738
+    16	(-56.5885647215dB,-6.27285165855e-15°)	411275.882137
+    17	(-33.4849107254dB,5.6223972426e-16°)	590486.773818
+    18	(-35.8657357309dB,5.97785370653e-15°)	685456.150775
+    19	(-37.1742228352dB,4.79984496305e-15°)	735593.158319
+    20	(-28.4593515763dB,6.96880578824e-15°)	364121.365127
+    21	(-24.8731936389dB,1.23899524757e-14°)	543712.963167
+    22	(-28.0086667504dB,1.26735574756e-14°)	646964.644374
+    23	(-27.8012113774dB,-6.45551517879e-15°)	583974.777119
+    24	(-20.6728104035dB,1.10548355726e-15°)	332121.359878

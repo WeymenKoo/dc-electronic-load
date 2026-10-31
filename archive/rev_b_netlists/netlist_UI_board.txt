@@ -1,0 +1,23 @@
+####  User_IO.SchDoc
+ ENC?     71dfb27d51b231a9f4bc421f01c8 PEC11L-4120K-S0020             ROTARY ENCODER MECHANICAL 20PPR
+ J?       4b6d22b45e2f925f038cba5d936f B16B-PHDSS(LF)(SN)             CONN HEADER VERT 16POS 2MM
+ J?       4b6d22b45e2f925f038cba5d936f B16B-PHDSS(LF)(SN)             CONN HEADER VERT 16POS 2MM
+ -- nets
+  [5V_Sel] J?.2(2) J?.4(4)
+  [GND] ENC?.3(MNT 1) ENC?.4(MNT 2) ENC?.C(COMMON)
+  [GND] J?.8(8)
+  [GND] J?.12(12)
+  [GND] J?.16(16)
+  [-] ENC?.B(CHANNEL B) J?.14(14)
+  [-] J?.7(7)
+  [-] J?.6(6)
+  [-] J?.11(11)
+  [-] J?.3(3)
+  [-] J?.15(15)
+  [-] J?.1(1)
+  [-] J?.5(5)
+  [-] ENC?.1(1)
+  [-] J?.9(9)
+  [-] ENC?.2(2)
+  [-] J?.13(13)
+  [-] ENC?.A(CHANNEL A) J?.10(10)

@@ -1,0 +1,99 @@
+LTspice 26.0.2 for MacOS
+Circuit: /private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/04_faults/04_faults.net
+Start Time: Thu Oct 29 01:48:06 2026
+
+.step fet=1
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 8.925 seconds.
+
+Files loaded:
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/04_faults/04_faults.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/lib/fet_models.lib
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/lib/misc_models.lib
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/sub/LT1013.sub
+
+
+Measurement: ipk_hotplug
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	8.12044811249	0.0002	0.001
+     2	8.12040328979	0.0002	0.001
+     3	8.12037658691	0.0002	0.001
+     4	8.12023258209	0.0002	0.001
+
+Measurement: i_during_dropout
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.000410134742499	0.0014
+     2	0.000410145296143	0.0014
+     3	0.000410178845956	0.0014
+     4	0.000410133101449	0.0014
+
+Measurement: ipk_recovery
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	8.12044811249	0.0015	0.0024
+     2	8.12040328979	0.0015	0.0024
+     3	8.12037658691	0.0015	0.0024
+     4	8.12023162842	0.0015	0.0024
+
+Measurement: i_rec_20us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.000670085178796	0.001521
+     2	0.000521958235508	0.001521
+     3	0.000286144997287	0.001521
+     4	0.00169175628707	0.001521
+
+Measurement: i_rec_100us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	7.70089917572	0.001601
+     2	7.24894326937	0.001601
+     3	7.02512093926	0.001601
+     4	6.88859061235	0.001601
+
+Measurement: epk_recovery_mj
+  step	INTEG(1000*V(DRAIN)*(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	22.5609918704	0.0015	0.0017
+     2	21.8858727167	0.0015	0.0017
+     3	21.6356398696	0.0015	0.0017
+     4	20.0441758441	0.0015	0.0017
+
+Measurement: t_otp_off
+  step	t_otp_off	FROM	TO
+     1	2.57327247662e-05	0.0025002	0.00252593272477
+     2	3.18528731703e-05	0.0025002	0.00253205287317
+     3	3.53468247353e-05	0.0025002	0.00253554682474
+     4	2.16501625149e-06	0.0025002	0.00250236501625
+
+Measurement: i_otp
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.00488476042262	0.0029
+     2	0.00600875309981	0.0029
+     3	0.00695347925644	0.0029
+     4	0.00255819328594	0.0029

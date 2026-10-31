@@ -1,0 +1,38 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Variant [[No Variations]] of Project [DCLoad.PrjPcb]
+   Generated File[DCLoad_Copper_Signal_Top.gbr]
+   Generated File[DCLoad_Copper_Signal_1.gbr]
+   Generated File[DCLoad_Copper_Signal_2.gbr]
+   Generated File[DCLoad_Copper_Signal_Bot.gbr]
+   Generated File[DCLoad_Pads_Bot.gbr]
+   Generated File[DCLoad_Pads_Top.gbr]
+   Generated File[DCLoad_Legend_Top.gbr]
+   Generated File[DCLoad_Legend_Bot.gbr]
+   Generated File[DCLoad_Soldermask_Top.gbr]
+   Generated File[DCLoad_Soldermask_Bot.gbr]
+   Generated File[DCLoad_Paste_Top.gbr]
+   Generated File[DCLoad_Paste_Bot.gbr]
+   Generated File[DCLoad_Mechanical_1.gbr]
+   Generated File[DCLoad_Top_3D_Body.gbr]
+   Generated File[DCLoad_Top_Courtyard.gbr]
+   Generated File[DCLoad_Top_Designator.gbr]
+   Generated File[DCLoad_Top_Assembly.gbr]
+   Generated File[DCLoad_Mechanical_7.gbr]
+   Generated File[DCLoad_Top_Component_Outline.gbr]
+   Generated File[DCLoad_Mechanical_13.gbr]
+   Generated File[DCLoad_Mechanical_15.gbr]
+   Generated File[DCLoad_Top_Component_Center.gbr]
+   Generated File[DCLoad_Profile.gbr]
+   Generated File[DCLoad_NPTH_Drill.gbr]
+   Generated File[DCLoad_PTH_Drill.gbr]
+   Generated File[DCLoad_Drawing_1.gbr]
+   Generated File[DCLoad_Drillmap_1.gbr]
+   Generated File[DCLoad.EXTREP]
+   Generated File[DCLoad.REP]
+
+
+Files Generated   : 29
+Documents Printed : 0
+
+Finished Output Generation At 1:00:07 AM On 5/24/2024

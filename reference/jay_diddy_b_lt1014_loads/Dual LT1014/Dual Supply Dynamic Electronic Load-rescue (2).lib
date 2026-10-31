@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# Dual_Banana_Socket-RESCUE-Dual_Supply_Dynamic_Electronic_Load
+#
+DEF Dual_Banana_Socket-RESCUE-Dual_Supply_Dynamic_Electronic_Load J 0 40 Y Y 1 F N
+F0 "J" 0 -200 60 H V C CNN
+F1 "Dual_Banana_Socket-RESCUE-Dual_Supply_Dynamic_Electronic_Load" 50 175 60 H V C CNN
+F2 "" -575 150 60 H I C CNN
+F3 "" -275 25 60 H I C CNN
+DRAW
+A -97 0 125 901 -901 0 1 30 N -97 125 -97 -125
+A 95 1 125 886 -886 0 1 30 N 98 126 98 -124
+C -100 0 50 0 1 0 N
+C -100 0 90 0 1 0 N
+C 100 0 50 0 1 0 N
+C 100 0 90 0 1 0 N
+P 2 0 1 24 -125 0 -75 0 N
+P 2 0 1 30 -100 -125 100 -125 N
+P 2 0 1 30 -100 125 100 125 N
+P 2 0 1 24 75 0 125 0 N
+P 2 0 1 24 100 25 100 -25 N
+X ~ 1 100 -250 118 U 50 50 1 1 I
+X ~ 2 -100 -250 118 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+#End Library

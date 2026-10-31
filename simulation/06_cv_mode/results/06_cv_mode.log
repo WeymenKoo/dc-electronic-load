@@ -1,0 +1,117 @@
+LTspice 26.0.2 for MacOS
+Circuit: /Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/06_cv_mode/06_cv_mode.net
+Start Time: Sat Oct 31 01:38:05 2026
+
+.step cx=1e-12 isrc=0.1
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cx=4.7e-05 isrc=0.1
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cx=1e-12 isrc=1
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cx=4.7e-05 isrc=1
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cx=1e-12 isrc=8
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step cx=4.7e-05 isrc=8
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 32.264 seconds.
+
+Files loaded:
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/06_cv_mode/06_cv_mode.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/lib/fet_models.lib
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/lib/misc_models.lib
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/sub/LT1013.sub
+
+
+Measurement: v_12v
+  step	V(DUT+) 	at
+     1	11.9722959476	0.059
+     2	12.10176956	0.059
+     3	11.9722880077	0.059
+     4	11.9722871924	0.059
+     5	11.9723033512	0.059
+     6	11.9723025636	0.059
+
+Measurement: vpp_12v
+  step	PP(V(DUT+) )	FROM	TO
+     1	0.00331783294678	0.05	0.059
+     2	7.33839713875	0.05	0.059
+     3	9.53674316406e-07	0.05	0.059
+     4	0.000126838684082	0.05	0.059
+     5	3.81469726562e-06	0.05	0.059
+     6	1.90734863281e-06	0.05	0.059
+
+Measurement: vpk_istep
+  step	MAX(V(DUT+) )	FROM	TO
+     1	14.2534828186	0.06	0.099
+     2	19.1300067902	0.06	0.099
+     3	13.6414270401	0.06	0.099
+     4	12.8011875153	0.06	0.099
+     5	18.1276359558	0.06	0.099
+     6	15.1210384369	0.06	0.099
+
+Measurement: v_after_istep
+  step	V(DUT+) 	at
+     1	11.9722390457	0.099
+     2	11.0995222585	0.099
+     3	11.9722890456	0.099
+     4	11.9722890854	0.099
+     5	11.9723074237	0.099
+     6	11.9723072052	0.099
+
+Measurement: v_10v
+  step	V(DUT+) 	at
+     1	9.97248935699	0.149
+     2	9.27843055243	0.149
+     3	9.97253894806	0.149
+     4	9.97253946631	0.149
+     5	9.97255774414	0.149
+     6	9.97255706787	0.149
+
+Measurement: vpp_10v
+  step	PP(V(DUT+) )	FROM	TO
+     1	9.53674316406e-07	0.14	0.149
+     2	1.73048058039	0.14	0.149
+     3	0	0.14	0.149
+     4	1.90734863281e-06	0.14	0.149
+     5	1.90734863281e-06	0.14	0.149
+     6	0	0.14	0.149
+
+Measurement: iload
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.109956312654	0.149
+     2	0.117883113269	0.149
+     3	1.09995962381	0.149
+     4	1.09997788422	0.149
+     5	8.79996377789	0.149
+     6	8.79995918274	0.149

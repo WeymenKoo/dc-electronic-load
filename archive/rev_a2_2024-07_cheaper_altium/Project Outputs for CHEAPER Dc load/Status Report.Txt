@@ -1,0 +1,10 @@
+Output: DC Load PCB STEP
+Type  : ExportSTEP
+From  : Variant [[No Variations]] of PCB Document [DCLoad.PcbDoc]
+   Generated File[DCLoad.step]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 3:56:10 PM On 7/29/2024

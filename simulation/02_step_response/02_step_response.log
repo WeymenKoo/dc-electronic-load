@@ -1,0 +1,210 @@
+LTspice 26.0.2 for MacOS
+Circuit: /Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/02_step_response/02_step_response.net
+Start Time: Thu Oct 29 02:13:08 2026
+
+.step fet=1 llead=1e-06
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=1 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=2 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=3 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+
+.step fet=4 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 4.870 seconds.
+
+Files loaded:
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/02_step_response/02_step_response.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/lib/fet_models.lib
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/lib/misc_models.lib
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/sub/LT1013.sub
+
+
+Measurement: t_rise_us
+  step	t_rise_us	FROM	TO
+     1	2.63768724564e-05	0.000107367059134	0.000133743931591
+     2	2.98238976435e-05	0.000108334418407	0.000138158316051
+     3	3.13857186618e-05	0.000108855028812	0.000140240747474
+     4	2.10144391726e-05	0.00010508831726	0.000126102756432
+     5	2.64545846491e-05	0.000107459559761	0.00013391414441
+     6	2.86224532682e-05	0.000108613358768	0.000137235812036
+     7	3.08810486542e-05	0.000109049366497	0.000139930415152
+     8	2.40621051683e-05	0.000105983004299	0.000130045109467
+
+Measurement: ipk_up
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	9.14459133148	0.0001	0.0004
+     2	9.14454269409	0.0001	0.0004
+     3	9.14451503754	0.0001	0.0004
+     4	9.14438056946	0.0001	0.0004
+     5	9.14459133148	0.0001	0.0004
+     6	9.14454269409	0.0001	0.0004
+     7	9.14451503754	0.0001	0.0004
+     8	9.14796161652	0.0001	0.0004
+
+Measurement: i_hi
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	9.14459133148	0.000395
+     2	9.14454269409	0.000395
+     3	9.14451503754	0.000395
+     4	9.14438056946	0.000395
+     5	9.14459133148	0.000395
+     6	9.14454269409	0.000395
+     7	9.14451503754	0.000395
+     8	9.14438056946	0.000395
+
+Measurement: i_lo
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.950831472874	9.5e-05
+     2	0.95081692934	9.5e-05
+     3	0.950806438923	9.5e-05
+     4	0.95055526495	9.5e-05
+     5	0.950831472874	9.5e-05
+     6	0.95081692934	9.5e-05
+     7	0.950806438923	9.5e-05
+     8	0.95055526495	9.5e-05
+
+Measurement: overshoot_pct
+  step	100*(Ipk_up-I_hi)/(I_hi-I_lo)
+     1	0
+     2	0
+     3	0
+     4	0
+     5	0
+     6	0
+     7	0
+     8	0.0437042153698
+
+Measurement: i_at_20us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	6.68979454041	0.000121
+     2	6.0999481678	0.000121
+     3	5.82796567672	0.000121
+     4	7.84197711945	0.000121
+     5	6.72859191895	0.000121
+     6	6.05113649368	0.000121
+     7	5.82536005974	0.000121
+     8	8.17090415955	0.000121
+
+Measurement: i_at_50us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	9.0138630867	0.000151
+     2	8.91111135483	0.000151
+     3	8.84911353811	0.000151
+     4	9.0941286087	0.000151
+     5	9.01192331314	0.000151
+     6	8.93607091904	0.000151
+     7	8.85881996155	0.000151
+     8	9.10278701782	0.000151
+
+Measurement: t_fall_us
+  step	t_fall_us	FROM	TO
+     1	2.35798514494e-05	0.000402526837282	0.000426106688731
+     2	2.6282849381e-05	0.000403085637714	0.000429368487095
+     3	2.79403204843e-05	0.000403065961226	0.00043100628171
+     4	1.70850421152e-05	0.000402539769028	0.000419624811143
+     5	2.32385768605e-05	0.000402883562633	0.000426122139493
+     6	2.52819227197e-05	0.000403473528371	0.000428755451091
+     7	2.71719242712e-05	0.000403578370265	0.000430750294536
+     8	1.51036686579e-05	0.000403173333671	0.000418277002328
+
+Measurement: imin_dn
+  step	MIN((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	0.950832724571	0.0004	0.0007
+     2	0.950826764107	0.0004	0.0007
+     3	0.950835347176	0.0004	0.0007
+     4	0.95055526495	0.0004	0.0007
+     5	0.950832724571	0.0004	0.0007
+     6	0.950826048851	0.0004	0.0007
+     7	0.950834691525	0.0004	0.0007
+     8	0.95055526495	0.0004	0.0007
+
+Measurement: undershoot_pct
+  step	100*(I_lo-Imin_dn)/(I_hi-I_lo)
+     1	-1.52762292511e-05
+     2	-0.000120028014975
+     3	-0.000352810358925
+     4	0
+     5	-1.52762292511e-05
+     6	-0.000111298704795
+     7	-0.000344808474496
+     8	0
+
+Measurement: ipk_small
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	1.97525787354	0.0007	0.001
+     2	1.97523760796	0.0007	0.001
+     3	1.97522342205	0.0007	0.001
+     4	1.9749943018	0.0007	0.001
+     5	1.97525787354	0.0007	0.001
+     6	1.97523760796	0.0007	0.001
+     7	1.97522342205	0.0007	0.001
+     8	1.9749943018	0.0007	0.001
+
+Measurement: i_small
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	1.97525787354	0.000995
+     2	1.97523760796	0.000995
+     3	1.97522342205	0.000995
+     4	1.9749943018	0.000995
+     5	1.97525787354	0.000995
+     6	1.97523760796	0.000995
+     7	1.97522342205	0.000995
+     8	1.9749943018	0.000995
+
+Measurement: small_overshoot_pct
+  step	100*(Ipk_small-I_small)/(I_small-I_lo)
+     1	0
+     2	0
+     3	0
+     4	0
+     5	0
+     6	0
+     7	0
+     8	0

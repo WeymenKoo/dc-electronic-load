@@ -1,0 +1,42 @@
+* ============================================================================
+* fet_models.lib  -  MOSFET candidates for the DC Load power stage (Rev C)
+* Source: verbatim copies of the VDMOS models shipped in LTspice 26.0.2
+*         lib/cmp/standard.mos (Analog Devices).  No third-party models.
+* ============================================================================
+* fet = 1  IRFP250N   Infineon/IR  200 V  TO-247  planar  RthJC 0.7 K/W  <- PRIMARY
+* fet = 2  IRFP240    Vishay       200 V  TO-247  planar  RthJC 0.83 K/W <- BACKUP A
+* fet = 3  IRF530     Vishay/IR    100 V  TO-220  planar  RthJC 1.7 K/W  <- part on the built Rev B board
+* fet = 4  IXTH88N30P IXYS         300 V  TO-247  large die (Ciss ~15 nF, high gm).
+*          Stand-in for the IXYS "L2" linear-rated parts (IXTH30N25L2 / IXTH110N10L2),
+*          which have no LTspice model: same vendor, similar die size -> worst case for
+*          loop stability.  Use it for STABILITY only, not for DC numbers.
+* ----------------------------------------------------------------------------
+.model IRFP250N VDMOS(Rg=1.44 Vto=4.0 Rd=47m Rs=0m Rb=5.6m Kp=13 Cgdmax=3.9n Cgdmin=0.10n Cgs=1.9n Cjo=1.25n Is=5p tt=186n ksubthres=.1 mfg=International_Rectifier Vds=200 Ron=75m Qg=123n)
+.model IRFP240 VDMOS(Rg=3 Vto=4 Rd=72m Rs=18m Rb=36m Kp=4.9 Lambda=.03 Cgdmax=1.34n Cgdmin=.1n Cgs=1.25n Cjo=1.25n Is=67p ksubthres=.1 mfg=International_Rectifier Vds=200 Ron=180m Qg=70n)
+.model IRF530 VDMOS(Rg=3 Vto=4 Rd=50m Rs=12m Rb=60m Kp=5 lambda=.01 Cgdmax=1n Cgdmin=.26n Cgs=.2n Cjo=.4n Is=52p ksubthres=.1 mfg=International_Rectifier Vds=100 Ron=160m Qg=26n)
+.model IXTH88N30P VDMOS(mtriode=.1 Rg=1 vto=5.4 Rd=17m Rs=12m Rb=2.5m Kp=650 Lambda=30m Cgdmin=50p Cgdmax=9n A=.4 Cgs=6.5n Cjo=12n M=0.6 VJ=0.7 Is=5p N=1 TT=0 ksubthres=.1 mfg=IXYS Vds=300 Ron=40m Qg=180n)
+* ----------------------------------------------------------------------------
+* FETSEL: one model whose parameters are picked by .param fet (1..4), so a single
+* schematic can .step through the candidates.  Checked numerically against the
+* four models above (see README, "model check").
+* ----------------------------------------------------------------------------
+* (each schematic sets .param fet=N or .step param fet list ...)
+.model FETSEL VDMOS(
++ Rg     = {table(fet, 1,1.44, 2,3,     3,3,     4,1)}
++ Vto    = {table(fet, 1,4.0,  2,4,     3,4,     4,5.4)}
++ Rd     = {table(fet, 1,47m,  2,72m,   3,50m,   4,17m)}
++ Rs     = {table(fet, 1,1u,   2,18m,   3,12m,   4,12m)}
++ Rb     = {table(fet, 1,5.6m, 2,36m,   3,60m,   4,2.5m)}
++ Kp     = {table(fet, 1,13,   2,4.9,   3,5,     4,650)}
++ Lambda = {table(fet, 1,0,    2,.03,   3,.01,   4,30m)}
++ Cgdmax = {table(fet, 1,3.9n, 2,1.34n, 3,1n,    4,9n)}
++ Cgdmin = {table(fet, 1,0.1n, 2,.1n,   3,.26n,  4,50p)}
++ Cgs    = {table(fet, 1,1.9n, 2,1.25n, 3,.2n,   4,6.5n)}
++ Cjo    = {table(fet, 1,1.25n,2,1.25n, 3,.4n,   4,12n)}
++ Is     = {table(fet, 1,5p,   2,67p,   3,52p,   4,5p)}
++ tt     = {table(fet, 1,186n, 2,0,     3,0,     4,0)}
++ mtriode= {table(fet, 1,1,    2,1,     3,1,     4,.1)}
++ A      = {table(fet, 1,1,    2,1,     3,1,     4,.4)}
++ M      = {table(fet, 1,.5,   2,.5,    3,.5,    4,.6)}
++ VJ     = {table(fet, 1,.75,  2,.75,   3,.75,   4,.7)}
++ ksubthres=.1 Vds=200 mfg=selector)

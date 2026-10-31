@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "dcload")(type "KiCad")(uri "${KIPRJMOD}/../libraries/footprints/dcload.pretty")(options "")(descr "DC Load project footprints"))
+)

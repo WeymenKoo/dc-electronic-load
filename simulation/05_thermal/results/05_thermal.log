@@ -1,0 +1,109 @@
+LTspice 26.0.2 for MacOS
+Circuit: /private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/05_thermal/05_thermal.net
+Start Time: Thu Oct 29 01:48:06 2026
+
+.step n=2 rsa=0.25
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=3 rsa=0.25
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=4 rsa=0.25
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=2 rsa=0.35
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=3 rsa=0.35
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=4 rsa=0.35
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=2 rsa=0.5
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=3 rsa=0.5
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=4 rsa=0.5
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=2 rsa=0.9
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=3 rsa=0.9
+Direct Newton iteration succeeded in finding operating point.
+
+.step n=4 rsa=0.9
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 0.562 seconds.
+
+Files loaded:
+/private/tmp/claude-501/-Users-kooweymen-Library-CloudStorage-GoogleDrive-kooweymen-gmail-com-Other-computers-MBA-1-Documents-Project-01-Hardware-DC-Load-Box/9bc8d2ec-99bb-436d-b434-b4dadb2cdbe4/scratchpad/pkg2/05_thermal/05_thermal.net
+
+
+Measurement: tj_1h
+  step	V(J1) 	at
+     1	157.5	3600
+     2	127.5	3600
+     3	112.5	3600
+     4	172.5	3600
+     5	142.5	3600
+     6	127.5	3600
+     7	194.999969482	3600
+     8	164.999969482	3600
+     9	149.999969482	3600
+    10	254.964782715	3600
+    11	224.964782715	3600
+    12	209.964782715	3600
+
+Measurement: tsink_1h
+  step	V(SINK) 	at
+     1	67.5	3600
+     2	67.5	3600
+     3	67.5	3600
+     4	82.5	3600
+     5	82.5	3600
+     6	82.5	3600
+     7	104.999977112	3600
+     8	104.999977112	3600
+     9	104.999977112	3600
+    10	164.964782715	3600
+    11	164.964782715	3600
+    12	164.964782715	3600
+
+Measurement: tcase_1h
+  step	V(CASE1) 	at
+     1	105	3600
+     2	92.5	3600
+     3	86.25	3600
+     4	120	3600
+     5	107.5	3600
+     6	101.25	3600
+     7	142.499969482	3600
+     8	129.999969482	3600
+     9	123.749977112	3600
+    10	202.464782715	3600
+    11	189.964782715	3600
+    12	183.714782715	3600
+
+Measurement: t_sink_90pct_s
+  step	V(SINK)=Ta+0.9*Ptot*Rsa
+     1	86.6455128883
+     2	86.6455128883
+     3	86.6455128883
+     4	254.675199821
+     5	254.675199821
+     6	254.675199821
+     7	447.938986113
+     8	447.938986113
+     9	447.938986113
+    10	923.070832122
+    11	923.070832122
+    12	923.070832122

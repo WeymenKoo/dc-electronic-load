@@ -1,0 +1,181 @@
+LTspice 26.0.2 for MacOS
+Circuit: /Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/01_dc_transfer/01_dc_transfer.net
+Start Time: Thu Oct 29 02:11:56 2026
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+.step vdut=1
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+.step vdut=2
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+.step vdut=12
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+.step vdut=48
+Total elapsed time: 1.315 seconds.
+
+Files loaded:
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/01_dc_transfer/01_dc_transfer.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/lib/fet_models.lib
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/DC Load Rev C/02_Simulation_LTspice/lib/misc_models.lib
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/sub/LT1013.sub
+
+
+Measurement: itot_fs
+  step	-I(Vdut) 	at
+     1	10.1687049866	4.096
+     2	10.1687345505	4.096
+     3	10.1687822342	4.096
+     4	10.1689529419	4.096
+
+Measurement: itot_1v
+  step	-I(Vdut) 	at
+     1	2.42740058899	1
+     2	2.42740535736	1
+     3	2.42745304108	1
+     4	2.42762470245	1
+
+Measurement: gain_a_per_v
+  step	(Itot_FS-Itot_1V)/3.096
+     1	2.50042131705
+     2	2.50042932594
+     3	2.50042932594
+     4	2.50042901791
+
+Measurement: ich1_fs
+  step	Id(M1) 	at
+     1	2.54217529297	4.096
+     2	2.54218149185	4.096
+     3	2.54218149185	4.096
+     4	2.54218149185	4.096
+
+Measurement: ich4_fs
+  step	Id(M4) 	at
+     1	2.54217529297	4.096
+     2	2.54218149185	4.096
+     3	2.54218149185	4.096
+     4	2.54218149185	4.096
+
+Measurement: isen_0
+  step	V(ISEN_ADC) 	at
+     1	0.121567152441	0
+     2	0.121567152441	0
+     3	0.121567152441	0
+     4	0.121567152441	0
+
+Measurement: isen_fs
+  step	V(ISEN_ADC) 	at
+     1	3.1643371582	4.096
+     2	3.16434454918	4.096
+     3	3.16434454918	4.096
+     4	3.16434454918	4.096
+
+Measurement: isen_err_pct_fs
+  step	100*((ISEN_FS-ISEN_0)/(0.3*0.997506) - Itot_FS)/Itot_FS
+     1	-0.00766562232713
+     2	-0.00771344984933
+     3	-0.00818233625738
+     4	-0.00986091354783
+
+Measurement: vsen
+  step	V(VSEN_ADC) 	at
+     1	0.129351526499	2
+     2	0.178357586265	2
+     3	0.668423652649	2
+     4	2.43266201019	2
+
+Measurement: vdutp
+  step	V(DUT+) 	at
+     1	0.896512925625	2
+     2	1.89651274681	2
+     3	11.8965120316	2
+     4	47.8965072632	2
+
+Measurement: vsen_ideal
+  step	1.05*(VDUTp*9791.67/209791.67 + 4.096*9523.8/479523.8)
+     1	0.129353369345
+     2	0.178360327827
+     3	0.668429965226
+     4	2.43268055237
+
+Measurement: vsen_err_mv
+  step	1000*(VSEN-VSEN_ideal)
+     1	-0.00184284618765
+     2	-0.00274156241564
+     3	-0.00631257730888
+     4	-0.0185421761367
+
+Measurement: vsen_err_pct_of_reading
+  step	100*(VSEN-VSEN_ideal)/(VSEN_ideal-0.08548)
+     1	-0.00420037534195
+     2	-0.0029517148354
+     3	-0.00108286777347
+     4	-0.000789969826737
+
+Measurement: ploss_fs
+  step	V(DRAIN)*(-I(Vdut)) 	at
+     1	7.48023873729	4.096
+     2	17.6489877621	4.096
+     3	119.336881955	4.096
+     4	485.421142733	4.096

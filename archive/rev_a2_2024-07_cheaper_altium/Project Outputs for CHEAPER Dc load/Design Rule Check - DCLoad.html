@@ -1,0 +1,456 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 9em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD22\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7/20/2024</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:34:51 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc" class="file"><acronym title="C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc">C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">36</td></tr>
+</table>
+</td>
+</table><a name="IDSOVLKTTF5WOUD3NBQF3ZYAC25IXQY3550N5WAZMMBFDNN5FNYILI"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4OM00LKP2MJAK0CP4SCYWPLS2HZ0CYX11004KFJHT3JR2LLUUHJM">Clearance Constraint (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0BQLL3LMJA1BDPEKA3KYFLPMXKGGN5QDD4OQTBPVXV4EWT3SL5YH">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA2ZQJIQ4F1DAFQ154FISOTFY3C0KWBS5LGQ3SIEC5NO3ZTYK0HQ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTLM0NRW0XL0QMSIYT0DYMCNO1HM1QHZRLIK1FFCMAIF4D0PRB5HN">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQPR3QFLXIQ1SBOQTLLF0W11QDBPJJD2GTC4AEXLGKUVEPWMF1A2C">Width Constraint (Min=0.127mm) (Max=25.4mm) (Preferred=0.305mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDLAHPOWT4CBSJXRCQ321FO1MXGCSTRGD23Z4IPG4G43VONC2DHJE">Power Plane Connect Rule(Direct Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGDQA54B3JMCCGYKHNFLAPBSF3OXE2IB3UYXWDULQ0FVXZMQI42KL">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYQCL2VWYGTR3KF3O3XRBQEIXBFLLJHXILP3JWB4Y1QPE4UW25TB">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYFAMTFT4RMUHPWS1VATPDWEMGGBDJKS3UDVZEMJ5JE0T4QYATYLE">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">15</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYZVSYIT0I3CRDRBOW5IN55PEKBPJB3QFINF0JAPM22ZI0D0PWCSB">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOVYVZEGEQFGXBYOWKESHJXAS0HZSOCBIE2RMGWBVPGT4IZW1NVWN">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMDLKG4UCMVU0PDIWFACH00V2PKWMRZXYQ0VQAVCWJKVK45YD0YL">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUY3QLG0B3UAYNZEMDHY3QJ1LOHHSKYOEME34I2EZFL11U10EMFIE">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3HHY1BV4FZCVOYPR3K3AKE52UKBB423XBBGRICPFP1QZ0MZAFLH">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">36</td>
+</tr>
+</table><br><a name="IDGDQA54B3JMCCGYKHNFLAPBSF3OXE2IB3UYXWDULQ0FVXZMQI42KL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6058.43mil|Location2.X=6185.664mil|Location1.Y=1235.595mil|Location2.Y=1362.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6058.43mil|Location2.X=6185.664mil|Location1.Y=1235.595mil|Location2.Y=1362.83mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-5(155.5mm,33mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6058.43mil|Location2.X=6185.664mil|Location1.Y=3834.021mil|Location2.Y=3961.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6058.43mil|Location2.X=6185.664mil|Location1.Y=3834.021mil|Location2.Y=3961.255mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-5(155.5mm,99mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2003.312mil|Location2.X=2130.546mil|Location1.Y=1235.595mil|Location2.Y=1362.83mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2003.312mil|Location2.X=2130.546mil|Location1.Y=1235.595mil|Location2.Y=1362.83mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-5(52.5mm,33mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2003.312mil|Location2.X=2130.546mil|Location1.Y=3834.021mil|Location2.Y=3961.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2003.312mil|Location2.X=2130.546mil|Location1.Y=3834.021mil|Location2.Y=3961.255mil|Absolute=True">Hole Size Constraint: (3.2mm &gt; 2.54mm) Pad Free-5(52.5mm,99mm) on Multi-Layer Actual Hole Size = 3.2mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2135.202mil|Location2.X=2274.247mil|Location1.Y=3316.304mil|Location2.Y=3455.349mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2135.202mil|Location2.X=2274.247mil|Location1.Y=3316.304mil|Location2.Y=3455.349mil|Absolute=True">Hole Size Constraint: (3.5mm &gt; 2.54mm) Pad J1-1(56mm,86mm) on Multi-Layer Actual Slot Hole Width = 3.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1908.824mil|Location2.X=2028.184mil|Location1.Y=3326.147mil|Location2.Y=3445.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1908.824mil|Location2.X=2028.184mil|Location1.Y=3326.147mil|Location2.Y=3445.507mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Pad J1-2(50mm,86mm) on Multi-Layer Actual Slot Hole Width = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2026.934mil|Location2.X=2146.294mil|Location1.Y=3141.107mil|Location2.Y=3260.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2026.934mil|Location2.X=2146.294mil|Location1.Y=3141.107mil|Location2.Y=3260.468mil|Absolute=True">Hole Size Constraint: (3mm &gt; 2.54mm) Pad J1-3(53mm,81.3mm) on Multi-Layer Actual Slot Hole Width = 3mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5807.721mil|Location2.X=5986.137mil|Location1.Y=1872.21mil|Location2.Y=2050.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5807.721mil|Location2.X=5986.137mil|Location1.Y=1872.21mil|Location2.Y=2050.625mil|Absolute=True">Hole Size Constraint: (4.5mm &gt; 2.54mm) Pad Q6-1(149.782mm,49.82mm) on Multi-Layer Actual Hole Size = 4.5mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5807.721mil|Location2.X=5986.137mil|Location1.Y=2155.674mil|Location2.Y=2334.09mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5807.721mil|Location2.X=5986.137mil|Location1.Y=2155.674mil|Location2.Y=2334.09mil|Absolute=True">Hole Size Constraint: (4.5mm &gt; 2.54mm) Pad Q6-2(149.782mm,57.02mm) on Multi-Layer Actual Hole Size = 4.5mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYFAMTFT4RMUHPWS1VATPDWEMGGBDJKS3UDVZEMJ5JE0T4QYATYLE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3033.8mil|Location2.X=3045.05mil|Location1.Y=2469.375mil|Location2.Y=2480.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3033.8mil|Location2.X=3045.05mil|Location1.Y=2469.375mil|Location2.Y=2480.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C10-1(77.978mm,63.565mm) on Top Layer And Pad C10-2(77.978mm,62.165mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4184.95mil|Location2.X=4196.2mil|Location1.Y=2270.832mil|Location2.Y=2282.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4184.95mil|Location2.X=4196.2mil|Location1.Y=2270.832mil|Location2.Y=2282.082mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C1-1(105.664mm,57.122mm) on Top Layer And Pad C1-2(105.664mm,58.522mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3443.8mil|Location2.X=3455.05mil|Location1.Y=2469.375mil|Location2.Y=2480.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3443.8mil|Location2.X=3455.05mil|Location1.Y=2469.375mil|Location2.Y=2480.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C11-1(88.392mm,63.565mm) on Top Layer And Pad C11-2(88.392mm,62.165mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2165.06mil|Location2.X=2176.31mil|Location1.Y=2471.225mil|Location2.Y=2482.475mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2165.06mil|Location2.X=2176.31mil|Location1.Y=2471.225mil|Location2.Y=2482.475mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C13-1(55.912mm,63.612mm) on Top Layer And Pad C13-2(55.912mm,62.212mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2725.06mil|Location2.X=2736.31mil|Location1.Y=2471.225mil|Location2.Y=2482.475mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2725.06mil|Location2.X=2736.31mil|Location1.Y=2471.225mil|Location2.Y=2482.475mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C14-1(70.136mm,63.612mm) on Top Layer And Pad C14-2(70.136mm,62.212mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3714.375mil|Location2.X=3725.625mil|Location1.Y=3620.257mil|Location2.Y=3631.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3714.375mil|Location2.X=3725.625mil|Location1.Y=3620.257mil|Location2.Y=3631.507mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C2-1(93.788mm,92.874mm) on Top Layer And Pad C2-2(95.188mm,92.874mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4794.375mil|Location2.X=4805.625mil|Location1.Y=3681.407mil|Location2.Y=3692.657mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4794.375mil|Location2.X=4805.625mil|Location1.Y=3681.407mil|Location2.Y=3692.657mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C3-1(122.62mm,92.874mm) on Top Layer And Pad C3-2(121.22mm,92.874mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3714.375mil|Location2.X=3725.625mil|Location1.Y=3020.257mil|Location2.Y=3031.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3714.375mil|Location2.X=3725.625mil|Location1.Y=3020.257mil|Location2.Y=3031.507mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C4-1(93.788mm,77.634mm) on Top Layer And Pad C4-2(95.188mm,77.634mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4794.375mil|Location2.X=4805.625mil|Location1.Y=3081.407mil|Location2.Y=3092.657mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4794.375mil|Location2.X=4805.625mil|Location1.Y=3081.407mil|Location2.Y=3092.657mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C5-1(122.62mm,77.634mm) on Top Layer And Pad C5-2(121.22mm,77.634mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3234.375mil|Location2.X=3245.625mil|Location1.Y=1784.95mil|Location2.Y=1796.2mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3234.375mil|Location2.X=3245.625mil|Location1.Y=1784.95mil|Location2.Y=1796.2mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C7-1(82.996mm,44.704mm) on Top Layer And Pad C7-2(81.596mm,44.704mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5305.186mil|Location2.X=5316.436mil|Location1.Y=2404.375mil|Location2.Y=2415.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5305.186mil|Location2.X=5316.436mil|Location1.Y=2404.375mil|Location2.Y=2415.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C9-1(134.118mm,60.514mm) on Top Layer And Pad C9-2(134.118mm,61.914mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.908mil|Location2.X=3761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.908mil|Location2.X=3761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.24mm &lt; 0.254mm) Between Pad R19-2(94.629mm,102.41mm) on Top Layer And Polygon Region (0 hole(s)) Top Solder [Top Solder] Mask Sliver [0.24mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4749.908mil|Location2.X=4761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4749.908mil|Location2.X=4761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.24mm &lt; 0.254mm) Between Pad R20-2(120.029mm,102.41mm) on Top Layer And Polygon Region (0 hole(s)) Top Solder [Top Solder] Mask Sliver [0.24mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2749.908mil|Location2.X=2761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2749.908mil|Location2.X=2761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.24mm &lt; 0.254mm) Between Pad R33-2(69.229mm,102.41mm) on Top Layer And Polygon Region (0 hole(s)) Top Solder [Top Solder] Mask Sliver [0.24mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5749.908mil|Location2.X=5761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5749.908mil|Location2.X=5761.158mil|Location1.Y=4062.153mil|Location2.Y=4073.403mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.24mm &lt; 0.254mm) Between Pad R34-2(145.429mm,102.41mm) on Top Layer And Polygon Region (0 hole(s)) Top Solder [Top Solder] Mask Sliver [0.24mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYZVSYIT0I3CRDRBOW5IN55PEKBPJB3QFINF0JAPM22ZI0D0PWCSB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4026.089mil|Location2.X=4037.339mil|Location1.Y=3525.832mil|Location2.Y=3537.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4026.089mil|Location2.X=4037.339mil|Location1.Y=3525.832mil|Location2.Y=3537.082mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Arc (102.031mm,89.699mm) on Top Overlay And Pad U2-1(103.676mm,89.699mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4286.089mil|Location2.X=4297.339mil|Location1.Y=2585.832mil|Location2.Y=2597.082mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4286.089mil|Location2.X=4297.339mil|Location1.Y=2585.832mil|Location2.Y=2597.082mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.25mm &lt; 0.254mm) Between Arc (108.635mm,65.823mm) on Top Overlay And Pad U1-1(110.28mm,65.823mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.25mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4917.905mil|Location2.X=4929.155mil|Location1.Y=2803.415mil|Location2.Y=2814.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4917.905mil|Location2.X=4929.155mil|Location1.Y=2803.415mil|Location2.Y=2814.665mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.101mm &lt; 0.254mm) Between Arc (125.616mm,71.374mm) on Top Overlay And Pad N9V-P$1(125.616mm,71.374mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.101mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5072.394mil|Location2.X=5083.644mil|Location1.Y=1933.415mil|Location2.Y=1944.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5072.394mil|Location2.X=5083.644mil|Location1.Y=1933.415mil|Location2.Y=1944.665mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.101mm &lt; 0.254mm) Between Arc (129.54mm,49.276mm) on Top Overlay And Pad P9V-P$1(129.54mm,49.276mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.101mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.394mil|Location2.X=3173.644mil|Location1.Y=1893.415mil|Location2.Y=1904.665mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3162.394mil|Location2.X=3173.644mil|Location1.Y=1893.415mil|Location2.Y=1904.665mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.101mm &lt; 0.254mm) Between Arc (81.026mm,48.26mm) on Top Overlay And Pad P5V-P$1(81.026mm,48.26mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.101mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3532.767mil|Location2.X=3544.017mil|Location1.Y=1893.789mil|Location2.Y=1905.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3532.767mil|Location2.X=3544.017mil|Location1.Y=1893.789mil|Location2.Y=1905.039mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.101mm &lt; 0.254mm) Between Arc (90.433mm,48.269mm) on Top Overlay And Pad 2V5-P$1(90.433mm,48.269mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.101mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3617.996mil|Location2.X=3629.246mil|Location1.Y=2706.305mil|Location2.Y=2717.555mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3617.996mil|Location2.X=3629.246mil|Location1.Y=2706.305mil|Location2.Y=2717.555mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Area Fill (91.34mm,68.483mm) (91.54mm,69.683mm) on Top Overlay And Pad D2-1(91.44mm,68.233mm) on Top Layer [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDOVYVZEGEQFGXBYOWKESHJXAS0HZSOCBIE2RMGWBVPGT4IZW1NVWN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.93mil|Location2.X=5723.597mil|Location1.Y=2414.277mil|Location2.Y=2421.944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5715.93mil|Location2.X=5723.597mil|Location1.Y=2414.277mil|Location2.Y=2421.944mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "+" (154.282mm,61.42mm) on Top Overlay And Track (145.337mm,45.165mm)(145.337mm,61.421mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5718.096mil|Location2.X=5725.762mil|Location1.Y=2414.316mil|Location2.Y=2421.983mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5718.096mil|Location2.X=5725.762mil|Location1.Y=2414.316mil|Location2.Y=2421.983mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "+" (154.282mm,61.42mm) on Top Overlay And Track (145.337mm,61.421mm)(154.227mm,61.421mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6068.096mil|Location2.X=6075.762mil|Location1.Y=2414.277mil|Location2.Y=2421.944mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6068.096mil|Location2.X=6075.762mil|Location1.Y=2414.277mil|Location2.Y=2421.944mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Text "+" (154.282mm,61.42mm) on Top Overlay And Track (154.227mm,45.165mm)(154.227mm,61.421mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUY3QLG0B3UAYNZEMDHY3QJ1LOHHSKYOEME34I2EZFL11U10EMFIE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1887.013mil|Location2.X=1908.263mil|Location1.Y=3178.376mil|Location2.Y=3219.286mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1887.013mil|Location2.X=1908.263mil|Location1.Y=3178.376mil|Location2.Y=3219.286mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.4mm &lt; 0.508mm) Between Board Edge And Track (48.5mm,81.5mm)(50.85mm,81.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1887.013mil|Location2.X=1908.263mil|Location1.Y=3532.707mil|Location2.Y=3573.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\koowe.LAPTOP-MJVFOJ8V\OneDrive\Documents\Project\DC Load Box\Cheaper DC load\CHEAPER Dc load\DCLoad.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1887.013mil|Location2.X=1908.263mil|Location1.Y=3532.707mil|Location2.Y=3573.617mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.4mm &lt; 0.508mm) Between Board Edge And Track (48.5mm,90.5mm)(56.7mm,90.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
