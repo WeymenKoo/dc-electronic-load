@@ -1,8 +1,8 @@
-# Firmware requirements: Rev D (STM32G0B1RET6)
+# Firmware requirements: Rev D (STM32G0B1CBT6, LQFP48)
 
 The Rev B bring-up firmware (`../archive/rev_b_2024-11_control_board_altium/DC Load Control Board Firmware/`) is an STM32F103 CubeIDE
 project with a DAC sweep and one ADC channel. Nothing of it carries over except the intent. Rev D firmware starts from a new
-STM32CubeIDE / CubeMX project for the STM32G0B1RET6 (crystal-less: HSI48 + CRS from USB SOF).
+STM32CubeIDE / CubeMX project for the STM32G0B1CBT6 (crystal-less: HSI48 + CRS from USB SOF).
 
 ## Must-haves (safety)
 
@@ -28,8 +28,8 @@ STM32CubeIDE / CubeMX project for the STM32G0B1RET6 (crystal-less: HSI48 + CRS f
 | ADS1118 | AIN0 ISEN, AIN1 VSEN, AIN2 V_NTC, AIN3 V_SET | single-ended, PGA ±4.096 V (AIN0 to AIN2) and ±0.256 V (AIN3), 860 SPS continuous, read the previous conversion while writing the next config. Also read the internal temperature sensor once a second |
 | SPI2 to the displays | PB13 SCK, PB15 MOSI, PB12 LOAD | 74AHCT125 level shift; two MAX7219 in a chain (32-bit frames, second device's data first); decode mode off, scan limit 7, intensity from the menu |
 | Encoder | PB4 / PB5 TIM3 encoder mode, PB3 push | 20 PPR, 4× decoding, RC filtered |
-| Buttons | PC0 ON/OFF, PC1 MODE, PC2 MENU | internal pull-ups, 20 ms debounce in software |
-| Fan | PC4 FAN_EN, PB9 TIM17_CH1 PWM 25 kHz (inverted), PB8 TIM16 input capture tach | FAN_EN also enables the boost |
+| Buttons | PD0 ON/OFF, PD1 MODE, PD2 MENU | internal pull-ups, 20 ms debounce in software |
+| Fan | PD3 FAN_EN, PB9 TIM17_CH1 PWM 25 kHz (inverted), PB8 TIM16 input capture tach | FAN_EN also enables the boost |
 | USB-C source detection | PA0 CC1, PA1 CC2 (ADC) | the connected CC line is the one above 0.2 V; 0.4 V default, 0.9 V 1.5 A, 1.7 V 3 A |
 | USB | PA11 DM, PA12 DP | CDC-ACM for SCPI; USBTMC class later (TinyUSB has one) for PyVISA `USB0::...::INSTR` |
 | Debug | PA9 / PA10 USART1 (J4), PC6 status LED, PB6 / PB7 I2C1 OLED (J5) | |

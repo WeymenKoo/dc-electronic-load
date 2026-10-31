@@ -396,7 +396,7 @@
       "default_line_thickness": 6.0,
       "default_text_size": 50.0,
       "field_names": [],
-      "hop_over_size_choice": 0,
+      "hop_over_size_choice": 1,
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
       "intersheets_ref_short": false,
@@ -430,7 +430,8 @@
       }
     ],
     "used_designators": "",
-    "variants": []
+    "variants": [],
+    "hop_over_display": true
   },
   "sheets": [
     [

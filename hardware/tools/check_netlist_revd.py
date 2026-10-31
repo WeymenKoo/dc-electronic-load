@@ -14,6 +14,11 @@ def kicad_nets(path):
     for net in ET.parse(path).getroot().find('nets'):
         for n in net.findall('node'):
             pins[(n.get('ref'), n.get('pin'))] = net.get('name')
+            fn = n.get('pinfunction')
+            if fn:
+                for part in fn.split('/'):                       # 'PA9/PA11' -> PA9 and PA11; 'VBAT_4' -> VBAT
+                    part = re.sub(r'_\d+$', '', part)
+                    pins.setdefault((n.get('ref'), '@' + part), net.get('name'))   # ('U4', '@PA5') by pin name; the real PA9 pin comes before the PA9/PA11 remap alias
     return pins
 
 
@@ -122,12 +127,12 @@ def main():
         return k.get((ref, pin), 'NONE:%s.%s' % (ref, pin))
     same = [
         # isolator channels: MCU -> side 1 -> side 2 -> DAC / ADC
-        (('U4', '22'), ('U8', '2'), 'SPI1_SCK to INA'), (('U8', '15'), ('U9', '3'), 'OUTA = DAC SCK'), (('U8', '15'), ('U10', '1'), 'OUTA = ADC SCLK'),
-        (('U4', '24'), ('U8', '3'), 'SPI1_MOSI to INB'), (('U8', '14'), ('U9', '4'), 'OUTB = DAC SDI'), (('U8', '14'), ('U10', '10'), 'OUTB = ADC DIN'),
-        (('U4', '21'), ('U8', '4'), '/CS_DAC to INC'), (('U8', '13'), ('U9', '2'), 'OUTC = DAC /CS'),
-        (('U4', '27'), ('U8', '5'), '/CS_ADC to IND'), (('U8', '12'), ('U10', '2'), 'OUTD = ADC /CS'),
-        (('U4', '28'), ('U8', '6'), 'LOAD_OFF to INE'), (('U8', '11'), ('D44', '2'), 'OUTE = LOAD_OFF_ISO into the OFF diode-OR'),
-        (('U10', '9'), ('U8', '10'), 'ADC DOUT to INF'), (('U8', '7'), ('U4', '23'), 'OUTF = SPI1_MISO'),
+        (('U4', '@PA5'), ('U8', '2'), 'SPI1_SCK to INA'), (('U8', '15'), ('U9', '3'), 'OUTA = DAC SCK'), (('U8', '15'), ('U10', '1'), 'OUTA = ADC SCLK'),
+        (('U4', '@PA7'), ('U8', '3'), 'SPI1_MOSI to INB'), (('U8', '14'), ('U9', '4'), 'OUTB = DAC SDI'), (('U8', '14'), ('U10', '10'), 'OUTB = ADC DIN'),
+        (('U4', '@PA4'), ('U8', '4'), '/CS_DAC to INC'), (('U8', '13'), ('U9', '2'), 'OUTC = DAC /CS'),
+        (('U4', '@PB0'), ('U8', '5'), '/CS_ADC to IND'), (('U8', '12'), ('U10', '2'), 'OUTD = ADC /CS'),
+        (('U4', '@PB1'), ('U8', '6'), 'LOAD_OFF to INE'), (('U8', '11'), ('D44', '2'), 'OUTE = LOAD_OFF_ISO into the OFF diode-OR'),
+        (('U10', '9'), ('U8', '10'), 'ADC DOUT to INF'), (('U8', '7'), ('U4', '@PA6'), 'OUTF = SPI1_MISO'),
         (('R21', '2'), ('U8', '4'), 'pull-up on /CS_DAC'), (('R22', '2'), ('U8', '5'), 'pull-up on /CS_ADC'), (('R23', '2'), ('U8', '6'), 'pull-up on LOAD_OFF'),
         # DAC / ADC analog connections
         (('U9', '8'), ('R31', '1'), 'DAC A = LOAD_CTRL into the 15k'), (('U9', '6'), ('R33', '1'), 'DAC B = CV_SET into the 1k'),
@@ -153,28 +158,28 @@ def main():
         (('R12', '1'), ('PS1', '4'), 'filter from the DC-DC output'), (('U3', '3'), ('PS1', '4'), 'LDO from the DC-DC output'), (('PS1', '3'), ('U3', '1'), 'DC-DC return = AGND'),
         (('PS1', '1'), ('J1', 'A4'), 'DC-DC input = VBUS'), (('PS1', '2'), ('J1', 'A1'), 'DC-DC input return = DGND'), (('U2', '5'), ('J1', 'A4'), 'boost from VBUS'),
         (('D3', '1'), ('Q1', '2'), 'boost output to P-FET source'), (('Q1', '3'), ('J2', '2'), 'P-FET drain to fan +12V'), (('J2', '1'), ('J1', 'A1'), 'fan return = DGND'),
-        (('U4', '25'), ('Q2', '1'), 'FAN_EN drives the level shifter'), (('U4', '25'), ('U2', '4'), 'FAN_EN also enables the boost'), (('Q2', '3'), ('Q1', '1'), 'level shifter to P gate'),
-        (('U4', '63'), ('Q3', '1'), 'FAN_PWM'), (('Q3', '3'), ('J2', '4'), 'open-drain to fan PWM pin'), (('U4', '62'), ('R10', '1'), 'FAN_TACH'), (('R10', '2'), ('J2', '3'), 'from fan tach'),
+        (('U4', '@PD3'), ('Q2', '1'), 'FAN_EN drives the level shifter'), (('U4', '@PD3'), ('U2', '4'), 'FAN_EN also enables the boost'), (('Q2', '3'), ('Q1', '1'), 'level shifter to P gate'),
+        (('U4', '@PB9'), ('Q3', '1'), 'FAN_PWM'), (('Q3', '3'), ('J2', '4'), 'open-drain to fan PWM pin'), (('U4', '@PB8'), ('R10', '1'), 'FAN_TACH'), (('R10', '2'), ('J2', '3'), 'from fan tach'),
         # USB
-        (('J1', 'A7'), ('D1', '1'), 'D- to ESD'), (('D1', '6'), ('U4', '43'), 'ESD to PA11 (DM)'), (('J1', 'A6'), ('D1', '3'), 'D+ to ESD'), (('D1', '4'), ('U4', '44'), 'ESD to PA12 (DP)'),
-        (('J1', 'A5'), ('R1', '1'), 'CC1 pull-down'), (('J1', 'A5'), ('U4', '17'), 'CC1 to PA0'), (('J1', 'B5'), ('U4', '18'), 'CC2 to PA1'),
-        (('U1', '1'), ('J1', 'A4'), 'LDO from VBUS'), (('U4', '8'), ('U1', '5'), 'MCU on +3V3'),
+        (('J1', 'A7'), ('D1', '1'), 'D- to ESD'), (('D1', '6'), ('U4', '@PA11'), 'ESD to PA11 (DM)'), (('J1', 'A6'), ('D1', '3'), 'D+ to ESD'), (('D1', '4'), ('U4', '@PA12'), 'ESD to PA12 (DP)'),
+        (('J1', 'A5'), ('R1', '1'), 'CC1 pull-down'), (('J1', 'A5'), ('U4', '@PA0'), 'CC1 to PA0'), (('J1', 'B5'), ('U4', '@PA1'), 'CC2 to PA1'),
+        (('U1', '1'), ('J1', 'A4'), 'LDO from VBUS'), (('U4', '@VDD'), ('U1', '5'), 'MCU on +3V3'),
         # display chain
-        (('U4', '35'), ('U7', '2'), 'SPI2_MOSI to buffer'), (('U7', '3'), ('U5', '1'), 'buffer to MAX1 DIN'), (('U5', '24'), ('U6', '1'), 'MAX1 DOUT to MAX2 DIN'),
-        (('U4', '33'), ('U7', '5'), 'SPI2_SCK to buffer'), (('U7', '6'), ('U5', '13'), 'CLK MAX1'), (('U7', '6'), ('U6', '13'), 'CLK MAX2'),
-        (('U4', '32'), ('U7', '9'), '/DISP_CS to buffer'), (('U7', '8'), ('U5', '12'), 'LOAD MAX1'), (('U7', '8'), ('U6', '12'), 'LOAD MAX2'),
+        (('U4', '@PB15'), ('U7', '2'), 'SPI2_MOSI to buffer'), (('U7', '3'), ('U5', '1'), 'buffer to MAX1 DIN'), (('U5', '24'), ('U6', '1'), 'MAX1 DOUT to MAX2 DIN'),
+        (('U4', '@PB13'), ('U7', '5'), 'SPI2_SCK to buffer'), (('U7', '6'), ('U5', '13'), 'CLK MAX1'), (('U7', '6'), ('U6', '13'), 'CLK MAX2'),
+        (('U4', '@PB12'), ('U7', '9'), '/DISP_CS to buffer'), (('U7', '8'), ('U5', '12'), 'LOAD MAX1'), (('U7', '8'), ('U6', '12'), 'LOAD MAX2'),
         (('DS1', '12'), ('U5', '2'), 'VOLTS digit 1 = DIG0'), (('DS1', '6'), ('U5', '7'), 'VOLTS digit 4 = DIG3'), (('DS2', '12'), ('U5', '3'), 'AMPS digit 1 = DIG4'),
         (('DS2', '6'), ('U5', '8'), 'AMPS digit 4 = DIG7'), (('DS3', '12'), ('U6', '2'), 'SET digit 1 = DIG0 of MAX2'), (('D5', '1'), ('U6', '3'), 'status LEDs on DIG4 of MAX2'),
         (('DS1', '11'), ('U5', '14'), 'seg a'), (('DS1', '3'), ('U5', '22'), 'seg DP'), (('DS3', '11'), ('U6', '14'), 'SET seg a'), (('D5', '2'), ('U6', '14'), 'LED CC anode = seg A'),
         (('D12', '2'), ('U6', '22'), 'LED REMOTE anode = seg DP'), (('U5', '19'), ('J1', 'A4'), 'MAX7219 on VBUS'), (('U7', '14'), ('J1', 'A4'), '74AHCT125 on VBUS'),
         (('R17', '1'), ('J1', 'A4'), 'ISET resistor to V+'),
         # front panel inputs
-        (('ENC1', 'A'), ('U4', '58'), 'encoder A to PB4'), (('ENC1', 'B'), ('U4', '59'), 'encoder B to PB5'), (('ENC1', 'S1'), ('U4', '57'), 'encoder push to PB3'),
-        (('R19', '2'), ('U4', '58'), 'pull-up on ENC_A'), (('C24', '1'), ('U4', '58'), 'filter on ENC_A'),
-        (('SW3', '1'), ('U4', '13'), 'ON/OFF to PC0'), (('SW4', '1'), ('U4', '14'), 'MODE to PC1'), (('SW5', '1'), ('U4', '15'), 'MENU to PC2'),
-        (('SW1', '1'), ('U4', '12'), 'reset button on NRST'), (('J3', '4'), ('U4', '12'), 'SWD NRST'), (('J3', '2'), ('U4', '45'), 'SWDIO'), (('J3', '3'), ('U4', '46'), 'SWCLK'),
-        (('SW2', '1'), ('U4', '46'), 'BOOT button on PA14'), (('J4', '2'), ('U4', '37'), 'UART TX'), (('J4', '3'), ('U4', '42'), 'UART RX'),
-        (('J5', '3'), ('U4', '60'), 'I2C SCL'), (('J5', '4'), ('U4', '61'), 'I2C SDA'), (('R16', '1'), ('U4', '36'), 'status LED on PC6'),
+        (('ENC1', 'A'), ('U4', '@PB4'), 'encoder A to PB4'), (('ENC1', 'B'), ('U4', '@PB5'), 'encoder B to PB5'), (('ENC1', 'S1'), ('U4', '@PB3'), 'encoder push to PB3'),
+        (('R19', '2'), ('U4', '@PB4'), 'pull-up on ENC_A'), (('C24', '1'), ('U4', '@PB4'), 'filter on ENC_A'),
+        (('SW3', '1'), ('U4', '@PD0'), 'ON/OFF to PC0'), (('SW4', '1'), ('U4', '@PD1'), 'MODE to PC1'), (('SW5', '1'), ('U4', '@PD2'), 'MENU to PC2'),
+        (('SW1', '1'), ('U4', '@PF2'), 'reset button on NRST'), (('J3', '4'), ('U4', '@PF2'), 'SWD NRST'), (('J3', '2'), ('U4', '@PA13'), 'SWDIO'), (('J3', '3'), ('U4', '@PA14'), 'SWCLK'),
+        (('SW2', '1'), ('U4', '@PA14'), 'BOOT button on PA14'), (('J4', '2'), ('U4', '@PA9'), 'UART TX'), (('J4', '3'), ('U4', '@PA10'), 'UART RX'),
+        (('J5', '3'), ('U4', '@PB6'), 'I2C SCL'), (('J5', '4'), ('U4', '@PB7'), 'I2C SDA'), (('R16', '1'), ('U4', '@PC6'), 'status LED on PC6'),
     ]
     for (r1, p1), (r2, p2), why in same:
         a, b = net(r1, p1), net(r2, p2)

@@ -7,12 +7,16 @@ The analog stage (per-MOSFET LT1014 loops, sense amplifiers, LM339 protection, h
 verified in LTspice (`../simulation`, decks 01 to 06). `hardware/tools/check_netlist_revd.py` proves, node by node, that the
 Rev D KiCad netlist is that simulated circuit. Everything digital is new in Rev D.
 
+Drawing conventions (A3, JetBrains Mono, block frames, no overlaps, 3-wire junctions, hop-overs, power tree) are listed in `../hardware/README.md`
+and enforced by the generator's lint pass.
+
 ## 1. Why Rev D (what was wrong with the Rev B control board + Rev C power board)
 
 | Problem | Rev D answer |
 |---|---|
 | No isolation: DUT minus was USB ground, so an earth-referenced DUT or a floating battery stack could push load current through the PC | ISO7761 digital isolator + 1 W isolated DC-DC. The whole analog stage floats on the DUT minus terminal |
 | Two USB-C ports (CH340 UART + a second one for DFU) and a 12 V barrel jack | One USB-C: power, USB CDC (SCPI), USB DFU in ROM. Fan 12 V is made on board by a boost converter |
+| STM32F103RET6 in LQFP64 | STM32G0B1CBT6 in LQFP48: USB DFU in ROM, crystal-less USB, cheaper and smaller. The F103 has no USB bootloader and needs a crystal, so it would have kept the second port |
 | REF5040 reference + trimmer + MCP4725 (DAC uses VDD as reference, EEPROM power-up value) | MCP4822 (internal reference, 0 V at power-up) and ADS1118 (internal 0.01 % reference). No precision reference, no trimmer |
 | STM32F103 12-bit ADC on an AMS1117 reference: ±2 % readback until calibrated | ADS1118, 16 bit, 7 ppm/K, 860 SPS, reads ISEN, VSEN, heatsink NTC and the live V_SET node |
 | Fan driver could never turn on (LM311 output had no pull-up); MCU could not read temperature; no /FAULT or /ENABLE line | MCU runs the fan from the ADC temperature; LOAD_OFF line through the isolator; hardware OTP/OVP/NTC-open stay independent of firmware |
@@ -41,7 +45,7 @@ Rev D KiCad netlist is that simulated circuit. Everything digital is new in Rev 
 ## 3. Architecture
 
 ```
-USB-C ──┬── VBUS 5 V ──┬── AP2112K ── +3V3 ── STM32G0B1RET6 ── SPI2 ── 74AHCT125 ── MAX7219 ×2 ── 3 × 4-digit 7-seg, 8 LEDs
+USB-C ──┬── VBUS 5 V ──┬── AP2112K ── +3V3 ── STM32G0B1CBT6 ── SPI2 ── 74AHCT125 ── MAX7219 ×2 ── 3 × 4-digit 7-seg, 8 LEDs
         │              │                          │   │  └── TIM3 encoder, 3 buttons, fan PWM/tach/enable, CC1/CC2 ADC
         │              ├── MT3608 boost ── +12V_FAN ── AO3401 switch ── 4-pin PWM fan
         │              └── B0512S-1WR3 ═══ barrier ═══ +12V_RAW ─┬─ 4.7 Ω / 22 µF ── +12V_ISO (op-amps, LM339, pull-ups)
@@ -175,5 +179,5 @@ PEC11L encoder on TIM3 with 10 k / 10 nF filters, push = digit select. Buttons: 
 
 ## 14. Cost estimate (single unit, distributor prices, excluding PCB, heatsink, fan, enclosure)
 
-LT1014 $9, 2 × LT1013 $7, 4 × IRFP250N $8, STM32G0B1RET6 $5, ISO7761 $4, ADS1118 $5, MCP4822 $3, DC-DC $2.5, 2 × MAX7219 $3 (clones) to $16 (genuine),
+LT1014 $9, 2 × LT1013 $7, 4 × IRFP250N $8, STM32G0B1CBT6 $3.5, ISO7761 $4, ADS1118 $5, MCP4822 $3, DC-DC $2.5, 2 × MAX7219 $3 (clones) to $16 (genuine),
 3 displays $3, USB-C and connectors $3, passives and the rest $12. **About $70 to $85.** Removed from Rev B/C: REF5040, trimmer, CH340, TPS5430, second USB-C, 16-pin cable.

@@ -2,8 +2,8 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "66314b6a-856c-59d5-a971-76692d7d524b")
-	(paper "A4")
+	(uuid "77b5ca7e-a50d-50a2-b890-1c7327d78c98")
+	(paper "A3")
 	(title_block
 		(title "Isolated interface: digital isolator, set-point DAC, readback ADC")
 		(date "2026-10-31")
@@ -2177,451 +2177,462 @@
 		)
 	)
 	(junction
-		(at 205.74 140.97)
+		(at 276.86 182.88)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b46eea1f-cd75-5af1-8b3b-bb1cb9656951")
+		(uuid "962a85a6-2e73-55d9-90b5-8ee8b5b1973e")
 	)
 	(wire
 		(pts
-			(xy 72.39 83.82)
-			(xy 60.96 83.82)
+			(xy 105.41 111.76)
+			(xy 93.98 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "007de9bc-5ebe-5403-97bd-413316c837d0")
+		(uuid "886998cf-6a50-5e21-993a-26d00e597905")
 	)
 	(wire
 		(pts
-			(xy 72.39 86.36)
-			(xy 60.96 86.36)
+			(xy 105.41 114.3)
+			(xy 93.98 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "293094d7-3fe5-5463-bad7-e841191e0fd9")
+		(uuid "aeadfe94-d676-5856-8e22-225de75e8aa9")
 	)
 	(wire
 		(pts
-			(xy 72.39 88.9)
-			(xy 60.96 88.9)
+			(xy 105.41 116.84)
+			(xy 93.98 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "3c49fac8-a593-57f0-b149-8d911107da45")
+		(uuid "8e36192b-3c0d-51a7-97c9-09c6b51cc2af")
 	)
 	(wire
 		(pts
-			(xy 72.39 91.44)
-			(xy 60.96 91.44)
+			(xy 105.41 119.38)
+			(xy 93.98 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "4fffc62f-bfc0-5689-9ee0-1e96d318779d")
+		(uuid "f94753d5-ef90-5406-a804-9060162b6bbc")
 	)
 	(wire
 		(pts
-			(xy 72.39 93.98)
-			(xy 60.96 93.98)
+			(xy 105.41 121.92)
+			(xy 93.98 121.92)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 220 110 0 1)
 		)
-		(uuid "00462a73-cb37-5d18-944f-9a88e279d93d")
+		(uuid "a892a425-3d7a-50ab-8700-9861ffa31ae2")
 	)
 	(wire
 		(pts
-			(xy 72.39 96.52)
-			(xy 60.96 96.52)
+			(xy 105.41 124.46)
+			(xy 93.98 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "c6ab2c60-169c-5326-8093-c4b923b14dca")
+		(uuid "f85fb966-928a-521f-9596-53e88b236f1b")
 	)
 	(wire
 		(pts
-			(xy 92.71 83.82)
-			(xy 102.87 83.82)
+			(xy 125.73 111.76)
+			(xy 135.89 111.76)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "c86acd11-6d12-520f-9cb4-1b8fda496a76")
+		(uuid "13a65d92-8bc5-501d-8ab4-b3742a5f6094")
 	)
 	(wire
 		(pts
-			(xy 92.71 86.36)
-			(xy 102.87 86.36)
+			(xy 125.73 114.3)
+			(xy 135.89 114.3)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "7001bf62-09c5-59a0-b3a0-7b03cbd0cf4e")
+		(uuid "e0165d00-2b2f-5901-a238-ca34caa0017a")
 	)
 	(wire
 		(pts
-			(xy 92.71 88.9)
-			(xy 102.87 88.9)
+			(xy 125.73 116.84)
+			(xy 135.89 116.84)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "663a6c79-c2e3-539a-841c-a7af1dec9f23")
+		(uuid "6fb3c96a-8a04-58c1-a5b8-84ec443810ac")
 	)
 	(wire
 		(pts
-			(xy 92.71 91.44)
-			(xy 102.87 91.44)
+			(xy 125.73 119.38)
+			(xy 135.89 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "8b0a47dd-e13b-58f1-bb6a-f2280ed43685")
+		(uuid "525f5f1e-e730-50a3-acf5-2c10e84542a5")
 	)
 	(wire
 		(pts
-			(xy 92.71 93.98)
-			(xy 102.87 93.98)
+			(xy 125.73 121.92)
+			(xy 135.89 121.92)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 220 110 0 1)
 		)
-		(uuid "f73460e4-ec6e-5de9-8f72-98b9158e86a7")
+		(uuid "6f223830-500d-583a-bc3f-a1657f7c0876")
 	)
 	(wire
 		(pts
-			(xy 92.71 96.52)
-			(xy 102.87 96.52)
+			(xy 125.73 124.46)
+			(xy 135.89 124.46)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "3882a8c0-060c-52e2-8d76-e9810e39554d")
+		(uuid "27c323b5-8706-5882-bde2-242538a021bd")
 	)
 	(wire
 		(pts
-			(xy 77.47 73.66)
-			(xy 77.47 68.58)
+			(xy 110.49 101.6)
+			(xy 110.49 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 190 0 0 1)
 		)
-		(uuid "a5678c41-ec09-5b24-a0fe-7ca82da0c205")
+		(uuid "86519f9f-e6de-5d8c-a22c-128ba1f5c726")
 	)
 	(wire
 		(pts
-			(xy 87.63 73.66)
-			(xy 87.63 68.58)
+			(xy 120.65 101.6)
+			(xy 120.65 96.52)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 190 0 0 1)
 		)
-		(uuid "bdd53daf-cf0f-599e-b394-4726788d63fc")
+		(uuid "8bc3b617-3015-5674-9348-e657e7b8ffa3")
 	)
 	(wire
 		(pts
-			(xy 128.27 105.41)
-			(xy 142.24 105.41)
+			(xy 161.29 135.89)
+			(xy 175.26 135.89)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "b7b434aa-86da-5e38-b365-04d6c1d96585")
+		(uuid "056891db-01d6-5544-b129-530ee4a76d9a")
 	)
 	(wire
 		(pts
-			(xy 24.13 52.07)
-			(xy 24.13 54.61)
+			(xy 57.15 80.01)
+			(xy 57.15 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a46648a7-4172-5f71-8fe3-3955d28705f9")
+		(uuid "d8f3c49c-e037-5846-98c8-cbe578963b37")
 	)
 	(wire
 		(pts
-			(xy 35.56 52.07)
-			(xy 35.56 54.61)
+			(xy 68.58 80.01)
+			(xy 68.58 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "2bb52466-5f8c-54fd-b6a2-5fa8b0bea14b")
+		(uuid "ee0f8b47-9198-5fb6-b147-c8c03454d305")
 	)
 	(wire
 		(pts
-			(xy 48.26 52.07)
-			(xy 48.26 54.61)
+			(xy 81.28 80.01)
+			(xy 81.28 82.55)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fe82a67f-9a2a-519e-96c9-49d3cd8a7c00")
+		(uuid "7c5690ae-bc93-5535-a7d8-8469c95ed559")
 	)
 	(wire
 		(pts
-			(xy 201.93 59.69)
-			(xy 194.31 59.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 110 0 180 1)
-		)
-		(uuid "81a34db8-0f80-505f-b411-ac886877ae30")
-	)
-	(wire
-		(pts
-			(xy 201.93 64.77)
-			(xy 194.31 64.77)
+			(xy 276.86 87.63)
+			(xy 269.24 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "8eab141c-c3fc-5c33-85fb-c8dcd0b728db")
+		(uuid "9369302e-9023-500d-8fe4-4b3cc4e5ebd9")
 	)
 	(wire
 		(pts
-			(xy 201.93 67.31)
-			(xy 194.31 67.31)
+			(xy 276.86 92.71)
+			(xy 269.24 92.71)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "f4327e83-3a96-5500-8b4e-4cdff49cc86b")
+		(uuid "433e457c-2339-58cf-bae3-4bec8aff53d7")
 	)
 	(wire
 		(pts
-			(xy 201.93 62.23)
-			(xy 181.61 62.23)
+			(xy 276.86 95.25)
+			(xy 269.24 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 110 0 180 1)
+		)
+		(uuid "600dce6d-135f-5998-a6aa-59e12e3009c8")
+	)
+	(wire
+		(pts
+			(xy 276.86 90.17)
+			(xy 255.27 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "718a156a-1896-5df8-b51b-9afb74647ac6")
+		(uuid "3bf4e0fc-994b-5bc6-aefa-524764e81885")
 	)
 	(wire
 		(pts
-			(xy 227.33 59.69)
-			(xy 238.76 59.69)
+			(xy 302.26 87.63)
+			(xy 313.69 87.63)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 170 0 170 1)
 		)
-		(uuid "9048382e-f897-52ce-a308-08e1262079e5")
+		(uuid "9db3022d-a3f8-593b-8451-92c95a6b50b9")
 	)
 	(wire
 		(pts
-			(xy 227.33 67.31)
-			(xy 238.76 67.31)
+			(xy 302.26 95.25)
+			(xy 313.69 95.25)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 170 0 170 1)
 		)
-		(uuid "829be0fb-4c21-562b-a090-1806bcdd5a15")
+		(uuid "81373261-bce0-5fb2-aa80-360721535d39")
 	)
 	(wire
 		(pts
-			(xy 214.63 52.07)
-			(xy 214.63 48.26)
+			(xy 289.56 80.01)
+			(xy 289.56 76.2)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 190 0 0 1)
 		)
-		(uuid "c9bfd769-c6c3-531e-b248-54172b2bd993")
+		(uuid "6d92ba6b-4e57-5203-b4b1-8fdf7c4c0286")
 	)
 	(wire
 		(pts
-			(xy 229.87 130.81)
-			(xy 237.49 130.81)
+			(xy 304.8 172.72)
+			(xy 312.42 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "454ef8eb-d7c8-583d-a6ef-706aeac509b7")
+		(uuid "f01c781e-b786-58d8-bdf4-33f33bdf0640")
 	)
 	(wire
 		(pts
-			(xy 229.87 133.35)
-			(xy 237.49 133.35)
+			(xy 304.8 175.26)
+			(xy 312.42 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "afae61bb-f085-505e-b9ae-ee63cf2bc704")
+		(uuid "1e0c3291-1c36-548c-a16f-4717fa51f0f0")
 	)
 	(wire
 		(pts
-			(xy 229.87 138.43)
-			(xy 237.49 138.43)
+			(xy 304.8 180.34)
+			(xy 312.42 180.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "f871b1b5-d623-5e70-a817-80d2bfe22088")
+		(uuid "acdad1a5-475a-5c6b-b3ba-326909776f84")
 	)
 	(wire
 		(pts
-			(xy 229.87 135.89)
-			(xy 237.49 135.89)
+			(xy 304.8 177.8)
+			(xy 312.42 177.8)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 110 0 180 1)
 		)
-		(uuid "e3e2e385-43cf-5f63-8e1a-51c67644a1fa")
+		(uuid "15b23c07-6b0f-59d5-b8f3-914962ec458b")
 	)
 	(wire
 		(pts
-			(xy 209.55 130.81)
-			(xy 195.58 130.81)
+			(xy 284.48 172.72)
+			(xy 270.51 172.72)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 0 80 200 1)
 		)
-		(uuid "8e16c960-186a-5815-84c1-b5813a614129")
+		(uuid "84337ec7-fc38-592f-84ca-47e6b59cd0ca")
 	)
 	(wire
 		(pts
-			(xy 209.55 133.35)
-			(xy 195.58 133.35)
+			(xy 284.48 175.26)
+			(xy 270.51 175.26)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 0 80 200 1)
 		)
-		(uuid "c8822456-f6b7-5e60-b67f-e1089a6b7964")
+		(uuid "7292e221-aff7-5d4b-9fb8-a47ef0509cf3")
 	)
 	(wire
 		(pts
-			(xy 209.55 138.43)
-			(xy 195.58 138.43)
+			(xy 284.48 180.34)
+			(xy 270.51 180.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 0 80 200 1)
 		)
-		(uuid "55a4ca83-74c9-5d57-b382-f6e6b182af4b")
+		(uuid "6d227643-9409-5231-9a59-b13af5f7648b")
 	)
 	(wire
 		(pts
-			(xy 209.55 140.97)
-			(xy 205.74 140.97)
+			(xy 284.48 182.88)
+			(xy 276.86 182.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "84eafaad-b7ba-559c-b1c3-4e196ef1cb4b")
+		(uuid "8cb36c0b-b740-5cea-a90d-9fb86eba795b")
 	)
 	(wire
 		(pts
-			(xy 198.12 140.97)
-			(xy 189.23 140.97)
+			(xy 276.86 182.88)
+			(xy 271.78 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27c86605-9da7-5a77-b3eb-6036cddef50e")
+	)
+	(wire
+		(pts
+			(xy 264.16 182.88)
+			(xy 256.54 182.88)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 170 0 170 1)
 		)
-		(uuid "cf0c20c8-19d0-5ac0-96c0-898a772985fb")
+		(uuid "542fa3fe-e3a6-5e74-8777-72c569ef6ade")
 	)
 	(wire
 		(pts
-			(xy 205.74 140.97)
-			(xy 205.74 143.51)
+			(xy 276.86 182.88)
+			(xy 276.86 186.69)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "41943901-d9be-5889-bd66-e080808b70b6")
+		(uuid "960023e0-2c77-5b23-a0ab-8d57559e2693")
 	)
 	(wire
 		(pts
-			(xy 219.71 123.19)
-			(xy 219.71 119.38)
+			(xy 294.64 165.1)
+			(xy 294.64 161.29)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 190 0 0 1)
 		)
-		(uuid "9ce1502f-cffb-523e-b293-31557781374b")
+		(uuid "3f5afabc-f997-5db0-a4ec-bf4f63306742")
 	)
 	(polyline
 		(pts
-			(xy 82.0 33.0)
-			(xy 82.0 116.0)
+			(xy 115.02 63.94)
+			(xy 115.02 151.94)
 		)
 		(stroke
 			(width 0.7)
 			(type dash)
 			(color 200 0 0 1)
 		)
-		(uuid "065cb952-321b-5826-a73b-6e9d71d51370")
+		(uuid "f0e782b4-87c9-55b1-b3e6-dce037542e9e")
 	)
 	(rectangle
-		(start 15 30)
-		(end 150 135)
+		(start 48.26 52.07)
+		(end 196.85 180.34)
 		(stroke
 			(width 0.25)
 			(type solid)
@@ -2631,11 +2642,11 @@
 			(type color)
 			(color 245 245 245 0.35)
 		)
-		(uuid "9cc6fb25-f130-58c5-b4d2-fb2c42de4aff")
+		(uuid "7638ff6b-f8e8-5616-a7ee-68ebd53da5eb")
 	)
 	(rectangle
-		(start 160 30)
-		(end 285 95)
+		(start 238.76 54.61)
+		(end 369.57 138.43)
 		(stroke
 			(width 0.25)
 			(type solid)
@@ -2645,11 +2656,11 @@
 			(type color)
 			(color 240 250 236 0.35)
 		)
-		(uuid "1216111e-94db-5524-8cbb-d974b6be59c3")
+		(uuid "66314b6a-856c-59d5-a971-76692d7d524b")
 	)
 	(rectangle
-		(start 160 102)
-		(end 285 170)
+		(start 238.76 143.51)
+		(end 372.11 233.68)
 		(stroke
 			(width 0.25)
 			(type solid)
@@ -2659,536 +2670,539 @@
 			(type color)
 			(color 240 250 236 0.35)
 		)
-		(uuid "fcef0ee0-3161-5aa6-bd42-28cc13c7ebcd")
+		(uuid "b46eea1f-cd75-5af1-8b3b-bb1cb9656951")
 	)
 	(text "Isolated interface: digital isolator, set-point DAC, readback ADC"
 		(exclude_from_sim no)
-		(at 12 18 0)
+		(at 18.0 22.0 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 4.0 4.0)
+				(face "JetBrains Mono")
+				(size 4.5 4.5)
 				(bold yes)
 				(color 0 40 90 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "49aa1a89-2b04-5100-8e70-30782fcd3604")
+		(uuid "007de9bc-5ebe-5403-97bd-413316c837d0")
 	)
 	(text "SPI crosses the barrier. The DAC and ADC carry their own references, so no precision reference or trimmer is needed."
 		(exclude_from_sim no)
-		(at 12 22.5 0)
+		(at 18.0 26.5 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.8 1.8)
+				(face "JetBrains Mono")
+				(size 2.0 2.0)
 				(italic yes)
 				(color 70 70 70 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "bd311f4a-58e3-5058-9ac7-0a4733fb9638")
-	)
-	(text "A   Digital isolator"
-		(exclude_from_sim no)
-		(at 16.5 33.4 0)
-		(effects
-			(font
-				(face "Arial")
-				(size 2.2 2.2)
-				(bold yes)
-				(color 0 50 120 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "5549d879-4e0a-52dc-b9a4-0d93e78fcd11")
+		(uuid "293094d7-3fe5-5463-bad7-e841191e0fd9")
 	)
 	(text "ISOLATION BARRIER"
 		(exclude_from_sim no)
-		(at 80.5 114 90)
+		(at 113.62 89.94 90)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.8 1.8)
+				(face "JetBrains Mono")
+				(size 2.0 2.0)
 				(bold yes)
 				(color 200 0 0 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "b5a42e12-5474-5762-91ff-9f1edc1bb479")
+		(uuid "3c49fac8-a593-57f0-b149-8d911107da45")
 	)
-	(text "Side 1 = MCU (3.3 V), side 2 = analog (5 V). Five channels go to the analog side, MISO comes back.\nISO7761 (no F suffix) outputs default HIGH when side 1 is unpowered or the input floats: chip selects stay\nde-asserted and LOAD_OFF_ISO is asserted, so the load is OFF until firmware says otherwise. R21-R23 give\nthe same guarantee while the MCU is in reset. Propagation delay 11 ns: keep SPI at or below 2 MHz."
+	(text "Side 1 = MCU (3.3 V), side 2 = analog (5 V). Five channels go to the\nanalog side, MISO comes back. ISO7761 (no F suffix) outputs default HIGH\nwhen side 1 is unpowered or an input floats: chip selects stay\nde-asserted and LOAD_OFF_ISO is asserted, so the load is OFF until\nfirmware says otherwise. R21-R23 give the same guarantee while the MCU\nis in reset. Propagation delay 11 ns: SPI at 2 MHz or less."
 		(exclude_from_sim no)
-		(at 18 128 0)
+		(at 57.02 173.94 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 2.0 2.0)
+				(color 40 40 40 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "894303a9-798c-542a-b83e-3ef0a80c8bcf")
+		(uuid "4fffc62f-bfc0-5689-9ee0-1e96d318779d")
+	)
+	(text "A   Digital isolator"
+		(exclude_from_sim no)
+		(at 50.26 55.67 0)
+		(effects
+			(font
+				(face "JetBrains Mono")
+				(size 2.5 2.5)
+				(bold yes)
+				(color 0 50 120 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "00462a73-cb37-5d18-944f-9a88e279d93d")
+	)
+	(text "12 bit, internal 2.048 V reference, gain 2: 0 - 4.095 V in 1 mV steps.\nA: LOAD_CTRL, 2.5 A per volt = 2.44 mA per LSB. B: CV_SET in VSEN volts.\nBoth outputs are 0 V after power-up (POR shutdown): no EEPROM surprise\nlike the MCP4725."
+		(exclude_from_sim no)
+		(at 245.02 131.94 0)
+		(effects
+			(font
+				(face "JetBrains Mono")
+				(size 2.0 2.0)
+				(color 40 40 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "c6ab2c60-169c-5326-8093-c4b923b14dca")
 	)
 	(text "B   Set-point DAC: A = current ceiling, B = CV voltage"
 		(exclude_from_sim no)
-		(at 161.5 33.4 0)
+		(at 240.76 58.21 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 2.2 2.2)
+				(face "JetBrains Mono")
+				(size 2.5 2.5)
 				(bold yes)
 				(color 0 50 120 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "f65795b3-c86f-583e-8a44-7f98f16b417c")
+		(uuid "c86acd11-6d12-520f-9cb4-1b8fda496a76")
 	)
-	(text "12 bit, internal 2.048 V reference, gain 2: 0 - 4.095 V in 1 mV steps.\nA: LOAD_CTRL, 2.5 A per volt = 2.44 mA per LSB. B: CV_SET in VSEN volts.\nBoth outputs are 0 V after power-up (POR shutdown): no EEPROM surprise like the MCP4725."
+	(text "AIN0 ISEN (0.30 V/A), AIN1 VSEN (0.049 V/V), AIN2 heatsink NTC, AIN3 the\nlive V_SET node (PGA +-256 mV): shows what the loops really get after OTP,\nOFF, KILL or CV pull it down. Internal reference 0.01 %, 7 ppm/K, 860 SPS,\nplus a die temperature sensor."
 		(exclude_from_sim no)
-		(at 163 92 0)
+		(at 245.02 227.94 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 2.0 2.0)
+				(color 40 40 40 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "0a02cff1-29b1-5014-901e-b47737b35fff")
+		(uuid "7001bf62-09c5-59a0-b3a0-7b03cbd0cf4e")
 	)
 	(text "C   Readback ADC: 16 bit, 4 channels"
 		(exclude_from_sim no)
-		(at 161.5 105.4 0)
+		(at 240.76 147.11 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 2.2 2.2)
+				(face "JetBrains Mono")
+				(size 2.5 2.5)
 				(bold yes)
 				(color 0 50 120 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "8f877bf7-299c-5101-8a1e-19e6c66830eb")
-	)
-	(text "AIN0 ISEN (0.30 V/A), AIN1 VSEN (0.049 V/V), AIN2 heatsink NTC, AIN3 the live V_SET node\n(PGA +-256 mV): shows what the loop really gets after OTP, OFF, KILL or CV pull it down.\nInternal reference 0.01 %, 7 ppm/K, 860 SPS, plus a die temperature sensor."
-		(exclude_from_sim no)
-		(at 163 167 0)
-		(effects
-			(font
-				(face "Arial")
-				(size 1.5 1.5)
-			)
-			(justify left bottom)
-		)
-		(uuid "538ef7c4-b1e2-55d9-bc7d-df5d0a169e33")
+		(uuid "663a6c79-c2e3-539a-841c-a7af1dec9f23")
 	)
 	(hierarchical_label "SPI1_SCK"
 		(shape input)
-		(at 60.96 83.82 180)
+		(at 93.98 111.76 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "1b9198c1-55ed-59cd-a76d-decad9cfdf19")
+		(uuid "8b0a47dd-e13b-58f1-bb6a-f2280ed43685")
 	)
 	(hierarchical_label "SPI1_MOSI"
 		(shape input)
-		(at 60.96 86.36 180)
+		(at 93.98 114.3 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "9e83e87c-0c9d-5d4e-ba1b-7bb33cfc39f3")
+		(uuid "f73460e4-ec6e-5de9-8f72-98b9158e86a7")
 	)
 	(hierarchical_label "~{CS_DAC}"
 		(shape input)
-		(at 60.96 88.9 180)
+		(at 93.98 116.84 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "2b80ccae-021b-50cd-8a05-bc40aa4bbd12")
+		(uuid "3882a8c0-060c-52e2-8d76-e9810e39554d")
 	)
 	(hierarchical_label "~{CS_ADC}"
 		(shape input)
-		(at 60.96 91.44 180)
+		(at 93.98 119.38 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "d379894a-5d95-50d1-b5fc-c462cc9abf36")
+		(uuid "a5678c41-ec09-5b24-a0fe-7ca82da0c205")
 	)
 	(hierarchical_label "LOAD_OFF"
 		(shape input)
-		(at 60.96 93.98 180)
+		(at 93.98 121.92 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 220 110 0 1)
 			)
 			(justify right)
 		)
-		(uuid "1da80781-2ab1-58f7-b23b-0bd6cdfd1df7")
+		(uuid "bdd53daf-cf0f-599e-b394-4726788d63fc")
 	)
 	(hierarchical_label "SPI1_MISO"
 		(shape output)
-		(at 60.96 96.52 180)
+		(at 93.98 124.46 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "47c099f9-5fcc-5a41-b441-719fce82435e")
+		(uuid "b7b434aa-86da-5e38-b365-04d6c1d96585")
 	)
 	(label "SCK_ISO"
-		(at 102.87 83.82 0)
+		(at 135.89 111.76 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "d4dac5d9-0d8d-5f00-aa71-57df1fc2aa2d")
+		(uuid "a46648a7-4172-5f71-8fe3-3955d28705f9")
 	)
 	(label "MOSI_ISO"
-		(at 102.87 86.36 0)
+		(at 135.89 114.3 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "c92508ba-dbca-5eab-9486-8f11bc8e7a85")
+		(uuid "2bb52466-5f8c-54fd-b6a2-5fa8b0bea14b")
 	)
 	(label "~{CS_DAC}_ISO"
-		(at 102.87 88.9 0)
+		(at 135.89 116.84 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "9969a030-58e7-5093-bd00-b58f201ba818")
+		(uuid "fe82a67f-9a2a-519e-96c9-49d3cd8a7c00")
 	)
 	(label "~{CS_ADC}_ISO"
-		(at 102.87 91.44 0)
+		(at 135.89 119.38 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "090c7f7a-d436-5dba-ac18-c45653845d6c")
+		(uuid "81a34db8-0f80-505f-b411-ac886877ae30")
 	)
 	(label "LOAD_OFF_ISO"
-		(at 102.87 93.98 0)
+		(at 135.89 121.92 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 220 110 0 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "038d3835-97db-5330-a8d8-4049c23fb9a5")
+		(uuid "8eab141c-c3fc-5c33-85fb-c8dcd0b728db")
 	)
 	(label "MISO_ISO"
-		(at 102.87 96.52 0)
+		(at 135.89 124.46 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "40d3da6b-8c35-5117-a4d7-5cd7665bb555")
+		(uuid "f4327e83-3a96-5500-8b4e-4cdff49cc86b")
 	)
 	(hierarchical_label "LOAD_OFF_ISO"
 		(shape output)
-		(at 142.24 105.41 0)
+		(at 175.26 135.89 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 220 110 0 1)
 			)
 			(justify left)
 		)
-		(uuid "523f4ca2-b0d3-53a8-b52f-f2c122260d65")
+		(uuid "718a156a-1896-5df8-b51b-9afb74647ac6")
 	)
 	(label "LOAD_OFF_ISO"
-		(at 128.27 105.41 180)
+		(at 161.29 135.89 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 220 110 0 1)
 			)
 			(justify right bottom)
 		)
-		(uuid "2ca25ded-53a6-54d6-bd03-2f38466f555f")
+		(uuid "9048382e-f897-52ce-a308-08e1262079e5")
 	)
 	(hierarchical_label "~{CS_DAC}"
 		(shape passive)
-		(at 24.13 54.61 270)
+		(at 57.15 82.55 270)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "1e272ed9-4147-5946-a0c8-6258855d3c79")
+		(uuid "829be0fb-4c21-562b-a090-1806bcdd5a15")
 	)
 	(hierarchical_label "~{CS_ADC}"
 		(shape passive)
-		(at 35.56 54.61 270)
+		(at 68.58 82.55 270)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right)
 		)
-		(uuid "a09dedcd-5996-590c-9c41-710a04baba99")
+		(uuid "c9bfd769-c6c3-531e-b248-54172b2bd993")
 	)
 	(hierarchical_label "LOAD_OFF"
 		(shape passive)
-		(at 48.26 54.61 270)
+		(at 81.28 82.55 270)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 220 110 0 1)
 			)
 			(justify right)
 		)
-		(uuid "83896a00-feb0-5123-9267-20d3f573b2fa")
+		(uuid "454ef8eb-d7c8-583d-a6ef-706aeac509b7")
 	)
 	(label "SCK_ISO"
-		(at 194.31 59.69 180)
+		(at 269.24 87.63 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right bottom)
 		)
-		(uuid "f3601126-5211-5c3b-9f1f-cce891649c88")
+		(uuid "afae61bb-f085-505e-b9ae-ee63cf2bc704")
 	)
 	(label "MOSI_ISO"
-		(at 194.31 64.77 180)
+		(at 269.24 92.71 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right bottom)
 		)
-		(uuid "41898c3d-88b8-50a1-b236-87bcc5f32db5")
+		(uuid "f871b1b5-d623-5e70-a817-80d2bfe22088")
 	)
 	(label "~{CS_DAC}_ISO"
-		(at 194.31 67.31 180)
+		(at 269.24 95.25 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify right bottom)
 		)
-		(uuid "dd33b5bd-59bd-5d52-b191-355c6ba09f56")
+		(uuid "e3e2e385-43cf-5f63-8e1a-51c67644a1fa")
 	)
 	(hierarchical_label "LOAD_CTRL"
 		(shape output)
-		(at 238.76 59.69 0)
+		(at 313.69 87.63 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 170 0 170 1)
 			)
 			(justify left)
 		)
-		(uuid "8f3f31e7-4a2d-5ce7-9b44-c81e895e79f0")
+		(uuid "8e16c960-186a-5815-84c1-b5813a614129")
 	)
 	(hierarchical_label "CV_SET"
 		(shape output)
-		(at 238.76 67.31 0)
+		(at 313.69 95.25 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 170 0 170 1)
 			)
 			(justify left)
 		)
-		(uuid "46435498-2f41-5b65-818a-8a781a98c147")
+		(uuid "c8822456-f6b7-5e60-b67f-e1089a6b7964")
 	)
 	(label "SCK_ISO"
-		(at 237.49 130.81 0)
+		(at 312.42 172.72 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "b31e5654-2025-57f2-88d0-bd50b93cc153")
+		(uuid "55a4ca83-74c9-5d57-b382-f6e6b182af4b")
 	)
 	(label "MOSI_ISO"
-		(at 237.49 133.35 0)
+		(at 312.42 175.26 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "37db24bb-21d8-5aca-ae91-73c09097a9f7")
+		(uuid "84eafaad-b7ba-559c-b1c3-4e196ef1cb4b")
 	)
 	(label "~{CS_ADC}_ISO"
-		(at 237.49 138.43 0)
+		(at 312.42 180.34 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "84c01b91-e1e3-54b2-9a1c-cff5efc1984b")
+		(uuid "cf0c20c8-19d0-5ac0-96c0-898a772985fb")
 	)
 	(label "MISO_ISO"
-		(at 237.49 135.89 0)
+		(at 312.42 177.8 0)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 110 0 180 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "09b64d14-c7f3-5b6e-aaa0-a0f12a9d0545")
+		(uuid "41943901-d9be-5889-bd66-e080808b70b6")
 	)
 	(hierarchical_label "ISEN_ADC"
 		(shape input)
-		(at 195.58 130.81 180)
+		(at 270.51 172.72 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 0 80 200 1)
 			)
 			(justify right)
 		)
-		(uuid "d405cfdd-2340-55f4-ba6d-c2b1fd590d63")
+		(uuid "9ce1502f-cffb-523e-b293-31557781374b")
 	)
 	(hierarchical_label "VSEN_ADC"
 		(shape input)
-		(at 195.58 133.35 180)
+		(at 270.51 175.26 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 0 80 200 1)
 			)
 			(justify right)
 		)
-		(uuid "9d95efb1-029c-5314-b1e0-63429afdbe98")
+		(uuid "065cb952-321b-5826-a73b-6e9d71d51370")
 	)
 	(hierarchical_label "TEMP_MON"
 		(shape input)
-		(at 195.58 138.43 180)
+		(at 270.51 180.34 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 0 80 200 1)
 			)
 			(justify right)
 		)
-		(uuid "c06b1733-9ce6-563e-b65d-13c7f1a52fe5")
+		(uuid "9cc6fb25-f130-58c5-b4d2-fb2c42de4aff")
 	)
 	(hierarchical_label "VSET"
 		(shape input)
-		(at 189.23 140.97 180)
+		(at 256.54 182.88 180)
 		(effects
 			(font
-				(face "Arial")
-				(size 1.5 1.5)
+				(face "JetBrains Mono")
+				(size 1.4 1.4)
 				(color 170 0 170 1)
 			)
 			(justify right)
 		)
-		(uuid "7e223041-4ed6-5584-a9b7-8c3b5e5aa231")
+		(uuid "1216111e-94db-5524-8cbb-d974b6be59c3")
 	)
 	(symbol
 		(lib_id "Isolator:ISO7761DW")
-		(at 82.55 91.44 0)
+		(at 115.57 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0a7486ca-cb1c-5d60-9c8b-6ddc4bf721d6")
+		(uuid "fcef0ee0-3161-5aa6-bd42-28cc13c7ebcd")
 		(property "Reference" "U8"
-			(at 82.0 67.0 0)
+			(at 115.02 94.94 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Value" "ISO7761DW"
-			(at 82.0 117.0 0)
+			(at 115.02 144.94 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm"
-			(at 82.55 91.44 0)
+			(at 115.57 119.38 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3196,10 +3210,10 @@
 			)
 		)
 		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/iso7763.pdf"
-			(at 82.55 91.44 0)
+			(at 115.57 119.38 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3207,10 +3221,10 @@
 			)
 		)
 		(property "Description" "Default high, High-speed, robust EMC, reinforced, six-channel, digital, isolator, SOIC-16"
-			(at 82.55 91.44 0)
+			(at 115.57 119.38 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3218,10 +3232,10 @@
 			)
 		)
 		(property "MPN" "ISO7761DW (default-high outputs)"
-			(at 82.55 91.44 0)
+			(at 115.57 119.38 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3229,52 +3243,52 @@
 			)
 		)
 		(pin "1"
-			(uuid "81895b9a-93fe-5228-a2c7-3e3ce154c1ad")
+			(uuid "49aa1a89-2b04-5100-8e70-30782fcd3604")
 		)
 		(pin "10"
-			(uuid "b7b62558-9352-5872-9fd4-88dfd23a3daa")
+			(uuid "bd311f4a-58e3-5058-9ac7-0a4733fb9638")
 		)
 		(pin "11"
-			(uuid "dc7f4a53-77f3-5361-83da-c025955ffefa")
+			(uuid "5549d879-4e0a-52dc-b9a4-0d93e78fcd11")
 		)
 		(pin "12"
-			(uuid "9aa7a7fc-ec65-5988-aeae-cdef701880f0")
+			(uuid "b5a42e12-5474-5762-91ff-9f1edc1bb479")
 		)
 		(pin "13"
-			(uuid "3a6572d6-01da-5e73-ac26-9f4eaad5ff7e")
+			(uuid "894303a9-798c-542a-b83e-3ef0a80c8bcf")
 		)
 		(pin "14"
-			(uuid "1acbdedb-1c86-5942-8478-89efc08cc33d")
+			(uuid "f65795b3-c86f-583e-8a44-7f98f16b417c")
 		)
 		(pin "15"
-			(uuid "6893f484-bcb1-5f43-b8d8-c26bf638fbff")
+			(uuid "0a02cff1-29b1-5014-901e-b47737b35fff")
 		)
 		(pin "16"
-			(uuid "8973792d-21f6-5d1f-bad3-2dab35b93860")
+			(uuid "8f877bf7-299c-5101-8a1e-19e6c66830eb")
 		)
 		(pin "2"
-			(uuid "f74e3299-2684-5cb6-b696-b7a4a50a0bcf")
+			(uuid "538ef7c4-b1e2-55d9-bc7d-df5d0a169e33")
 		)
 		(pin "3"
-			(uuid "d47424d5-204b-5c0e-af4d-9ad42a6ed69e")
+			(uuid "1b9198c1-55ed-59cd-a76d-decad9cfdf19")
 		)
 		(pin "4"
-			(uuid "beedb65d-5a6e-5d6d-8767-ec97fc9b0d11")
+			(uuid "9e83e87c-0c9d-5d4e-ba1b-7bb33cfc39f3")
 		)
 		(pin "5"
-			(uuid "45183b41-6338-569c-a13b-d53eeee6244d")
+			(uuid "2b80ccae-021b-50cd-8a05-bc40aa4bbd12")
 		)
 		(pin "6"
-			(uuid "5733baa2-640c-54bd-8236-0b947fa3db78")
+			(uuid "d379894a-5d95-50d1-b5fc-c462cc9abf36")
 		)
 		(pin "7"
-			(uuid "84ba9ba7-2551-5ff8-b78e-2b004170c366")
+			(uuid "1da80781-2ab1-58f7-b23b-0bd6cdfd1df7")
 		)
 		(pin "8"
-			(uuid "571f1332-23c6-5a7a-b19a-252dc4ad873f")
+			(uuid "47c099f9-5fcc-5a41-b441-719fce82435e")
 		)
 		(pin "9"
-			(uuid "aab337b7-b4bc-5b86-b6eb-e6e05bb3fc87")
+			(uuid "d4dac5d9-0d8d-5f00-aa71-57df1fc2aa2d")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -3287,38 +3301,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+3V3")
-		(at 77.47 68.58 0)
+		(at 110.49 96.52 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "5edde914-bfde-59a8-a22d-b7c5308f2cdf")
-		(property "Reference" "#PWR104"
-			(at 77.47 68.58 0)
+		(uuid "c92508ba-dbca-5eab-9486-8f11bc8e7a85")
+		(property "Reference" "#PWR102"
+			(at 110.49 96.52 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
-			(at 77.47 65.06 0)
+			(at 110.49 92.7 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 68.58 0)
+			(at 110.49 96.52 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3326,10 +3340,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 68.58 0)
+			(at 110.49 96.52 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3337,10 +3351,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 77.47 68.58 0)
+			(at 110.49 96.52 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3348,7 +3362,155 @@
 			)
 		)
 		(pin "1"
-			(uuid "7ec06673-6d72-5c3d-bb68-9ba9083cd2cd")
+			(uuid "9969a030-58e7-5093-bd00-b58f201ba818")
+		)
+		(instances
+			(project "DC_Load_RevD"
+				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
+					(reference "#PWR102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dcload:DGND")
+		(at 110.49 134.62 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "090c7f7a-d436-5dba-ac18-c45653845d6c")
+		(property "Reference" "#PWR103"
+			(at 110.49 134.62 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "DGND"
+			(at 110.49 138.52 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 110.49 134.62 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 110.49 134.62 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 110.49 134.62 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "038d3835-97db-5330-a8d8-4049c23fb9a5")
+		)
+		(instances
+			(project "DC_Load_RevD"
+				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
+					(reference "#PWR103")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dcload:+5V_ISO")
+		(at 120.65 96.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "40d3da6b-8c35-5117-a4d7-5cd7665bb555")
+		(property "Reference" "#PWR104"
+			(at 120.65 96.52 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_ISO"
+			(at 120.65 92.7 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 96.52 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 96.52 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 120.65 96.52 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "523f4ca2-b0d3-53a8-b52f-f2c122260d65")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -3360,39 +3522,39 @@
 		)
 	)
 	(symbol
-		(lib_id "dcload:DGND")
-		(at 77.47 106.68 0)
+		(lib_id "dcload:AGND")
+		(at 120.65 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "1ba6de99-38fb-51af-875b-36710e588f82")
+		(uuid "2ca25ded-53a6-54d6-bd03-2f38466f555f")
 		(property "Reference" "#PWR105"
-			(at 77.47 106.68 0)
+			(at 120.65 134.62 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
-		(property "Value" "DGND"
-			(at 77.47 110.28 0)
+		(property "Value" "AGND"
+			(at 120.65 138.52 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 77.47 106.68 0)
+			(at 120.65 134.62 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3400,10 +3562,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 77.47 106.68 0)
+			(at 120.65 134.62 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3411,10 +3573,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 77.47 106.68 0)
+			(at 120.65 134.62 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3422,7 +3584,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e5d43a4a-8e35-5592-b133-1a7ae60b8d57")
+			(uuid "1e272ed9-4147-5946-a0c8-6258855d3c79")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -3434,187 +3596,39 @@
 		)
 	)
 	(symbol
-		(lib_id "dcload:+5V_ISO")
-		(at 87.63 68.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "7e797650-39d0-5916-9d02-169a588d4867")
-		(property "Reference" "#PWR106"
-			(at 87.63 68.58 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V_ISO"
-			(at 87.63 65.06 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 68.58 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 68.58 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 87.63 68.58 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0227b5a-af0f-5574-932b-764e8aa0c7be")
-		)
-		(instances
-			(project "DC_Load_RevD"
-				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR106")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "dcload:AGND")
-		(at 87.63 106.68 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "13082097-c29b-5111-ad90-6aff175cfc91")
-		(property "Reference" "#PWR107"
-			(at 87.63 106.68 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "AGND"
-			(at 87.63 110.28 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 87.63 106.68 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 87.63 106.68 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 87.63 106.68 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2e251c11-9f3e-5fa0-aefc-8d11d9de0a44")
-		)
-		(instances
-			(project "DC_Load_RevD"
-				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR107")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 59.69 49.53 0)
+		(at 91.44 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "512a4914-3b8f-508b-866b-69a92d118a0c")
+		(uuid "a09dedcd-5996-590c-9c41-710a04baba99")
 		(property "Reference" "C27"
-			(at 62.2 48.7 0)
+			(at 94.24 76.17 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "100nF"
-			(at 62.2 51.5 0)
+			(at 94.24 78.97 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 59.69 49.53 0)
+			(at 91.44 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3622,10 +3636,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 49.53 0)
+			(at 91.44 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3633,10 +3647,10 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 59.69 49.53 0)
+			(at 91.44 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3644,10 +3658,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "3a2146b6-0359-5f20-a1d7-aab4263ad151")
+			(uuid "83896a00-feb0-5123-9267-20d3f573b2fa")
 		)
 		(pin "2"
-			(uuid "d3f7279a-ddd6-5300-845c-1bc3bc9f4bfe")
+			(uuid "f3601126-5211-5c3b-9f1f-cce891649c88")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -3660,38 +3674,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+3V3")
-		(at 59.69 45.72 0)
+		(at 91.44 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "a3e5d9ad-4c19-5d05-8607-2a0f4575500d")
-		(property "Reference" "#PWR108"
-			(at 59.69 45.72 0)
+		(uuid "41898c3d-88b8-50a1-b236-87bcc5f32db5")
+		(property "Reference" "#PWR106"
+			(at 91.44 73.66 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
-			(at 60.0 42.12 0)
+			(at 91.02 69.76 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 45.72 0)
+			(at 91.44 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3699,10 +3713,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 45.72 0)
+			(at 91.44 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3710,10 +3724,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 59.69 45.72 0)
+			(at 91.44 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3721,12 +3735,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "7818bb1a-c0cc-5963-803f-1aff2e9993ea")
+			(uuid "dd33b5bd-59bd-5d52-b191-355c6ba09f56")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR108")
+					(reference "#PWR106")
 					(unit 1)
 				)
 			)
@@ -3734,38 +3748,38 @@
 	)
 	(symbol
 		(lib_id "dcload:DGND")
-		(at 59.69 53.34 0)
+		(at 91.44 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "31574107-dae3-57e7-a197-835fabf0e662")
-		(property "Reference" "#PWR109"
-			(at 59.69 53.34 0)
+		(uuid "8f3f31e7-4a2d-5ce7-9b44-c81e895e79f0")
+		(property "Reference" "#PWR107"
+			(at 91.44 81.28 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "DGND"
-			(at 60.0 56.94 0)
+			(at 91.02 85.18 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 59.69 53.34 0)
+			(at 91.44 81.28 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3773,10 +3787,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 59.69 53.34 0)
+			(at 91.44 81.28 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3784,10 +3798,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 59.69 53.34 0)
+			(at 91.44 81.28 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3795,12 +3809,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a276d8b0-55ef-59cf-bb3e-2ec5ae191391")
+			(uuid "46435498-2f41-5b65-818a-8a781a98c147")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR109")
+					(reference "#PWR107")
 					(unit 1)
 				)
 			)
@@ -3808,38 +3822,38 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 104.14 49.53 0)
+		(at 140.97 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a41f9b8a-4c66-5348-8812-9b8c380a765f")
+		(uuid "b31e5654-2025-57f2-88d0-bd50b93cc153")
 		(property "Reference" "C28"
-			(at 106.2 48.7 0)
+			(at 143.77 76.17 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "100nF"
-			(at 106.2 51.5 0)
+			(at 143.77 78.97 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 104.14 49.53 0)
+			(at 140.97 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3847,10 +3861,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 49.53 0)
+			(at 140.97 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3858,10 +3872,10 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 104.14 49.53 0)
+			(at 140.97 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3869,10 +3883,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "93f2f054-d1b0-541e-9c90-52677ca40e3a")
+			(uuid "37db24bb-21d8-5aca-ae91-73c09097a9f7")
 		)
 		(pin "2"
-			(uuid "0a723fa4-2752-5a07-975e-e2d78c6375e6")
+			(uuid "84c01b91-e1e3-54b2-9a1c-cff5efc1984b")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -3885,38 +3899,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+5V_ISO")
-		(at 104.14 45.72 0)
+		(at 140.97 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "7dad51ed-a6f8-5bc7-9301-f6fb345efc81")
-		(property "Reference" "#PWR110"
-			(at 104.14 45.72 0)
+		(uuid "09b64d14-c7f3-5b6e-aaa0-a0f12a9d0545")
+		(property "Reference" "#PWR108"
+			(at 140.97 73.66 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+5V_ISO"
-			(at 104.0 42.12 0)
+			(at 141.02 69.76 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 45.72 0)
+			(at 140.97 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3924,10 +3938,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 45.72 0)
+			(at 140.97 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3935,10 +3949,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 104.14 45.72 0)
+			(at 140.97 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3946,12 +3960,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "edcfa2ea-ee30-5e1f-a61a-4dbd91100bf3")
+			(uuid "d405cfdd-2340-55f4-ba6d-c2b1fd590d63")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR110")
+					(reference "#PWR108")
 					(unit 1)
 				)
 			)
@@ -3959,38 +3973,38 @@
 	)
 	(symbol
 		(lib_id "dcload:AGND")
-		(at 104.14 53.34 0)
+		(at 140.97 81.28 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "429e228b-2bb2-5d40-ad08-b1cf0a847cf4")
-		(property "Reference" "#PWR111"
-			(at 104.14 53.34 0)
+		(uuid "9d95efb1-029c-5314-b1e0-63429afdbe98")
+		(property "Reference" "#PWR109"
+			(at 140.97 81.28 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "AGND"
-			(at 104.0 56.94 0)
+			(at 141.02 85.18 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 53.34 0)
+			(at 140.97 81.28 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -3998,10 +4012,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 53.34 0)
+			(at 140.97 81.28 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4009,10 +4023,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 53.34 0)
+			(at 140.97 81.28 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4020,12 +4034,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "23deac03-6944-5532-9da0-5a8b94cdf544")
+			(uuid "c06b1733-9ce6-563e-b65d-13c7f1a52fe5")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR111")
+					(reference "#PWR109")
 					(unit 1)
 				)
 			)
@@ -4033,38 +4047,38 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 24.13 48.26 0)
+		(at 57.15 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8c3d28d8-fded-5aa3-9a2d-df08d4287e18")
+		(uuid "7e223041-4ed6-5584-a9b7-8c3b5e5aa231")
 		(property "Reference" "R21"
-			(at 26.2 46.7 0)
+			(at 59.15 74.9 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "10k"
-			(at 26.2 49.5 0)
+			(at 59.15 77.7 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 24.13 48.26 0)
+			(at 57.15 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4072,10 +4086,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 24.13 48.26 0)
+			(at 57.15 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4083,10 +4097,10 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 24.13 48.26 0)
+			(at 57.15 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4094,10 +4108,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "00dd4615-1224-5706-98aa-c30198274e17")
+			(uuid "0a7486ca-cb1c-5d60-9c8b-6ddc4bf721d6")
 		)
 		(pin "2"
-			(uuid "06434fb3-2919-5789-acbc-90aae130ea4b")
+			(uuid "81895b9a-93fe-5228-a2c7-3e3ce154c1ad")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -4110,38 +4124,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+3V3")
-		(at 24.13 44.45 0)
+		(at 57.15 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "eaec18e6-53d1-56ad-a0c5-4637df1fb08a")
-		(property "Reference" "#PWR112"
-			(at 24.13 44.45 0)
+		(uuid "b7b62558-9352-5872-9fd4-88dfd23a3daa")
+		(property "Reference" "#PWR110"
+			(at 57.15 72.39 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
-			(at 24.0 40.85 0)
+			(at 57.02 68.49 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 24.13 44.45 0)
+			(at 57.15 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4149,10 +4163,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 24.13 44.45 0)
+			(at 57.15 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4160,10 +4174,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 24.13 44.45 0)
+			(at 57.15 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4171,12 +4185,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f95b3a33-3dd1-51af-b849-b4037e2daa82")
+			(uuid "dc7f4a53-77f3-5361-83da-c025955ffefa")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR112")
+					(reference "#PWR110")
 					(unit 1)
 				)
 			)
@@ -4184,38 +4198,38 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 35.56 48.26 0)
+		(at 68.58 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "40fc29ce-f82a-57f9-91a8-7ee891add347")
+		(uuid "9aa7a7fc-ec65-5988-aeae-cdef701880f0")
 		(property "Reference" "R22"
-			(at 38.2 46.7 0)
+			(at 70.58 74.9 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "10k"
-			(at 38.2 49.5 0)
+			(at 70.58 77.7 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 35.56 48.26 0)
+			(at 68.58 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4223,10 +4237,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 48.26 0)
+			(at 68.58 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4234,10 +4248,10 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 35.56 48.26 0)
+			(at 68.58 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4245,10 +4259,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "8a24d444-642b-5ede-b208-9491a8ffeaaf")
+			(uuid "3a6572d6-01da-5e73-ac26-9f4eaad5ff7e")
 		)
 		(pin "2"
-			(uuid "ff67dd1b-8bf5-5fb0-9692-42ae19e8296c")
+			(uuid "1acbdedb-1c86-5942-8478-89efc08cc33d")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -4261,38 +4275,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+3V3")
-		(at 35.56 44.45 0)
+		(at 68.58 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "aa7bd316-a81f-5105-bff4-a16653ff7cf6")
-		(property "Reference" "#PWR113"
-			(at 35.56 44.45 0)
+		(uuid "6893f484-bcb1-5f43-b8d8-c26bf638fbff")
+		(property "Reference" "#PWR111"
+			(at 68.58 72.39 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
-			(at 36.0 40.85 0)
+			(at 69.02 68.49 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 44.45 0)
+			(at 68.58 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4300,10 +4314,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 44.45 0)
+			(at 68.58 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4311,10 +4325,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 35.56 44.45 0)
+			(at 68.58 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4322,12 +4336,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ea2d88d1-0091-5224-b6bf-fe16003d4ad1")
+			(uuid "8973792d-21f6-5d1f-bad3-2dab35b93860")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR113")
+					(reference "#PWR111")
 					(unit 1)
 				)
 			)
@@ -4335,38 +4349,38 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 48.26 48.26 0)
+		(at 81.28 76.2 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7d175283-fce9-5540-901a-907d55157080")
+		(uuid "f74e3299-2684-5cb6-b696-b7a4a50a0bcf")
 		(property "Reference" "R23"
-			(at 50.2 46.7 0)
+			(at 83.28 74.9 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "10k"
-			(at 50.2 49.5 0)
+			(at 83.28 77.7 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 48.26 48.26 0)
+			(at 81.28 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4374,10 +4388,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 48.26 0)
+			(at 81.28 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4385,10 +4399,10 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 48.26 48.26 0)
+			(at 81.28 76.2 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4396,10 +4410,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "65e24cd1-60fa-52db-a349-8604af69e698")
+			(uuid "d47424d5-204b-5c0e-af4d-9ad42a6ed69e")
 		)
 		(pin "2"
-			(uuid "ef35ed30-0a6f-5949-851f-c27c2ac77cc7")
+			(uuid "beedb65d-5a6e-5d6d-8767-ec97fc9b0d11")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -4412,38 +4426,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+3V3")
-		(at 48.26 44.45 0)
+		(at 81.28 72.39 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "8158031a-4e08-5639-8351-c71d794da9b2")
-		(property "Reference" "#PWR114"
-			(at 48.26 44.45 0)
+		(uuid "45183b41-6338-569c-a13b-d53eeee6244d")
+		(property "Reference" "#PWR112"
+			(at 81.28 72.39 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+3V3"
-			(at 48.0 40.85 0)
+			(at 81.02 68.49 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 44.45 0)
+			(at 81.28 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4451,10 +4465,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 44.45 0)
+			(at 81.28 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4462,10 +4476,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 48.26 44.45 0)
+			(at 81.28 72.39 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4473,12 +4487,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b8de36ec-671c-50a6-b8f1-3f7d6e915b1f")
+			(uuid "5733baa2-640c-54bd-8236-0b947fa3db78")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR114")
+					(reference "#PWR112")
 					(unit 1)
 				)
 			)
@@ -4486,36 +4500,36 @@
 	)
 	(symbol
 		(lib_id "Analog_DAC:MCP4822")
-		(at 214.63 62.23 0)
+		(at 289.56 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e757ab78-2f7e-5adb-a027-943f4160e573")
+		(uuid "84ba9ba7-2551-5ff8-b78e-2b004170c366")
 		(property "Reference" "U9"
-			(at 215.0 42.0 0)
+			(at 289.02 69.94 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Value" "MCP4822"
-			(at 215.0 82.0 0)
+			(at 289.02 109.94 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 214.63 62.23 0)
+			(at 289.56 90.17 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4523,10 +4537,10 @@
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/20002249B.pdf"
-			(at 214.63 62.23 0)
+			(at 289.56 90.17 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4534,10 +4548,10 @@
 			)
 		)
 		(property "Description" "2-Channel 12-Bit D/A Converters with SPI Interface and Internal Reference (2.048V)"
-			(at 214.63 62.23 0)
+			(at 289.56 90.17 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4545,10 +4559,10 @@
 			)
 		)
 		(property "MPN" "MCP4822-E/SN"
-			(at 214.63 62.23 0)
+			(at 289.56 90.17 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4556,28 +4570,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f2647f9-af55-5cfa-bd0f-3d1b3c54e1c4")
+			(uuid "571f1332-23c6-5a7a-b19a-252dc4ad873f")
 		)
 		(pin "2"
-			(uuid "cfc18469-886e-5e07-bc55-e5cd6962fe81")
+			(uuid "aab337b7-b4bc-5b86-b6eb-e6e05bb3fc87")
 		)
 		(pin "3"
-			(uuid "9dc51b06-fe22-52ac-b7db-dc53b6a9c86c")
+			(uuid "5edde914-bfde-59a8-a22d-b7c5308f2cdf")
 		)
 		(pin "4"
-			(uuid "01b23f75-6def-5426-85f5-1fd33f8e0971")
+			(uuid "7ec06673-6d72-5c3d-bb68-9ba9083cd2cd")
 		)
 		(pin "5"
-			(uuid "d118b4a1-25c5-5952-9d72-915b5f48c949")
+			(uuid "1ba6de99-38fb-51af-875b-36710e588f82")
 		)
 		(pin "6"
-			(uuid "b64abe72-46cb-5ca7-b44a-4bfa3e19b21d")
+			(uuid "e5d43a4a-8e35-5592-b133-1a7ae60b8d57")
 		)
 		(pin "7"
-			(uuid "be8bfea1-7e45-5126-8546-efd2b3e5fea7")
+			(uuid "7e797650-39d0-5916-9d02-169a588d4867")
 		)
 		(pin "8"
-			(uuid "1b3d95f5-a392-5df1-82ce-6147fdaf3fa6")
+			(uuid "c0227b5a-af0f-5574-932b-764e8aa0c7be")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -4590,38 +4604,38 @@
 	)
 	(symbol
 		(lib_id "dcload:AGND")
-		(at 181.61 62.23 270)
+		(at 255.27 90.17 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "fa6930b5-3e8d-5d66-88ee-897452dcd332")
-		(property "Reference" "#PWR115"
-			(at 181.61 62.23 90)
+		(uuid "13082097-c29b-5111-ad90-6aff175cfc91")
+		(property "Reference" "#PWR113"
+			(at 255.27 90.17 90)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "AGND"
-			(at 177.43 62.23 90)
+			(at 249.06 90.17 90)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 181.61 62.23 90)
+			(at 255.27 90.17 90)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4629,10 +4643,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 181.61 62.23 90)
+			(at 255.27 90.17 90)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4640,10 +4654,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 181.61 62.23 90)
+			(at 255.27 90.17 90)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4651,7 +4665,155 @@
 			)
 		)
 		(pin "1"
-			(uuid "a0d3aff8-2d27-5888-8ef8-8d6cfb60b8d5")
+			(uuid "2e251c11-9f3e-5fa0-aefc-8d11d9de0a44")
+		)
+		(instances
+			(project "DC_Load_RevD"
+				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
+					(reference "#PWR113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dcload:+5V_ISO")
+		(at 289.56 76.2 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "512a4914-3b8f-508b-866b-69a92d118a0c")
+		(property "Reference" "#PWR114"
+			(at 289.56 76.2 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_ISO"
+			(at 289.56 72.11 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 289.56 76.2 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 289.56 76.2 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 289.56 76.2 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a2146b6-0359-5f20-a1d7-aab4263ad151")
+		)
+		(instances
+			(project "DC_Load_RevD"
+				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
+					(reference "#PWR114")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dcload:AGND")
+		(at 289.56 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "d3f7279a-ddd6-5300-845c-1bc3bc9f4bfe")
+		(property "Reference" "#PWR115"
+			(at 289.56 102.87 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "AGND"
+			(at 289.56 106.77 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 289.56 102.87 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 289.56 102.87 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 289.56 102.87 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a3e5d9ad-4c19-5d05-8607-2a0f4575500d")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -4663,187 +4825,39 @@
 		)
 	)
 	(symbol
-		(lib_id "dcload:+5V_ISO")
-		(at 214.63 48.26 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "435e7154-276d-5670-a367-f1b6681062cc")
-		(property "Reference" "#PWR116"
-			(at 214.63 48.26 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V_ISO"
-			(at 214.63 44.47 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 214.63 48.26 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 214.63 48.26 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 214.63 48.26 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2097b421-ecf8-5868-b200-5e528cae901e")
-		)
-		(instances
-			(project "DC_Load_RevD"
-				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR116")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "dcload:AGND")
-		(at 214.63 74.93 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "ea0a346f-cbca-5a3e-9b82-dfe3490af3ce")
-		(property "Reference" "#PWR117"
-			(at 214.63 74.93 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "AGND"
-			(at 214.63 78.53 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 214.63 74.93 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 214.63 74.93 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 214.63 74.93 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c27a7813-0645-5ce4-9a41-e0d8f8f2a42e")
-		)
-		(instances
-			(project "DC_Load_RevD"
-				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR117")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 240.03 45.72 0)
+		(at 322.58 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "cd1a248f-4b9f-5356-b56b-08cf4d225268")
+		(uuid "7818bb1a-c0cc-5963-803f-1aff2e9993ea")
 		(property "Reference" "C29"
-			(at 242.2 44.7 0)
+			(at 325.38 72.36 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "100nF"
-			(at 242.2 47.5 0)
+			(at 325.38 75.16 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 240.03 45.72 0)
+			(at 322.58 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4851,10 +4865,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 45.72 0)
+			(at 322.58 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4862,10 +4876,10 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 240.03 45.72 0)
+			(at 322.58 73.66 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4873,10 +4887,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "155b766c-9935-52a9-bf24-86a46c4dea71")
+			(uuid "31574107-dae3-57e7-a197-835fabf0e662")
 		)
 		(pin "2"
-			(uuid "317d8c57-b7c7-5467-aa1c-7b21a434ad3a")
+			(uuid "a276d8b0-55ef-59cf-bb3e-2ec5ae191391")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -4889,38 +4903,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+5V_ISO")
-		(at 240.03 41.91 0)
+		(at 322.58 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "9565f1df-ef0a-50be-9710-15148dc989f7")
-		(property "Reference" "#PWR118"
-			(at 240.03 41.91 0)
+		(uuid "a41f9b8a-4c66-5348-8812-9b8c380a765f")
+		(property "Reference" "#PWR116"
+			(at 322.58 69.85 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+5V_ISO"
-			(at 240.0 38.31 0)
+			(at 323.02 65.95 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 240.03 41.91 0)
+			(at 322.58 69.85 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4928,10 +4942,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 41.91 0)
+			(at 322.58 69.85 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4939,10 +4953,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 240.03 41.91 0)
+			(at 322.58 69.85 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -4950,12 +4964,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "50efa2bf-b14f-55e5-b2b4-6e4dcfd7235f")
+			(uuid "93f2f054-d1b0-541e-9c90-52677ca40e3a")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR118")
+					(reference "#PWR116")
 					(unit 1)
 				)
 			)
@@ -4963,38 +4977,38 @@
 	)
 	(symbol
 		(lib_id "dcload:AGND")
-		(at 240.03 49.53 0)
+		(at 322.58 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "4c83f331-5412-588a-af3d-41c144b89990")
-		(property "Reference" "#PWR119"
-			(at 240.03 49.53 0)
+		(uuid "0a723fa4-2752-5a07-975e-e2d78c6375e6")
+		(property "Reference" "#PWR117"
+			(at 322.58 77.47 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "AGND"
-			(at 240.0 53.13 0)
+			(at 323.02 81.37 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 240.03 49.53 0)
+			(at 322.58 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5002,10 +5016,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 240.03 49.53 0)
+			(at 322.58 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5013,10 +5027,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 240.03 49.53 0)
+			(at 322.58 77.47 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5024,12 +5038,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "578a8f6d-43e6-5291-9f72-591f0975d4e5")
+			(uuid "7dad51ed-a6f8-5bc7-9301-f6fb345efc81")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR119")
+					(reference "#PWR117")
 					(unit 1)
 				)
 			)
@@ -5037,37 +5051,37 @@
 	)
 	(symbol
 		(lib_id "Analog_ADC:ADS1118IDGS")
-		(at 219.71 135.89 0)
+		(at 294.64 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "869241b9-08d6-514e-b208-ab58d827e2e1")
+		(uuid "edcfa2ea-ee30-5e1f-a61a-4dbd91100bf3")
 		(property "Reference" "U10"
-			(at 232.0 122.0 0)
+			(at 307.02 163.94 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "ADS1118"
-			(at 220.0 156.0 0)
+			(at 295.02 197.94 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" "Package_SO:TSSOP-10_3x3mm_P0.5mm"
-			(at 219.71 135.89 0)
+			(at 294.64 177.8 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5075,10 +5089,10 @@
 			)
 		)
 		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ads1118.pdf"
-			(at 219.71 135.89 0)
+			(at 294.64 177.8 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5086,10 +5100,10 @@
 			)
 		)
 		(property "Description" "Ultrasmall, Low-Power, SPI-Compatible, 16-Bit Analog-to-Digital Converter with Internal Reference and Temperature Sensor, VSSOP-10"
-			(at 219.71 135.89 0)
+			(at 294.64 177.8 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5097,10 +5111,10 @@
 			)
 		)
 		(property "MPN" "ADS1118IDGSR"
-			(at 219.71 135.89 0)
+			(at 294.64 177.8 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5108,34 +5122,34 @@
 			)
 		)
 		(pin "1"
-			(uuid "686262d2-dd66-5ae9-a5b9-1c8ee836d81a")
+			(uuid "429e228b-2bb2-5d40-ad08-b1cf0a847cf4")
 		)
 		(pin "10"
-			(uuid "7a480ff5-4ec7-55ad-b7b1-b3cb7da76c99")
+			(uuid "23deac03-6944-5532-9da0-5a8b94cdf544")
 		)
 		(pin "2"
-			(uuid "c2cc2da2-e27b-5770-b50c-6b346b367b2b")
+			(uuid "8c3d28d8-fded-5aa3-9a2d-df08d4287e18")
 		)
 		(pin "3"
-			(uuid "02580ec7-0510-5dd3-85d1-cdef0a9c65ea")
+			(uuid "00dd4615-1224-5706-98aa-c30198274e17")
 		)
 		(pin "4"
-			(uuid "60edeccd-5070-5910-ae77-bc183e2dbc2a")
+			(uuid "06434fb3-2919-5789-acbc-90aae130ea4b")
 		)
 		(pin "5"
-			(uuid "e9651f34-56b7-5e54-9150-ccb19d3da111")
+			(uuid "eaec18e6-53d1-56ad-a0c5-4637df1fb08a")
 		)
 		(pin "6"
-			(uuid "53ac243c-0d96-5b89-863d-f4a39013462a")
+			(uuid "f95b3a33-3dd1-51af-b849-b4037e2daa82")
 		)
 		(pin "7"
-			(uuid "791cf204-5d06-5c76-9cfb-282813302610")
+			(uuid "40fc29ce-f82a-57f9-91a8-7ee891add347")
 		)
 		(pin "8"
-			(uuid "c8c889d5-017c-5dfd-9da7-35479c5e63a2")
+			(uuid "8a24d444-642b-5ede-b208-9491a8ffeaaf")
 		)
 		(pin "9"
-			(uuid "7d81a440-50fc-5813-bff1-0d11160babbf")
+			(uuid "ff67dd1b-8bf5-5fb0-9692-42ae19e8296c")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -5148,36 +5162,36 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 201.93 140.97 90)
+		(at 267.97 182.88 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "12986416-1648-5458-acd6-aa0a0f5904d0")
+		(uuid "aa7bd316-a81f-5105-bff4-a16653ff7cf6")
 		(property "Reference" "R24"
-			(at 201.55 138.67 90)
+			(at 267.97 185.78 90)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Value" "1k"
-			(at 201.55 143.57 90)
+			(at 267.97 188.28 90)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 201.93 140.97 90)
+			(at 267.97 182.88 90)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5185,10 +5199,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 201.93 140.97 90)
+			(at 267.97 182.88 90)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5196,10 +5210,10 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 201.93 140.97 90)
+			(at 267.97 182.88 90)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5207,10 +5221,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "c1baa67b-517d-5dd9-b1ac-c1b857209723")
+			(uuid "ea2d88d1-0091-5224-b6bf-fe16003d4ad1")
 		)
 		(pin "2"
-			(uuid "ee708f7d-5dfd-5a12-aa9f-3f6c881a05dd")
+			(uuid "7d175283-fce9-5540-901a-907d55157080")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -5223,38 +5237,38 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 205.74 147.32 0)
+		(at 276.86 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "03a9046d-62c2-523a-9ce1-076ab3a81740")
+		(uuid "65e24cd1-60fa-52db-a349-8604af69e698")
 		(property "Reference" "C30"
-			(at 207.75 145.67 0)
+			(at 274.06 189.2 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "10nF C0G"
-			(at 207.75 148.47 0)
+			(at 274.06 192.0 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 205.74 147.32 0)
+			(at 276.86 190.5 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5262,10 +5276,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 147.32 0)
+			(at 276.86 190.5 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5273,10 +5287,10 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 205.74 147.32 0)
+			(at 276.86 190.5 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5284,10 +5298,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "4f2e5a3d-9079-5070-8117-5a8fac1e410e")
+			(uuid "ef35ed30-0a6f-5949-851f-c27c2ac77cc7")
 		)
 		(pin "2"
-			(uuid "7c60e1cd-77ae-5df6-aa0d-171548d38156")
+			(uuid "8158031a-4e08-5639-8351-c71d794da9b2")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -5300,38 +5314,38 @@
 	)
 	(symbol
 		(lib_id "dcload:AGND")
-		(at 205.74 151.13 0)
+		(at 276.86 194.31 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "5b3a9ada-4853-5c2b-8a00-6291e06f3edc")
-		(property "Reference" "#PWR120"
-			(at 205.74 151.13 0)
+		(uuid "b8de36ec-671c-50a6-b8f1-3f7d6e915b1f")
+		(property "Reference" "#PWR118"
+			(at 276.86 194.31 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "AGND"
-			(at 205.55 154.73 0)
+			(at 277.48 198.21 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 205.74 151.13 0)
+			(at 276.86 194.31 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5339,10 +5353,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 205.74 151.13 0)
+			(at 276.86 194.31 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5350,10 +5364,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 205.74 151.13 0)
+			(at 276.86 194.31 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5361,7 +5375,155 @@
 			)
 		)
 		(pin "1"
-			(uuid "f5a5d4d2-ec1c-5fc7-b0d5-d1b740787228")
+			(uuid "e757ab78-2f7e-5adb-a027-943f4160e573")
+		)
+		(instances
+			(project "DC_Load_RevD"
+				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
+					(reference "#PWR118")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dcload:+5V_ISO")
+		(at 294.64 161.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "5f2647f9-af55-5cfa-bd0f-3d1b3c54e1c4")
+		(property "Reference" "#PWR119"
+			(at 294.64 161.29 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V_ISO"
+			(at 294.64 157.2 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 294.64 161.29 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 161.29 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+12V\""
+			(at 294.64 161.29 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cfc18469-886e-5e07-bc55-e5cd6962fe81")
+		)
+		(instances
+			(project "DC_Load_RevD"
+				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
+					(reference "#PWR119")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "dcload:AGND")
+		(at 294.64 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "9dc51b06-fe22-52ac-b7db-dc53b6a9c86c")
+		(property "Reference" "#PWR120"
+			(at 294.64 190.5 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Value" "AGND"
+			(at 294.64 194.4 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 294.64 190.5 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 294.64 190.5 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 294.64 190.5 0)
+			(effects
+				(font
+					(face "JetBrains Mono")
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "01b23f75-6def-5426-85f5-1fd33f8e0971")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -5373,187 +5535,39 @@
 		)
 	)
 	(symbol
-		(lib_id "dcload:+5V_ISO")
-		(at 219.71 119.38 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "df1c381e-49fc-5333-bed5-bea5ec781bc8")
-		(property "Reference" "#PWR121"
-			(at 219.71 119.38 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V_ISO"
-			(at 219.71 115.59 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.71 119.38 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 119.38 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 219.71 119.38 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8e0ecedc-ae86-5de8-bff6-ade926973707")
-		)
-		(instances
-			(project "DC_Load_RevD"
-				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR121")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "dcload:AGND")
-		(at 219.71 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(uuid "059d44b7-8272-5ff3-aa57-7d806cd7075e")
-		(property "Reference" "#PWR122"
-			(at 219.71 148.59 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Value" "AGND"
-			(at 219.71 152.19 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.5 1.5)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 219.71 148.59 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 219.71 148.59 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 219.71 148.59 0)
-			(effects
-				(font
-					(face "Arial")
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f5681151-aca7-539e-8a1c-8e07f0b419e4")
-		)
-		(instances
-			(project "DC_Load_RevD"
-				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR122")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 246.38 118.11 0)
+		(at 332.74 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "548769c4-7b1f-56f1-a2e5-679f8ad39920")
+		(uuid "d118b4a1-25c5-5952-9d72-915b5f48c949")
 		(property "Reference" "C31"
-			(at 248.2 116.7 0)
+			(at 335.54 161.26 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "100nF"
-			(at 248.2 119.5 0)
+			(at 335.54 164.06 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 246.38 118.11 0)
+			(at 332.74 162.56 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5561,10 +5575,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 118.11 0)
+			(at 332.74 162.56 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5572,10 +5586,10 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 246.38 118.11 0)
+			(at 332.74 162.56 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5583,10 +5597,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "be682fa2-4ca0-5abc-81b1-29f9bcb4d7ea")
+			(uuid "b64abe72-46cb-5ca7-b44a-4bfa3e19b21d")
 		)
 		(pin "2"
-			(uuid "a98ca0ec-a994-589c-87c6-6674f3d156a2")
+			(uuid "be8bfea1-7e45-5126-8546-efd2b3e5fea7")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -5599,38 +5613,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+5V_ISO")
-		(at 246.38 114.3 0)
+		(at 332.74 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "d1265010-1a56-5e70-b311-3d1a55480e42")
-		(property "Reference" "#PWR123"
-			(at 246.38 114.3 0)
+		(uuid "1b3d95f5-a392-5df1-82ce-6147fdaf3fa6")
+		(property "Reference" "#PWR121"
+			(at 332.74 158.75 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+5V_ISO"
-			(at 246.0 110.7 0)
+			(at 333.02 154.85 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 246.38 114.3 0)
+			(at 332.74 158.75 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5638,10 +5652,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 114.3 0)
+			(at 332.74 158.75 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5649,10 +5663,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 246.38 114.3 0)
+			(at 332.74 158.75 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5660,12 +5674,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "38246df3-3411-5790-9703-606fb3d7bd5a")
+			(uuid "fa6930b5-3e8d-5d66-88ee-897452dcd332")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR123")
+					(reference "#PWR121")
 					(unit 1)
 				)
 			)
@@ -5673,38 +5687,38 @@
 	)
 	(symbol
 		(lib_id "dcload:AGND")
-		(at 246.38 121.92 0)
+		(at 332.74 166.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "0c44f51c-5e07-526b-9940-5009373f6f07")
-		(property "Reference" "#PWR124"
-			(at 246.38 121.92 0)
+		(uuid "a0d3aff8-2d27-5888-8ef8-8d6cfb60b8d5")
+		(property "Reference" "#PWR122"
+			(at 332.74 166.37 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "AGND"
-			(at 246.0 125.52 0)
+			(at 333.02 170.27 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 246.38 121.92 0)
+			(at 332.74 166.37 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5712,10 +5726,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 246.38 121.92 0)
+			(at 332.74 166.37 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5723,10 +5737,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 246.38 121.92 0)
+			(at 332.74 166.37 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5734,12 +5748,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "2d3b9d72-82ff-578a-90a4-de282b71e4de")
+			(uuid "435e7154-276d-5670-a367-f1b6681062cc")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR124")
+					(reference "#PWR122")
 					(unit 1)
 				)
 			)
@@ -5747,38 +5761,38 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 256.54 118.11 0)
+		(at 349.25 162.56 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3e095a7d-31f0-5b08-8099-61a11903f459")
+		(uuid "2097b421-ecf8-5868-b200-5e528cae901e")
 		(property "Reference" "C32"
-			(at 258.2 116.7 0)
+			(at 352.05 161.26 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "1uF"
-			(at 258.2 119.5 0)
+			(at 352.05 164.06 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 256.54 118.11 0)
+			(at 349.25 162.56 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5786,10 +5800,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 118.11 0)
+			(at 349.25 162.56 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5797,10 +5811,10 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 256.54 118.11 0)
+			(at 349.25 162.56 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5808,10 +5822,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b83334dd-1078-5113-ba46-a58a5442e181")
+			(uuid "ea0a346f-cbca-5a3e-9b82-dfe3490af3ce")
 		)
 		(pin "2"
-			(uuid "4d32ab01-15e7-5dbf-a09f-a462f7efc8f8")
+			(uuid "c27a7813-0645-5ce4-9a41-e0d8f8f2a42e")
 		)
 		(instances
 			(project "DC_Load_RevD"
@@ -5824,38 +5838,38 @@
 	)
 	(symbol
 		(lib_id "dcload:+5V_ISO")
-		(at 256.54 114.3 0)
+		(at 349.25 158.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2cc8feb9-e17c-5611-9851-cbe475fc52a2")
-		(property "Reference" "#PWR125"
-			(at 256.54 114.3 0)
+		(uuid "cd1a248f-4b9f-5356-b56b-08cf4d225268")
+		(property "Reference" "#PWR123"
+			(at 349.25 158.75 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "+5V_ISO"
-			(at 256.0 110.7 0)
+			(at 349.02 154.85 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 114.3 0)
+			(at 349.25 158.75 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5863,10 +5877,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 114.3 0)
+			(at 349.25 158.75 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5874,10 +5888,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 256.54 114.3 0)
+			(at 349.25 158.75 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5885,12 +5899,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "fbefc175-6076-512a-9eca-dc6551e197ff")
+			(uuid "155b766c-9935-52a9-bf24-86a46c4dea71")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR125")
+					(reference "#PWR123")
 					(unit 1)
 				)
 			)
@@ -5898,38 +5912,38 @@
 	)
 	(symbol
 		(lib_id "dcload:AGND")
-		(at 256.54 121.92 0)
+		(at 349.25 166.37 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "87193f74-d4f0-57fa-b821-ab25acf30ab3")
-		(property "Reference" "#PWR126"
-			(at 256.54 121.92 0)
+		(uuid "317d8c57-b7c7-5467-aa1c-7b21a434ad3a")
+		(property "Reference" "#PWR124"
+			(at 349.25 166.37 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 				(justify left)
 				(hide yes)
 			)
 		)
 		(property "Value" "AGND"
-			(at 256.0 125.52 0)
+			(at 349.02 170.27 0)
 			(effects
 				(font
-					(face "Arial")
-					(size 1.5 1.5)
+					(face "JetBrains Mono")
+					(size 1.6 1.6)
 				)
 			)
 		)
 		(property "Footprint" ""
-			(at 256.54 121.92 0)
+			(at 349.25 166.37 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5937,10 +5951,10 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 121.92 0)
+			(at 349.25 166.37 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5948,10 +5962,10 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 256.54 121.92 0)
+			(at 349.25 166.37 0)
 			(effects
 				(font
-					(face "Arial")
+					(face "JetBrains Mono")
 					(size 1.27 1.27)
 				)
 				(justify left)
@@ -5959,12 +5973,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "74b6d179-5ded-5df2-ae41-0e757528fee5")
+			(uuid "9565f1df-ef0a-50be-9710-15148dc989f7")
 		)
 		(instances
 			(project "DC_Load_RevD"
 				(path "/7a1d2c3e-4f50-4b61-9c72-8d83e94fa5b6/abdbf844-70ad-534b-bca5-f48fc28bd57c"
-					(reference "#PWR126")
+					(reference "#PWR124")
 					(unit 1)
 				)
 			)

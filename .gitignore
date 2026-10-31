@@ -27,3 +27,6 @@ reference/mechanical/
 Thumbs.db
 __pycache__/
 *.pyc
+
+# KiCad 10 local project history (its own git repo)
+.history/
