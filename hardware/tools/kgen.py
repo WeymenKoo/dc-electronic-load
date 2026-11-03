@@ -443,7 +443,7 @@ class Sch:
             pl[0] = [(r2(x + dx), r2(y + dy)) for x, y in pl[0]]
         for sh in self.sheets:
             sh['x'], sh['y'] = r2(sh['x'] + dx), r2(sh['y'] + dy)
-            sh['pins'] = [(n, s, side, r2(py + dy)) for n, s, side, py in sh['pins']]
+            sh['pins'] = [(n, s, side, r2(pos + (dx if side in ('T', 'B') else dy))) for n, s, side, pos in sh['pins']]
         self.blocks = [(t, (r2(b[0] + dx), r2(b[1] + dy), r2(b[2] + dx), r2(b[3] + dy))) for t, b in self.blocks]
 
     def centre_on_sheet(self):
@@ -649,11 +649,11 @@ class Sch:
         out.append(['embedded_fonts', 'no'])
         return dump(out) + '\n'
 
-    def add_sheet(self, name, fname, x, y, w, h, pins, page):
+    def add_sheet(self, name, fname, x, y, w, h, pins, page, show_file=True):
         u = uid()
         x, y, w, h = self.g(x), self.g(y), self.g(w), self.g(h)
-        pins = [(n, sh, side, self.g(py)) for n, sh, side, py in pins]
-        self.sheets.append(dict(name=name, fname=fname, x=x, y=y, w=w, h=h, pins=pins, page=page, uuid=u))
+        pins = [(n, sh, side, self.g(pos)) for n, sh, side, pos in pins]
+        self.sheets.append(dict(name=name, fname=fname, x=x, y=y, w=w, h=h, pins=pins, page=page, uuid=u, show_file=show_file))
         return u
 
     def _sheet(self, s):
@@ -664,9 +664,17 @@ class Sch:
                ['property', Str('Sheetname'), Str(s['name']), ['at', s['x'], r2(s['y'] - 0.7), 0],
                 ['effects', self.F(max(1.5, self.fs_label), bold=True), ['justify', 'left', 'bottom']]],
                ['property', Str('Sheetfile'), Str(s['fname']), ['at', s['x'], r2(s['y'] + s['h'] + 0.6), 0],
-                ['effects', self.F(self.fs_label * 0.8), ['justify', 'left', 'top']]]]
-        for name, shape, side, py in s['pins']:
-            px, ang, just = (s['x'], 180, 'left') if side == 'L' else (r2(s['x'] + s['w']), 0, 'right')
+                ['effects', self.F(self.fs_label * 0.8), ['justify', 'left', 'top']] + ([] if s.get('show_file', True) else [['hide', 'yes']])]]
+        for name, shape, side, pos in s['pins']:
+            # L / R: pos is the pin's y; T / B: pos is the pin's x. KiCad sheet-pin angles: 180 left, 0 right, 90 top, 270 bottom
+            if side == 'L':
+                px, py, ang, just = s['x'], pos, 180, 'left'
+            elif side == 'R':
+                px, py, ang, just = r2(s['x'] + s['w']), pos, 0, 'right'
+            elif side == 'T':
+                px, py, ang, just = pos, s['y'], 90, 'right'
+            else:
+                px, py, ang, just = pos, r2(s['y'] + s['h']), 270, 'left'
             out.append(['pin', Str(name), shape, ['at', px, py, ang], ['uuid', Str(uid())], ['effects', self.F(self.fs_pin), ['justify', just]]])
         out.append(['instances', ['project', Str(self.project), ['path', Str('/' + self.root), ['page', Str(str(s['page']))]]]])
         return out

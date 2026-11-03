@@ -1,0 +1,251 @@
+LTspice 26.0.2 for MacOS
+Circuit: /private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/rev_e/01_dc_transfer/01_dc_transfer.net
+Start Time: Tue Nov  3 03:03:48 2026
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 660.867 ms
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 919.104 ms
+.step vdut=1
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1
+Starting source stepping with srcstepmethod=0
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0, level 2
+Starting source stepping with srcstepmethod=1, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.05875 s
+.step vdut=2
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 713.887 ms
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 succeeded in finding the operating point.
+
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1
+Starting source stepping with srcstepmethod=0
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0, level 2
+Starting source stepping with srcstepmethod=1, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 3.47157 s
+.step vdut=12
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 744.644 ms
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 462.047 ms
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 464.809 ms
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 513.552 ms
+.step vdut=48
+Total elapsed time: 763.480 seconds.
+
+Files loaded:
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/rev_e/01_dc_transfer/01_dc_transfer.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/lib/fet_models.lib
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/lib/tlv915x.lib
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/lib/misc_models.lib
+
+
+Measurement: itot_fs
+  step	-I(Vdut) 	at
+     1	10.1415786743	4.096
+     2	10.1415834427	4.096
+     3	10.1416311264	4.096
+     4	10.1418027878	4.096
+
+Measurement: itot_1v
+  step	-I(Vdut) 	at
+     1	2.39956974983	1
+     2	2.3995745182	1
+     3	2.39962220192	1
+     4	2.39979362488	1
+
+Measurement: gain_a_per_v
+  step	(Itot_FS-Itot_1V)/3.096
+     1	2.50064887742
+     2	2.50064887742
+     3	2.50064887742
+     4	2.50064895443
+
+Measurement: ich1_fs
+  step	Id(M1) 	at
+     1	2.53515148163	4.096
+     2	2.53541636467	4.096
+     3	2.535394907	4.096
+     4	2.53539705276	4.096
+
+Measurement: ich4_fs
+  step	Id(M4) 	at
+     1	2.53515148163	4.096
+     2	2.53541636467	4.096
+     3	2.535394907	4.096
+     4	2.53539705276	4.096
+
+Measurement: isen_0
+  step	V(ISEN_ADC) 	at
+     1	0.124000869691	0
+     2	0.12400084734	0
+     3	0.12400084734	0
+     4	0.12400084734	0
+
+Measurement: isen_fs
+  step	V(ISEN_ADC) 	at
+     1	3.15888381004	4.096
+     2	3.15888404846	4.096
+     3	3.15888381004	4.096
+     4	3.15888381004	4.096
+
+Measurement: isen_err_pct_fs
+  step	100*((ISEN_FS-ISEN_0)/(0.3*0.997506) - Itot_FS)/Itot_FS
+     1	-9.00455282236e-05
+     2	-0.000128471081962
+     3	-0.000606504344676
+     4	-0.00229910613759
+
+Measurement: vsen
+  step	V(VSEN_ADC) 	at
+     1	0.129508331418	2
+     2	0.178514748812	2
+     3	0.668583929539	2
+     4	2.43283748627	2
+
+Measurement: vdutp
+  step	V(DUT+) 	at
+     1	0.897111177444	2
+     2	1.89711093903	2
+     3	11.8970947266	2
+     4	47.8971214294	2
+
+Measurement: vsen_ideal
+  step	1.05*(VDUTp*9791.67/209791.67 + 4.096*9523.8/479523.8)
+     1	0.129382687852
+     2	0.178389643413
+     3	0.668458521341
+     4	2.43271065079
+
+Measurement: vsen_err_mv
+  step	1000*(VSEN-VSEN_ideal)
+     1	0.125643565727
+     2	0.125105398411
+     3	0.125408197354
+     4	0.126835472307
+
+Measurement: vsen_err_pct_of_reading
+  step	100*(VSEN-VSEN_ideal)/(VSEN_ideal-0.08548)
+     1	0.286186499901
+     2	0.134652759191
+     3	0.0215116325497
+     4	0.00540362202001
+
+Measurement: ploss_fs
+  step	V(DRAIN)*(-I(Vdut)) 	at
+     1	7.46782943446	4.096
+     2	17.6094103435	4.096
+     3	119.025481607	4.096
+     4	484.133044663	4.096

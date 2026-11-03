@@ -5,8 +5,22 @@ import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from ascgen import Sheet, ltrun
 
-OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # the 02_Simulation_LTspice folder
+SIMROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # the simulation folder
 GND = '0'
+
+# ----------------------------------------------------------------- revisions
+# Rev C (the LT1014 / LT1013 decks, results kept as the reference) and Rev E (TLV9154 quads, the cheaper build).
+# Everything else in the analog stage is identical; Rb changes because the TLV9154 offset limit is 0.83 mV, not 0.3 mV.
+REVS = {
+    'C': dict(out=SIMROOT, lib='../lib/', title='Rev C', quad=('OpAmps\\LT1014', 'LT1014', ''), dual=('OpAmps\\LT1013', 'LT1013', ''),
+              amp_inc='', rb='22Meg', rb_mv='+1.8 mV', dead='72 mA', amp_note='LT1014 (1/4)', dual_note='LT1013',
+              floor='so the LT1013 never works into its ~35 mV output floor', floorv='keeps U6 off its output floor', ich03='0.025 0.25 2.5'),
+    'E': dict(out=os.path.join(SIMROOT, 'rev_e'), lib='../../lib/', title='Rev E', quad=('OpAmps\\opamp2', 'TLV9152', ''), dual=('OpAmps\\opamp2', 'TLV9152', ''),
+              amp_inc='.include ../../lib/tlv915x.lib\n', rb='15Meg', rb_mv='+2.6 mV', dead='106 mA', amp_note='TLV9154 (1/4, TI model = TLV9152)', dual_note='TLV9154 (1/4)',
+              floor='(kept from Rev C: calibrated out, harmless with the rail-to-rail TLV9154)', floorv='(kept from Rev C, calibrated out)', ich03='0.05 0.25 2.5'),
+}
+REV = REVS['C']
+OUT = REV['out']
 
 # ----------------------------------------------------------------- design values
 RF, CC, RG, RS = '3.3k', '1n', '47', '{Rs}'
@@ -18,15 +32,15 @@ def channel(sh, ox, oy, n, set_from_left=True, fet='FETSEL', inj=False, clamp=Tr
     U, C, Rf, Rg, M, R = 'U%d' % n, 'C%d' % n, 'Rf%d' % n, 'Rg%d' % n, 'M%d' % n, 'Rs%d' % n
     s, fb, out, g, d = 'S%d' % n, 'FB%d' % n, 'OUT%d' % n, 'G%d' % n, 'DRAIN'
     vset = 'VSET'
-    sh.sym('OpAmps\\LT1014', ox, oy, 'R0', U, 'LT1014', [vset, fb, '+12V', GND, out])
+    sh.sym(REV['quad'][0], ox, oy, 'R0', U, REV['quad'][1], [vset, fb, '+12V', GND, out])
     sh.wire((ox, oy + 32), (ox, oy + 16)); sh.flag(ox, oy + 16, '+12V')
     sh.wire((ox, oy + 96), (ox, oy + 112)); sh.flag(ox, oy + 112, GND)
     # integrator capacitor across the op-amp (In- to OUT)
     sh.sym('cap', ox + 32, oy - 48, 'R90', C, CC, [out, fb])
     sh.wire((ox - 32, oy + 48), (ox - 32, oy - 32), (ox - 32, oy - 160))
     sh.wire((ox + 32, oy + 64), (ox + 80, oy + 64), (ox + 80, oy - 32), (ox + 32, oy - 32))
-    # 22M from +12V into In-: +1.8 mV deliberate offset -> output sits at 0 V when V_SET = 0
-    sh.sym('res', ox - 16, oy, 'R90', 'Rb%d' % n, '22Meg', [fb, '+12V']); sh.flag(ox - 112, oy + 16, '+12V')
+    # Rb from +12V into In-: deliberate positive offset (Rev C 22M = +1.8 mV, Rev E 15M = +2.6 mV) -> output sits at 0 V when V_SET = 0
+    sh.sym('res', ox - 16, oy, 'R90', 'Rb%d' % n, REV['rb'], [fb, '+12V']); sh.flag(ox - 112, oy + 16, '+12V')
     if kill:   # KILL line (dropout comparator) -> 4.7k + 1N4148 -> In-: forces OUT to 0 V fast
         sh.sym('res', ox - 80, oy - 64, 'R90', 'Rk%d' % n, '4.7k', ['K%d' % n, 'KILL'])
         sh.sym('diode', ox - 96, oy - 32, 'R270', 'Dk%d' % n, '1N4148', ['K%d' % n, fb])
@@ -78,21 +92,21 @@ def deck03():
     sh.flag(-320, -224, '+12V'); sh.flag(-320, -144, GND)
     # annotation
     sh.rect(-400, -448, 1040, 320)
-    sh.text(-392, -440, 'DC LOAD Rev C - ONE CURRENT-SINK CHANNEL - LOOP GAIN (Middlebrook voltage injection)', size=3)
+    sh.text(-392, -440, 'DC LOAD ' + REV['title'] + ' - ONE CURRENT-SINK CHANNEL - LOOP GAIN (Middlebrook voltage injection)', size=3)
     sh.text(-392, -400, 'Vinj breaks the loop between the source node (low Z, 0.1 R) and Rf (3.3k): ideal injection point.\n'
                         'T(f) = -V(src)/V(inj).  In the log: PM = phase of V(src)/V(inj) at fc;  GM = -|V(src)/V(inj)| where its phase = 0.', size=1)
     sh.text(560, -200, 'DUT model: supply + 20 mR lead +\nlead inductance (1 uH ~ 1 m of\nloose lead pair, 10 uH = abuse)', size=1)
     sh.text(-392, 360, 'PASS criteria: PM >= 45 deg and GM >= 10 dB for every FET candidate, channel current\n'
-                       '25 mA ... 2.5 A and 1 ... 10 uH leads.  Rf=3.3k, Cc=1n, Rg=47 chosen from this sweep.', size=2)
+                       '%s mA ... 2.5 A and 1 ... 10 uH leads.  Rf=3.3k, Cc=1n, Rg=47 chosen from this sweep.' % REV['ich03'].split()[0].replace('0.025', '25').replace('0.05', '50'), size=2)
     sh.text(-392, 460, '.param fet=1 Ich=2.5 Llead=1u Vdut=24 Rs=0.1\n'
                        '.step param fet list 1 2 3 4   ; 1 IRFP250N  2 IRFP240  3 IRF530  4 IXTH88N30P (big-die proxy)\n'
-                       '.step param Ich list 0.025 0.25 2.5\n'
+                       '.step param Ich list ' + REV['ich03'] + '\n'
                        '.step param Llead list 1u 10u\n'
                        '.ac dec 50 10 10Meg\n'
                        '.meas AC fc WHEN mag(V(src)/V(inj))=1\n'
                        '.meas AC PM FIND V(src)/V(inj) AT fc\n'
                        '.meas AC GM FIND V(src)/V(inj) WHEN ph(V(src)/V(inj))=0\n'
-                       '.include ../lib/fet_models.lib\n.include ../lib/misc_models.lib', directive=True)
+                       '.include ' + REV['lib'] + 'fet_models.lib\n.include ' + REV['lib'] + 'misc_models.lib\n' + REV['amp_inc'], directive=True)
     return sh
 
 
@@ -166,9 +180,9 @@ def system(title, vctrl_value, vdut_value, votp_value='0', fet='FETSEL', dut_cur
     ix, iy = 800, 2112
     sh.wire((560, oys[-1] + 128), (560, iy + 160), (736, iy + 160), (736, iy + 80), (ix - 32, iy + 80))
     sh.flag(560, iy, 'AVG')
-    # 1M from +4.096 V: lifts AVG by ~10 mV (ISEN +123 mV) so the LT1013 never works into its ~35 mV output floor
+    # 1M from +4.096 V: lifts AVG by ~10 mV (ISEN +123 mV) (see REV floor note)
     sh.sym('res', 576, 2000, 'R90', 'Roffi', '1Meg', ['AVG', '+4V096']); sh.flag(480, 2016, '+4V096')
-    sh.sym('OpAmps\\LT1013', ix, iy, 'R0', 'U5', 'LT1013', ['AVG', 'FBI', '+12V', GND, 'ISEN_OA'])
+    sh.sym(REV['dual'][0], ix, iy, 'R0', 'U5', REV['dual'][1], ['AVG', 'FBI', '+12V', GND, 'ISEN_OA'])
     sh.wire((ix, iy + 32), (ix, iy + 16)); sh.flag(ix, iy + 16, '+12V')
     sh.wire((ix, iy + 96), (ix, iy + 112)); sh.flag(ix, iy + 112, GND)
     sh.sym('res', ix + 64, iy - 48, 'R90', 'Rfi', '110k', ['ISEN_OA', 'FBI'])
@@ -209,9 +223,9 @@ def system(title, vctrl_value, vdut_value, votp_value='0', fet='FETSEL', dut_cur
     sh.wire((1088, -16), (1136, -16), (vx - 32, -16))
     sh.sym('res', 1120, -16, 'R0', 'Rv2', '10k', ['VP', GND]); sh.flag(1136, 80, GND)
     sh.wire((1136, -16), (1136, 0))
-    # 470k from +4.096 V: ~+85 mV output offset keeps U6 off its output floor (removed by zero calibration)
+    # 470k from +4.096 V: ~+85 mV output offset (see REV floorv note; removed by zero calibration)
     sh.sym('res', 1152, -112, 'R0', 'Roffv', '470k', ['+4V096', 'VP']); sh.flag(1168, -96, '+4V096')
-    sh.sym('OpAmps\\LT1013', vx, vy, 'R0', 'U6', 'LT1013', ['VP', 'VM', '+12V', GND, 'VSEN_OA'])
+    sh.sym(REV['dual'][0], vx, vy, 'R0', 'U6', REV['dual'][1], ['VP', 'VM', '+12V', GND, 'VSEN_OA'])
     sh.wire((vx, vy + 32), (vx, vy + 16)); sh.flag(vx, vy + 16, '+12V')
     sh.wire((vx, vy + 96), (vx, vy + 112)); sh.flag(vx, vy + 112, GND)
     sh.sym('res', 1104, -160, 'R90', 'Rv3', '200k', ['VM', GND])
@@ -232,16 +246,22 @@ def system(title, vctrl_value, vdut_value, votp_value='0', fet='FETSEL', dut_cur
     return sh
 
 
-SYS_NOTE = ('Each channel: LT1014 (1/4) forces V(Sn) = V_SET, so I_ch = V_SET / Rs  (Rs = 2 x 0.2R 2512 in parallel).\n'
-            'Dz (6.8 V) limits wind-up; Dk/Rk let the dropout detector force the op-amp low; Rb (22M) = +1.8 mV offset -> 0 A at V_SET = 0.\n'
-            'Rf/Cc = 3.3k/1n integrator, Rg = 47R.  I_total = 4 x V_SET / 0.1 = 2.5 A per volt of LOAD_CTRL (10.24 A full scale).')
-SWMODEL = ('.model SWOTP SW(Ron=2 Roff=1G Vt=1 Vh=0)    ; LM339 + 2N7002 pull-down\n'
-           '.model SWDROP SW(Ron=50 Roff=1G Vt=0 Vh=50m) ; LM339 output, 50 mV hysteresis\n'
-           '.include ../lib/misc_models.lib')
+def _notes():
+    global SYS_NOTE, SWMODEL
+    SYS_NOTE = ('Each channel: %s forces V(Sn) = V_SET, so I_ch = V_SET / Rs  (Rs = 2 x 0.2R 2512 in parallel).\n'
+                'Dz (6.8 V) limits wind-up; Dk/Rk let the dropout detector force the op-amp low; Rb (%s) = %s offset -> 0 A at V_SET = 0.\n'
+                'Rf/Cc = 3.3k/1n integrator, Rg = 47R.  I_total = 4 x V_SET / 0.1 = 2.5 A per volt of LOAD_CTRL (10.24 A full scale).'
+                % (REV['amp_note'], REV['rb'], REV['rb_mv']))
+    SWMODEL = ('.model SWOTP SW(Ron=2 Roff=1G Vt=1 Vh=0)    ; LM339 + 2N7002 pull-down\n'
+               '.model SWDROP SW(Ron=50 Roff=1G Vt=0 Vh=50m) ; LM339 output, 50 mV hysteresis\n'
+               '.include ' + REV['lib'] + 'misc_models.lib')
+
+
+_notes()
 
 
 def deck01():
-    sh = system('DC LOAD Rev C - ANALOG STAGE - 01 DC TRANSFER', '0', '{Vdut}')
+    sh = system('DC LOAD ' + REV['title'] + ' - ANALOG STAGE - 01 DC TRANSFER', '0', '{Vdut}')
     sh.text(-1256, -320, SYS_NOTE, size=1)
     sh.text(-1256, 2400, '.param fet=1 Rs=0.1 Vdut=12 Llead=1u\n'
                          '.step param Vdut list 1 2 12 48\n'
@@ -260,7 +280,7 @@ def deck01():
                          '.meas DC VSEN_err_mV PARAM 1000*(VSEN-VSEN_ideal)\n'
                          '.meas DC VSEN_err_pct_of_reading PARAM 100*(VSEN-VSEN_ideal)/(VSEN_ideal-0.08548)\n'
                          '.meas DC Ploss_FS FIND V(DRAIN)*(-I(Vdut)) AT 4.096\n'
-                         '.include ../lib/fet_models.lib\n' + SWMODEL, directive=True)
+                         '.include ' + REV['lib'] + 'fet_models.lib\n' + REV['amp_inc'] + SWMODEL, directive=True)
     sh.text(-1256, 2160, 'TEST: sweep LOAD_CTRL 0 -> 4.096 V at DUT = 1 / 2 / 12 / 48 V.\n'
                          'EXPECT: 2.50 A/V, ~10.2 A full scale, channels equal; ISEN/VSEN errors vs their ideal (offset-\n'
                          'corrected) transfer < 0.5 %.  Ideal formulas are written out in the .meas lines.', size=2)
@@ -272,7 +292,7 @@ ISUM = '(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4))'
 
 def deck02():
     pwl = 'PWL(0 0.4096 100u 0.4096 101u 3.6864 400u 3.6864 401u 0.4096 700u 0.4096 701u 0.8192 1m 0.8192 1.001m 0.4096)'
-    sh = system('DC LOAD Rev C - ANALOG STAGE - 02 STEP RESPONSE', pwl, '{Vdut}')
+    sh = system('DC LOAD ' + REV['title'] + ' - ANALOG STAGE - 02 STEP RESPONSE', pwl, '{Vdut}')
     sh.text(-1256, -320, SYS_NOTE, size=1)
     sh.text(-1256, 2400, '.param fet=1 Rs=0.1 Vdut=24 Llead=1u\n'
                          '.step param fet list 1 2 3 4\n'
@@ -291,7 +311,7 @@ def deck02():
                          '.meas TRAN Ipk_small MAX ' + ISUM + ' FROM 700u TO 1m\n'
                          '.meas TRAN I_small FIND ' + ISUM + ' AT 995u\n'
                          '.meas TRAN small_overshoot_pct PARAM 100*(Ipk_small-I_small)/(I_small-I_lo)\n'
-                         '.include ../lib/fet_models.lib\n' + SWMODEL, directive=True)
+                         '.include ' + REV['lib'] + 'fet_models.lib\n' + REV['amp_inc'] + SWMODEL, directive=True)
     sh.text(-1256, 2160, 'TEST: LOAD_CTRL steps 1 A -> 9 A -> 1 A (large signal) then 1 A -> 2 A (small signal),\n'
                          '1 us DAC edge, DUT = 24 V with 1 uH / 10 uH leads, all four MOSFET candidates.\n'
                          'EXPECT: no ringing, overshoot < 5 %, 10-90 % rise in tens of us (filter + loop).', size=2)
@@ -301,7 +321,7 @@ def deck02():
 def deck04():
     vd = 'PWL(0 0 200u 0 201u 24 1m 24 1.001m 0.4 1.5m 0.4 1.501m 24 3.5m 24)'
     vo = 'PWL(0 0 2.5m 0 2.501m 5 3m 5 3.001m 0)'
-    sh = system('DC LOAD Rev C - ANALOG STAGE - 04 FAULT CASES', '3.2768', vd, vo)
+    sh = system('DC LOAD ' + REV['title'] + ' - ANALOG STAGE - 04 FAULT CASES', '3.2768', vd, vo)
     sh.text(-1256, -320, 'Set point fixed at 8 A (LOAD_CTRL = 3.2768 V).  Timeline:\n'
                          ' 0.2 ms  DUT hot-plugged with the load already enabled (0 -> 24 V in 1 us)\n'
                          ' 1.0 ms  DUT collapses to 0.4 V for 0.5 ms (op-amps rail high = integrator wind-up)\n'
@@ -318,7 +338,7 @@ def deck04():
                          '.meas TRAN Epk_recovery_mJ INTEG 1000*V(DRAIN)*' + ISUM + ' FROM 1.5m TO 1.7m\n'
                          '.meas TRAN t_otp_off TRIG V(OTP)=1 RISE=1 TARG ' + ISUM + '=0.8 TD=2.5m FALL=1\n'
                          '.meas TRAN I_otp FIND ' + ISUM + ' AT 2.9m\n'
-                         '.include ../lib/fet_models.lib\n' + SWMODEL, directive=True)
+                         '.include ' + REV['lib'] + 'fet_models.lib\n' + REV['amp_inc'] + SWMODEL, directive=True)
     sh.text(-1256, 2160, 'EXPECT: hot-plug overshoot small; dropout recovery shows wind-up overshoot (quantified in log);\n'
                          'OTP pull-down turns all 4 channels off within ~tens of us.', size=2)
     return sh
@@ -432,7 +452,7 @@ def deck05():
 def deck06():
     """Hardware CV mode added to the unchanged Rev C stage: error amp pulls V_SET down through a 2N7002."""
     ramp = 'PWL(0 0 5m 0 25m 4.096)'
-    sh = system('DC LOAD Rev C - ANALOG STAGE - 06 HARDWARE CV MODE (current-source DUT)', ramp, '30',
+    sh = system('DC LOAD ' + REV['title'] + ' - ANALOG STAGE - 06 HARDWARE CV MODE (current-source DUT)', ramp, '30',
                 dut_current='PWL(0 {Isrc} 60m {Isrc} 60.01m {1.1*Isrc})')
     sh.flag(1312, -32, 'VSEN_OA')
     # pull-down on V_SET: the LOAD_CTRL setting stays in charge as the current ceiling
@@ -440,7 +460,7 @@ def deck06():
     sh.flag(-592, 160, 'QG')
     # error amp: In+ = CV_SET, In- = VSEN amp output through R1
     ox, oy = -432, 192
-    sh.sym('OpAmps\\LT1013', ox, oy, 'R0', 'U7', 'LT1013', ['CVSET', 'CVM', '+12V', GND, 'CVO'])
+    sh.sym(REV['dual'][0], ox, oy, 'R0', 'U7', REV['dual'][1], ['CVSET', 'CVM', '+12V', GND, 'CVO'])
     sh.wire((ox, oy + 32), (ox, oy + 16)); sh.flag(ox, oy + 16, '+12V')
     sh.wire((ox, oy + 96), (ox, oy + 112)); sh.flag(ox, oy + 112, GND)
     sh.sym('res', -480, 224, 'R90', 'Rcv1', '100k', ['CVM', 'VSEN_OA'])
@@ -469,7 +489,7 @@ def deck06():
                          '.meas TRAN Iload FIND ' + ISUM + ' AT 149m\n'
                          '.model M2N7002 VDMOS(Rg=3 Vto=1.6 Rd=0.2 Rs=0.5 Kp=0.16 Cgdmax=30p Cgdmin=5p Cgs=20p Cjo=10p Is=1p ksubthres=.1)\n'
                          '.model DCL D(Is=1n N=0.1 Rs=1)\n'
-                         '.include ../lib/fet_models.lib\n' + SWMODEL, directive=True)
+                         '.include ' + REV['lib'] + 'fet_models.lib\n' + REV['amp_inc'] + SWMODEL, directive=True)
     sh.text(-1256, 2160, 'TEST: current-source DUT (30 V compliance) with CV set to 12 V, LOAD_CTRL ramped 0 -> full scale over 20 ms.\n'
                          'At 60 ms the source steps +10 %, at 100 ms CV_SET steps to 10 V.\n'
                          'EXPECT: V(DUT+) settles to the CV setting with no sustained oscillation for 0.1 - 8 A, with and without 47 uF across the DUT.', size=2)
@@ -477,9 +497,15 @@ def deck06():
 
 
 DECKS = {'06_cv_mode': deck06, '00_baseline_rev_b': deck00, '05_thermal': deck05, '01_dc_transfer': deck01, '02_step_response': deck02, '03_loop_gain': deck03, '04_faults': deck04}
+REV_E_DECKS = ['01_dc_transfer', '02_step_response', '03_loop_gain', '04_faults', '06_cv_mode']   # 00 (Rev B baseline) and 05 (thermal) have no op-amp
 
 if __name__ == '__main__':
-    want = sys.argv[1:] or list(DECKS)
+    args = sys.argv[1:]
+    if args and args[0] == '--rev-e':           # python3 build_decks.py --rev-e [deck ...]  -> ../rev_e/<deck>/
+        REV = REVS['E']; OUT = REV['out']; _notes(); args = args[1:]
+        want = args or REV_E_DECKS
+    else:
+        want = args or list(DECKS)
     for name in want:
         sh = DECKS[name]()
         d = os.path.join(OUT, name)

@@ -1,0 +1,86 @@
+LTspice 26.0.2 for MacOS
+Circuit: /private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/rev_e/04_faults/04_faults.net
+Start Time: Tue Nov  3 03:31:16 2026
+
+.step fet=1
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration succeeded in finding operating point.
+
+.step fet=2
+Direct Newton iteration succeeded in finding operating point.
+
+.step fet=3
+Direct Newton iteration succeeded in finding operating point.
+
+.step fet=4
+Direct Newton iteration succeeded in finding operating point.
+Total elapsed time: 34.291 seconds.
+
+Files loaded:
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/rev_e/04_faults/04_faults.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/lib/fet_models.lib
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/lib/tlv915x.lib
+/private/var/folders/dx/lhdvs7vd7yj89tntqlzk2_yr0000gn/T/ltrun_local/lib/misc_models.lib
+
+
+Measurement: ipk_hotplug
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	8.0931224823	0.0002	0.001
+     2	8.09312152863	0.0002	0.001
+     3	8.09312152863	0.0002	0.001
+     4	13.2412176132	0.0002	0.001
+
+Measurement: i_during_dropout
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.000381076136843	0.0014
+     2	0.000381103545983	0.0014
+     3	0.000380572491835	0.0014
+     4	0.000381070828277	0.0014
+
+Measurement: ipk_recovery
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	8.0931224823	0.0015	0.0024
+     2	8.09312152863	0.0015	0.0024
+     3	8.09312152863	0.0015	0.0024
+     4	13.2479782104	0.0015	0.0024
+
+Measurement: i_rec_20us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.000689012747364	0.001521
+     2	0.00053732749624	0.001521
+     3	0.000294512567248	0.001521
+     4	0.00173777579683	0.001521
+
+Measurement: i_rec_100us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	7.66244545768	0.001601
+     2	7.23283559548	0.001601
+     3	6.98557225255	0.001601
+     4	6.62959962156	0.001601
+
+Measurement: epk_recovery_mj
+  step	INTEG(1000*V(DRAIN)*(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	22.3736601841	0.0015	0.0017
+     2	21.7720827065	0.0015	0.0017
+     3	21.4771179423	0.0015	0.0017
+     4	19.8052934034	0.0015	0.0017
+
+Measurement: t_otp_off
+  step	t_otp_off	FROM	TO
+     1	2.42153812096e-05	0.0025002	0.00252441538121
+     2	3.0124774335e-05	0.0025002	0.00253032477434
+     3	3.34279441972e-05	0.0025002	0.0025336279442
+     4	9.29281739928e-07	0.0025002	0.00250112928174
+
+Measurement: i_otp
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.00165070724881	0.0029
+     2	0.00216383805197	0.0029
+     3	0.00261759683176	0.0029
+     4	0.00070488070603	0.0029

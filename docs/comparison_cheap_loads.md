@@ -17,8 +17,8 @@ Evidence is mostly forum measurements and one teardown of an older Atorch unit, 
 | Possibly used or counterfeit FETs in the unit | EEVblog p. 14 | You choose the source: buy from an authorised distributor | – |
 
 ## Where Rev C does NOT win
-- **Price of a finished unit.** One older listing had a 150 W tester [at about $30](https://budgetlightforum.com/t/mini-review-150w-load-unit/43730). Rev C's parts come to about US$65–90 by my estimate, excluding your scrap heatsink and fan and the control board you already own. It beats a [Siglent SDL1020X-E at about $574](https://valuetronics.com/apps/aeo/ai/md/default/products/8359457521911.md), not a DL24.
-- **Very low current.** A DL24 was reported usable down to about 10 mA. Rev C has a deliberate 72 mA dead zone in CC and a 0.1 A minimum in CV. For a small current source, use a resistor or decade box.
+- **Price of a finished unit.** One older listing had a 150 W tester [at about $30](https://budgetlightforum.com/t/mini-review-150w-load-unit/43730). Rev E's parts come to US$23.46 at JLCPCB / LCSC prices (2026-11-03, `hardware/outputs/rev_e_v1/BOM_RevE_JLC.csv`) plus about $7 of off-board items (OLED module, 5 V blower, NTC, ribbon, M4 hardware) and $4 to $6 of PCB, so about $35 per instrument excluding the scrap heatsink and the enclosure. (Rev C's parts were about US$65–90 at distributor prices.) It beats a [Siglent SDL1020X-E at about $574](https://valuetronics.com/apps/aeo/ai/md/default/products/8359457521911.md), not a DL24.
+- **Very low current.** A DL24 was reported usable down to about 10 mA. Rev C has a deliberate 72 mA dead zone in CC (Rev E: 106 mA, because the TLV9154's offset limit is larger) and a 0.1 A minimum in CV. For a small current source, use a resistor or decade box.
 - **Readback resolution.** The 12-bit ADC gives 2.7 mA and 16 mV per LSB. For a precision current source, the DMM in series is the reference and the load only sets the compliance voltage.
 - **Ground.** DUT− is common with USB ground, the same class of problem the DL24P thread reports. See the warning in the spec.
 - **It exists today.** Firmware for every mode above CC is unwritten.
@@ -33,4 +33,4 @@ Evidence is mostly forum measurements and one teardown of an older Atorch unit, 
 | Connectors, fuse + holder, 2 binding posts + 2 sense terminals | $10–15 | my estimate |
 | 2 oz PCB | $5–15 | my estimate |
 
-**Biggest saving not taken:** a TI TLV9104/TLV9102 would cost far less than the LT parts and has close GBW (1.1 MHz), but its Vos is ±1.5 mV max against the design's ≤ 1 mV requirement, its package differs and it is unsimulated. I kept the simulated parts. Also treat the very cheap LCSC IRFP250N listings (under $1) as suspect.
+**Saving taken in Rev E:** the LT parts were replaced by two TLV9154 quads (16 V, Vos 0.83 mV max, $1.34 each at LCSC) with the zero-offset resistor changed from 22M to 15M, and the whole stage was re-simulated (`simulation/rev_e`). The IRFP250N is the genuine Infineon part at LCSC (C2580, $1.00), not the sub-$1 clones.

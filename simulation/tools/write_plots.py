@@ -1,7 +1,11 @@
 """Writes, for every sim folder in pkg2/: <deck>.plt (LTspice waveform-viewer layout) and plot_<deck>.py (matplotlib)."""
 import os
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # the 02_Simulation_LTspice folder
+import sys
+SIMROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # the simulation folder
+ROOT, COMMON_REL, REV = SIMROOT, "'..', 'common'", 'C'
+if sys.argv[1:2] == ['--rev-e']:                  # python3 write_plots.py --rev-e  -> ../rev_e/<deck>/ (TLV9154 decks 01-04, 06)
+    ROOT, COMMON_REL, REV = os.path.join(SIMROOT, 'rev_e'), "'..', '..', 'common'", 'E'
 V, A = 524290, 34603010            # LTspice trace codes: volts / amps; + n selects colour n
 ISUM = 'I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)'
 
@@ -106,7 +110,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(HERE, '..', 'common'))
+sys.path.insert(0, os.path.join(HERE, %(common)s))
 from ltspice_raw import read_raw, FETS, COL
 
 plt.rcParams.update({'font.size': 9, 'axes.grid': True, 'grid.alpha': 0.3, 'figure.dpi': 130})
@@ -214,11 +218,30 @@ ax.legend(fontsize=7, ncol=2); fig.tight_layout(); fig.savefig(OUT); print('wrot
 '''),
 }
 
+# figure-title text that differs between revisions (Rev C text is in BODY; Rev E replacements are filled from its run)
+TITLES = {'E': {
+    '02_step_response': [("ax[0].set_title('Fig 02a - 1 A -> 9 A (solid 1 uH, dashed 10 uH leads)')",
+                          "ax[0].set_title('Fig 02a (Rev E, TLV9154) - 1 A -> 9 A (solid 1 uH, dashed 10 uH); IXTH proxy overshoots at 1 uH')")],
+    '03_loop_gain': [("(k, ':', '25 mA, 1 uH')", "(k, ':', '50 mA, 1 uH')"),
+                     ("ax[0].set_title('Fig 03 - loop gain per channel (Rf 3.3k, Cc 1n, Rg 47R): PM >= 80 deg, GM >= 13 dB')",
+                      "ax[0].set_title('Fig 03 (Rev E, TLV9154) - loop gain (Rf 3.3k, Cc 1n, Rg 47R): planar FETs PM >= 87 deg, GM >= 22 dB; IXTH proxy 80 deg / 9 dB')")],
+    '04_faults': [("ax[1].axhline(8.12, color='k', ls=':', lw=0.8)", "ax[1].axhline(8.09, color='k', ls=':', lw=0.8)"),
+                  ("ax[0].set_title('Fig 04 - faults at 8 A set point: no current overshoot on hot-plug or recovery')",
+                   "ax[0].set_title('Fig 04 (Rev E, TLV9154) - faults at 8 A: planar FETs no overshoot, IXTH proxy peaks at 13.2 A')")],
+    '01_dc_transfer': [("ax[0].set_title('Fig 01a - 2.50 A/V, 4 equal channels')", "ax[0].set_title('Fig 01a (Rev E, TLV9154) - 2.50 A/V, 4 equal channels, 10.14 A full scale')")],
+}}
+
 if __name__ == '__main__':
-    open(os.path.join(ROOT, 'common', 'ltspice_raw.py'), 'w').write(COMMON)
+    if REV == 'C':
+        open(os.path.join(ROOT, 'common', 'ltspice_raw.py'), 'w').write(COMMON)
     for deck, txt in PLT.items():
+        if REV == 'E' and deck in ('00_baseline_rev_b', '05_thermal'):
+            continue
         with open(os.path.join(ROOT, deck, deck + '.plt'), 'w', newline='\r\n') as f:
             f.write(txt)
         fig, body = BODY[deck]
-        open(os.path.join(ROOT, deck, 'plot_%s.py' % deck), 'w').write(HEAD % dict(deck=deck, fig=fig) + body)
+        for a, b in TITLES.get(REV, {}).get(deck, ()):
+            assert a in body, (deck, a)
+            body = body.replace(a, b)
+        open(os.path.join(ROOT, deck, 'plot_%s.py' % deck), 'w').write(HEAD % dict(deck=deck, fig=fig, common=COMMON_REL) + body)
     print('ok')

@@ -1,37 +1,42 @@
 # DC Electronic Load
 
-A 150 W programmable DC load (0.6 to 58 V, 0 to 10.2 A) for testing power supplies, batteries and precision current sources.
+A 150 W programmable DC load (0.6 to 58 V, 0 to 10.1 A) for testing power supplies, batteries and precision current sources.
 Built to be better than the AliExpress DL24-class loads and far cheaper than a bench load: four TO-247 MOSFETs each with its own
-precision current loop, hardware CC and CV, real protection, 16-bit readback, galvanic isolation from the PC, and a local 7-segment panel so
+current loop, hardware CC and CV, real protection, 16-bit readback, galvanic isolation from the PC, and a local OLED + encoder panel so
 no computer is needed for simple tests. One USB-C port powers it and carries SCPI (CDC) and DFU.
 
-**Current revision: Rev D** (schematic complete and verified, PCB not started). Rev B was built in Nov 2024 as two Altium boards; Rev C was a
-redesign of the power board around the Rev B control board and was absorbed into Rev D.
+**Current revision: Rev E** (schematic complete and verified; 2-layer PCB panel created with every part placed, routing not started).
+Rev E is the Rev D architecture built as cheaply as JLCPCB / LCSC allow: about US$25 of catalogue parts per unit plus the OLED module,
+blower and PCB (`docs/rev_e_specification.md`, section 14). Rev D (Nov 2026) was the same architecture with LT1014 / LT1013 op-amps, a
+MAX7219 7-segment panel, a 12 V boost for the fan and a 4-layer panel; Rev B was built in Nov 2024 as two Altium boards; Rev C was a
+redesign of the power board around the Rev B control board.
 
 ## Folder map
 
 | Folder | What is in it |
 |---|---|
-| `hardware/` | **Rev D KiCad 10 project**, project libraries, the generator and netlist checker, outputs (PDF schematic, ERC, BOM, netlist). See `hardware/README.md` |
-| `simulation/` | LTspice decks 00 to 06 for the analog stage: DC transfer, step response, loop gain, faults, thermal, hardware CV. README with the results table |
-| `docs/` | `rev_d_specification.md` (ratings, architecture, isolation, thresholds, layout rules, bring-up, open items), `firmware_requirements.md`, `design_review_rev_b.md` (why Rev B was replaced), MOSFET selection, heatsink plan, comparison with the cheap loads, Rev B design notes spreadsheet |
+| `hardware/` | **Rev E KiCad 10 project**, project libraries, the generator, netlist checker, placer and JLCPCB pricing tools, outputs (PDF schematic, ERC, BOM with LCSC codes and prices, placed-board drawing). See `hardware/README.md` |
+| `simulation/` | LTspice decks 00 to 06 for the Rev C analog stage (LT1014 / LT1013, reference results kept) and `rev_e/` with decks 01 to 04 and 06 re-run on the TLV9154. README with both results tables |
+| `docs/` | `rev_e_specification.md` (ratings, architecture, isolation, thresholds, layout rules, bring-up, open items, cost), `firmware_requirements.md`, `design_review_rev_b.md` (why Rev B was replaced), MOSFET selection, heatsink plan, comparison with the cheap loads, Rev B design notes spreadsheet |
 | `datasheets/` | component datasheets and app notes (`appnotes/`) |
 | `reference/` | other people's DC load designs used as references (Scullcom, Jay Diddy B, Kerry Wong) and heatsink / cooler CAD |
 | `archive/` | the built Altium revisions: Rev A (May 2024), Rev A2 "cheaper" (Jul 2024), Rev B control, power and UI boards (Nov 2024) with gerbers, the Rev B bring-up firmware, the Rev B netlists used for the review, early LTspice experiments |
 
 ## Start here
-1. `docs/rev_d_specification.md`: what the instrument is and why every block exists.
-2. `hardware/outputs/rev_d_v1/DC_Load_RevD_schematic.pdf`: 13 pages, page 1 is the block diagram.
-3. `simulation/README.md`, then open `simulation/01_dc_transfer/01_dc_transfer.asc` in LTspice.
+1. `docs/rev_e_specification.md`: what the instrument is, what Rev E changed to get the cost down, and why every block exists.
+2. `hardware/outputs/rev_e_v1/DC_Load_RevE_schematic.pdf`: 14 pages, page 1 is the block diagram. `BOM_RevE_JLC.csv` is the priced BOM.
+3. `simulation/README.md`, then open `simulation/rev_e/01_dc_transfer/01_dc_transfer.asc` in LTspice.
 4. `docs/design_review_rev_b.md` if you want to know what went wrong before.
 
 ## Status and next steps
 - [x] Rev B review, Rev C analog redesign simulated (decks 01 to 06)
-- [x] Rev D integrated schematic: ERC clean, netlist proven against the simulation
-- [ ] Verify the items in `docs/rev_d_specification.md` section 13 (DC-DC pinout, display pinout, nBOOT_SEL) and order parts from an authorised distributor
-- [ ] PCB layout (rules in the spec, section 11), then the bring-up plan
+- [x] Rev D schematic (control + power board, isolated, USB-C): ERC clean, netlist proven against the simulation
+- [x] Rev E cost reduction: TLV9154 re-simulation (decks 01 to 04, 06), schematic regenerated, every part sourced at JLCPCB / LCSC, 2-layer 170 × 100 mm panel placed
+- [ ] Order: PCB (2-layer, 2 oz, 170 × 100 mm panel), the LCSC parts from `BOM_RevE_JLC.csv`, the off-board items (spec section 14). Verify the items in spec section 13 first (DC-DC pin order, OLED pin order, nBOOT_SEL)
+- [ ] PCB routing by hand (rules in the spec, section 11), then the bring-up plan
 - [ ] Firmware (`docs/firmware_requirements.md`)
-- [ ] Measure the heatsink Rsa and set the firmware power limits
+- [ ] Measure the heatsink Rsa with the blower duct fitted and set the firmware power limits (fanless is about 25 W)
 
 ## Tools
-KiCad 10 (schematic generated by `hardware/tools/build_revd.py`, Python 3, no dependencies), LTspice 24+, kicad-cli for the exports.
+KiCad 10 (schematic generated by `hardware/tools/build_reve.py`, Python 3, no dependencies), LTspice 24+ (run from a local copy, see
+`simulation/README.md`), kicad-cli for the exports, the JLCPCB parts API for prices (`hardware/tools/jlc_price.py`).

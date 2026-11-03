@@ -1,7 +1,11 @@
-# LTspice simulation package (analog stage of Rev C / Rev D)
+# LTspice simulation package (analog stage of Rev C / Rev D / Rev E)
 
 > The analog stage simulated here is unchanged in Rev D except for the reference rail (4.096 V became the ratiometric +5V_ISO).
-> `hardware/tools/check_netlist_revd.py` proves the Rev D KiCad netlist against deck 06 node by node.
+> **Rev E replaces the LT1014 / LT1013 with TLV9154 quads: the same decks re-run with TI's model live in `rev_e/` (its README has the
+> side-by-side results table).** The Rev C decks and results below are kept as the reference. `hardware/tools/check_netlist_reve.py` proves
+> the Rev E KiCad netlist against `rev_e/06_cv_mode/06_cv_mode.net` node by node.
+>
+> **Run LTspice from a local copy** (`tools/ltrun_local.sh <deck>.asc`): Google Drive File Stream breaks LTspice's incremental `.raw` writes.
 
 Six simulations, **each in its own folder** (numbered in run order). Every component is connected with drawn wires.
 Net labels are used only for ground, the supply rails (+12V, +3V3, +4V096), to *name* a wire for `.meas`, and for two long
@@ -22,7 +26,9 @@ intended circuit before it was run.
 ├── lib/                 shared models (decks use .include ../lib/...)
 ├── common/ltspice_raw.py  .raw reader used by every plot_*.py
 ├── measurements_summary.txt  all .meas results in one place
-└── tools/               generator: build_decks.py (schematics), write_plots.py (.plt + plot_*.py)
+├── rev_e/               the TLV9154 re-run of decks 01-04 and 06 (build_decks.py --rev-e, write_plots.py --rev-e), own README and summary
+├── lib/tlv915x.lib      TI TLV9152 PSpice macromodel (SBOMB53B), used for the TLV9154
+└── tools/               generator: build_decks.py (schematics), write_plots.py (.plt + plot_*.py), ltrun.sh / ltrun_local.sh (headless runs)
 ```
 
 | Folder | Question it answers | Analysis | Runtime |
@@ -106,7 +112,7 @@ macOS CrossOver build: `/Applications/LTspice.app/Contents/SharedSupport/ltspice
 ## Derived requirements (for the downstream blocks)
 - **DAC / LOAD_CTRL source**: must drive 16 kΩ (15 k + 1 k) to ground. MCP4725 is fine. Power-on value must be 0 (program the MCP4725 EEPROM to 0x000).
 - **Op-amp substitution**: input common mode must include 0 V, supply ≥ 12 V, |Vos| ≤ 1 mV (the zero-offset bias is +1.8 mV), and output high ≥ 8 V into 47 Ω + gate.
-  If GBW differs from ~0.8 MHz, re-run deck 03.
+  If GBW differs from ~0.8 MHz, re-run deck 03. (Done for the TLV9154 in Rev E: Vos limit 0.83 mV, bias raised to +2.6 mV, GBW 4.5 MHz, margins in `rev_e/README.md`.)
 - **ADC**: ISEN 0.300 V/A + 0.12 V; VSEN 0.0490 V/V + 0.085 V. 1 kΩ / 10 nF source, so use an STM32 sample time ≥ 41.5 cycles.
   Inputs are clamped to 3V3 by BAT54S.
 - **+12 V rail**: ~5 mA for the analog parts plus the fan (≤ 0.5 A).
@@ -118,4 +124,5 @@ macOS CrossOver build: `/Applications/LTspice.app/Contents/SharedSupport/ltspice
 `tools/build_decks.py` (with `ascgen.py`) writes every `<folder>/<name>.asc`, runs the LTspice netlister and checks each node against
 the intended netlist. `tools/write_plots.py` writes the `.plt` files, the `plot_*.py` scripts and `common/ltspice_raw.py`.
 You only need these to change things programmatically; normal edits can be made in LTspice directly.
-`tools/ltrun.sh` is the headless LTspice runner for the macOS CrossOver build.
+`tools/ltrun.sh` is the headless LTspice runner for the macOS CrossOver build; `tools/ltrun_local.sh` is the same on a local copy of the tree (use this one on Google Drive).
+`python3 tools/build_decks.py --rev-e` and `python3 tools/write_plots.py --rev-e` regenerate the Rev E folder.

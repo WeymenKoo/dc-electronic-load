@@ -1,0 +1,273 @@
+LTspice 26.0.2 for MacOS
+Circuit: /Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/simulation/rev_e/02_step_response/02_step_response.net
+Start Time: Tue Nov  3 02:49:04 2026
+
+.step fet=1 llead=1e-06
+solver = Normal
+Maximum thread count: 10
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.33269 s
+
+.step fet=2 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 517.582 ms
+
+.step fet=3 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.17094 s
+
+.step fet=4 llead=1e-06
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.20243 s
+
+.step fet=1 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.182 s
+
+.step fet=2 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.78118 s
+
+.step fet=3 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 524.815 ms
+
+.step fet=4 llead=1e-05
+Direct Newton iteration failed to find operating point.
+Starting Gmin stepping
+Gmin stepping failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=0
+Starting source stepping with srcstepmethod=1
+Source stepping failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Starting Gmin stepping level 2
+Gmin stepping level 2 failed to find operating point. Use".option gminsteps=0" to skip all Gmin stepping.
+Starting source stepping with srcstepmethod=1, level 2
+Starting source stepping with srcstepmethod=0, level 2
+Source stepping level 2 failed to find operating point. Use ".options srcsteps=0" to skip all source stepping.
+Pseudo Transient succeeded in finding the operating point at 1.14335 s
+Total elapsed time: 1018.233 seconds.
+
+Files loaded:
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/simulation/rev_e/02_step_response/02_step_response.net
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.dio
+/Users/kooweymen/Library/Application Support/LTspice/Bottles/ltspice/drive_c/users/crossover/AppData/Local/LTspice/lib/cmp/standard.mos
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/simulation/lib/fet_models.lib
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/simulation/lib/tlv915x.lib
+/Users/kooweymen/Library/CloudStorage/GoogleDrive-kooweymen@gmail.com/Other computers/MBA 1/Documents/Project/01 Hardware/DC Load Box/simulation/lib/misc_models.lib
+
+
+Measurement: t_rise_us
+  step	t_rise_us	FROM	TO
+     1	2.63989164863e-05	0.000107245031093	0.00013364394758
+     2	2.9758089499e-05	0.000108200360658	0.000137958450157
+     3	3.12805632318e-05	0.000108719404063	0.000139999967295
+     4	2.25455916336e-05	0.000104822379589	0.000127367971223
+     5	2.65156498336e-05	0.000107340947793	0.000133856597627
+     6	2.85428426016e-05	0.00010847868445	0.000137021527052
+     7	3.07979420761e-05	0.000108911299217	0.000139709241294
+     8	2.50198532655e-05	0.000105973131809	0.000130992985075
+
+Measurement: ipk_up
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	9.11735343933	0.0001	0.0004
+     2	9.11735248566	0.0001	0.0004
+     3	9.11735248566	0.0001	0.0004
+     4	13.6313610077	0.0001	0.0004
+     5	9.11735343933	0.0001	0.0004
+     6	9.11735248566	0.0001	0.0004
+     7	9.11735248566	0.0001	0.0004
+     8	9.12568378448	0.0001	0.0004
+
+Measurement: i_hi
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	9.11735343933	0.000395
+     2	9.11735248566	0.000395
+     3	9.11735248566	0.000395
+     4	9.20275449756	0.000395
+     5	9.11735343933	0.000395
+     6	9.11735248566	0.000395
+     7	9.11735248566	0.000395
+     8	9.11734962463	0.000395
+
+Measurement: i_lo
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	0.922856509686	9.5e-05
+     2	0.922856032848	9.5e-05
+     3	0.922855973244	9.5e-05
+     4	0.92285066843	9.5e-05
+     5	0.922856509686	9.5e-05
+     6	0.922856211662	9.5e-05
+     7	0.922855854034	9.5e-05
+     8	0.92285066843	9.5e-05
+
+Measurement: overshoot_pct
+  step	100*(Ipk_up-I_hi)/(I_hi-I_lo)
+     1	0
+     2	0
+     3	0
+     4	53.4862071048
+     5	0
+     6	0
+     7	0
+     8	0.101704325007
+
+Measurement: i_at_20us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	6.74079823494	0.000121
+     2	6.16317081451	0.000121
+     3	5.89482021332	0.000121
+     4	7.76620721817	0.000121
+     5	6.78219442036	0.000121
+     6	6.12112545967	0.000121
+     7	5.89864492416	0.000121
+     8	8.17910432816	0.000121
+
+Measurement: i_at_50us
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	8.99433422089	0.000151
+     2	8.90002918243	0.000151
+     3	8.84265518188	0.000151
+     4	9.06937122345	0.000151
+     5	8.99260711007	0.000151
+     6	8.92266082764	0.000151
+     7	8.8512377739	0.000151
+     8	9.05116224289	0.000151
+
+Measurement: t_fall_us
+  step	t_fall_us	FROM	TO
+     1	2.31153862943e-05	0.000402329894522	0.000425445280816
+     2	2.58248942619e-05	0.000402758825238	0.0004285837195
+     3	2.74629362011e-05	0.000402696791834	0.000430159728035
+     4	0.000140404874654	0.000267984818007	0.000408389692661
+     5	2.27282246182e-05	0.000402736740316	0.000425464964934
+     6	2.47779765685e-05	0.000403205165709	0.000427983142277
+     7	2.65703375132e-05	0.000403343281922	0.000429913619436
+     8	1.45420774196e-05	0.000403197506042	0.000417739583462
+
+Measurement: imin_dn
+  step	MIN((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	0.922857522964	0.0004	0.0007
+     2	0.922864437103	0.0004	0.0007
+     3	0.922880768776	0.0004	0.0007
+     4	0.92285066843	0.0004	0.0007
+     5	0.922857582569	0.0004	0.0007
+     6	0.922863960266	0.0004	0.0007
+     7	0.922880113125	0.0004	0.0007
+     8	0.92285066843	0.0004	0.0007
+
+Measurement: undershoot_pct
+  step	100*(I_lo-Imin_dn)/(I_hi-I_lo)
+     1	-1.23653589706e-05
+     2	-0.000102559748018
+     3	-0.000302587623157
+     4	0
+     5	-1.30927330276e-05
+     6	-9.45586349876e-05
+     7	-0.000296041252003
+     8	0
+
+Measurement: ipk_small
+  step	MAX((I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) )	FROM	TO
+     1	1.94738519192	0.0007	0.001
+     2	1.94738447666	0.0007	0.001
+     3	1.94738435745	0.0007	0.001
+     4	1.94737958908	0.0007	0.001
+     5	1.94738519192	0.0007	0.001
+     6	1.94738471508	0.0007	0.001
+     7	1.94738411903	0.0007	0.001
+     8	1.94737958908	0.0007	0.001
+
+Measurement: i_small
+  step	(I(Rs1)+I(Rs2)+I(Rs3)+I(Rs4)) 	at
+     1	1.94738519192	0.000995
+     2	1.94738447666	0.000995
+     3	1.94738423824	0.000995
+     4	1.94737958908	0.000995
+     5	1.94738519192	0.000995
+     6	1.94738471508	0.000995
+     7	1.94738411903	0.000995
+     8	1.94737958908	0.000995
+
+Measurement: small_overshoot_pct
+  step	100*(Ipk_small-I_small)/(I_small-I_lo)
+     1	0
+     2	0
+     3	1.16355296016e-05
+     4	0
+     5	0
+     6	0
+     7	0
+     8	0
